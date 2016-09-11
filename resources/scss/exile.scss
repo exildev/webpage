@@ -23,6 +23,31 @@ html, body, #sheet{
         &.top{
             height: 128px;
         }
+        nav{
+            ul{
+                list-style: none;
+                margin: 0;
+                padding: 0;
+                position: relative;
+                right: 0;
+                li{
+                    display: inline-block;
+                    padding: 16px 8px;
+                    &:first-child{
+                        padding-left: 16px;
+                    }
+                    &:last-child{
+                        padding-right: 16px;
+                    }
+                    a{
+                        display: block;
+                        @extend %wh1;
+                        text-decoration: none;
+                        color: white;
+                    }
+                }
+            }
+        }
     }
     > .content{
         background: white;
@@ -48,5 +73,5 @@ html, body, #sheet{
 }
 
 [class^="col-"] > *:not(input):not(p):not(h1){
-    padding: 16px;
+    // padding: 16px;
 }
