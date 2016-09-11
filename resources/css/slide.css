@@ -4,7 +4,7 @@ html,body{
 	padding: 0;
 }
 .slide{
-	outline: solid 1px #000; 
+	outline: solid 1px #000;
 	width: 25%;
 	height: 500px;
 	transition: all 1s;
@@ -17,10 +17,10 @@ html,body{
 }
 
 .slide.full.left{
-	width: 50%; 
+	width: 50%;
 }
 .slide.full.right{
-	width: 50%; 
+	width: 50%;
 	margin-left: -50%;
 }
 .fuller {
@@ -28,10 +28,10 @@ html,body{
 	z-index: 10;
 }
 .slide.left{
-	background-image: url(image1.jpg);
+	background-image: url(../img/image1.jpg);
 }
 .slide.right{
-	background-image: url(image2.jpg);
+	background-image: url(../img/image2.jpg);
 }
 
 .slide.back{
@@ -40,7 +40,7 @@ html,body{
 	display: block;
 	margin-top: -500px;
 	width: 100%;
-	
+
 	transform: scale(0.95);
 }
 
