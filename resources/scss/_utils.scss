@@ -1,0 +1,14 @@
+@import "mixin";
+%wh1{
+    @extend %w1;
+    @extend %h1;
+}
+%w1{
+    width: 100%;
+}
+%h1{
+    height: 100%;
+}
+%cols{
+    @include cols(12);
+}
