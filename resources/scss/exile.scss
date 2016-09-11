@@ -1,21 +1,18 @@
 @import "utils";
 @import "mixin";
-
 *{
     box-sizing: border-box;
 }
-
 html, body, #sheet{
     @extend %wh1;
     padding: 0;
     margin: 0;
     font-family: 'Roboto', sans-serif;
 }
-
 #sheet{
     display: flex;
     flex-flow: column;
-    > .header{
+    .header{
         height: 56px;
         background: navy;
         transition: height .2s;
@@ -23,7 +20,11 @@ html, body, #sheet{
         &.top{
             height: 128px;
         }
+        > *:first-child{
+            margin-top: 3px;
+        }
         nav{
+            margin-top: 2px;
             ul{
                 list-style: none;
                 margin: 0;
@@ -32,24 +33,30 @@ html, body, #sheet{
                 right: 0;
                 li{
                     display: inline-block;
-                    padding: 16px 8px;
-                    &:first-child{
-                        padding-left: 16px;
-                    }
-                    &:last-child{
-                        padding-right: 16px;
-                    }
                     a{
                         display: block;
                         @extend %wh1;
+                        padding: 16px;
                         text-decoration: none;
                         color: white;
+                        span {
+                            transition: width .2s;
+                            display: block;
+                            margin: 3px;
+                            width: 0%;
+                        }
+                        &:hover{
+                            span{
+                                border: 1px solid white;
+                                width: 30%;
+                            }
+                        }
                     }
                 }
             }
         }
     }
-    > .content{
+    .content{
         background: white;
         flex: 2;
         overflow: auto;
@@ -58,9 +65,11 @@ html, body, #sheet{
         }
     }
 }
-
 .row{
     width: 1200px;
+    @media screen and (max-width:  1200px) {
+        width: 100%;
+    }
 }
 .rowf{
     @extend %w1;
@@ -70,6 +79,14 @@ html, body, #sheet{
     display: flex;
     flex-wrap: wrap;
     @include cols(12);
+}
+.right{
+    display: flex;
+    justify-content: flex-end;
+}
+.left{
+    display: flex;
+    justify-content: flex-start;
 }
 
 [class^="col-"] > *:not(input):not(p):not(h1){

@@ -1,7 +1,7 @@
-html, body, #sheet, #sheet > .header nav ul li a, .rowf {
+html, body, #sheet, #sheet .header nav ul li a, .rowf {
   width: 100%; }
 
-html, body, #sheet, #sheet > .header nav ul li a {
+html, body, #sheet, #sheet .header nav ul li a {
   height: 100%; }
 
 * {
@@ -15,39 +15,50 @@ html, body, #sheet {
 #sheet {
   display: flex;
   flex-flow: column; }
-  #sheet > .header {
+  #sheet .header {
     height: 56px;
     background: navy;
     transition: height .2s;
     color: white; }
-    #sheet > .header.top {
+    #sheet .header.top {
       height: 128px; }
-    #sheet > .header nav ul {
-      list-style: none;
-      margin: 0;
-      padding: 0;
-      position: relative;
-      right: 0; }
-      #sheet > .header nav ul li {
-        display: inline-block;
-        padding: 16px 8px; }
-        #sheet > .header nav ul li:first-child {
-          padding-left: 16px; }
-        #sheet > .header nav ul li:last-child {
-          padding-right: 16px; }
-        #sheet > .header nav ul li a {
-          display: block;
-          text-decoration: none;
-          color: white; }
-  #sheet > .content {
+    #sheet .header > *:first-child {
+      margin-top: 3px; }
+    #sheet .header nav {
+      margin-top: 2px; }
+      #sheet .header nav ul {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        position: relative;
+        right: 0; }
+        #sheet .header nav ul li {
+          display: inline-block; }
+          #sheet .header nav ul li a {
+            display: block;
+            padding: 16px;
+            text-decoration: none;
+            color: white; }
+            #sheet .header nav ul li a span {
+              transition: width .2s;
+              display: block;
+              margin: 3px;
+              width: 0%; }
+            #sheet .header nav ul li a:hover span {
+              border: 1px solid white;
+              width: 30%; }
+  #sheet .content {
     background: white;
     flex: 2;
     overflow: auto; }
-    #sheet > .content [class^="col-"] {
+    #sheet .content [class^="col-"] {
       border: 1px solid red; }
 
 .row {
   width: 1200px; }
+  @media screen and (max-width: 1200px) {
+    .row {
+      width: 100%; } }
 
 .row, .rowf {
   margin: 0 auto;
@@ -77,5 +88,13 @@ html, body, #sheet {
     width: 91.66667%; }
   .row .col-12, .rowf .col-12 {
     width: 100%; }
+
+.right {
+  display: flex;
+  justify-content: flex-end; }
+
+.left {
+  display: flex;
+  justify-content: flex-start; }
 
 /*# sourceMappingURL=exile.css.map */
