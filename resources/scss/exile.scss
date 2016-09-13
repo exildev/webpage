@@ -8,6 +8,7 @@ html, body, #sheet{
     padding: 0;
     margin: 0;
     font-family: 'Roboto Condensed', sans-serif;
+    background: #d4e8e3;
 }
 
 h1, h2, h3, h4, h5, h6{
@@ -36,7 +37,7 @@ h1, h2, h3, h4, h5, h6{
             background: white;
             height: 56px;
             border-radius: 0 0 3px 3px;
-            box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+            @extend %shadow;
             transition: top .2s;
         }
         .memu{
@@ -91,7 +92,7 @@ h1, h2, h3, h4, h5, h6{
         }
     }
     .content{
-        background: white;
+        // background: white;
         flex: 2;
         overflow: auto;
         [class^="col-"]{
@@ -127,8 +128,23 @@ h1, h2, h3, h4, h5, h6{
   justify-content: center;
 }
 
+.card{
+    padding: 16px;
+    @extend %shadow;
+    border-radius: 4px;
+    background: white;
+    margin-top: 4px;
+    margin-bottom: 4px;
+}
 footer{
+    &.card{
+        width: 99%;
+        border-radius: 3px 3px 0 0;
+        padding-bottom: 0;
+        margin-bottom: 0;
+    }
     .power [class^="col-"]{
+        border-top: 1px solid #555;
         padding: 16px;
     }
     h3{

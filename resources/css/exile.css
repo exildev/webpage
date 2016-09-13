@@ -2,9 +2,11 @@ html, body, #sheet, #sheet .header nav ul li a, .rowf { width: 100%; }
 
 html, body, #sheet, #sheet .header nav ul li a { height: 100%; }
 
+#sheet .header .top-header, .card { box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23); }
+
 * { box-sizing: border-box; }
 
-html, body, #sheet { padding: 0; margin: 0; font-family: 'Roboto Condensed', sans-serif; }
+html, body, #sheet { padding: 0; margin: 0; font-family: 'Roboto Condensed', sans-serif; background: #d4e8e3; }
 
 h1, h2, h3, h4, h5, h6 { font-family: 'Roboto', sans-serif; }
 
@@ -13,7 +15,7 @@ h1, h2, h3, h4, h5, h6 { font-family: 'Roboto', sans-serif; }
 #sheet .header.top { height: 128px; }
 #sheet .header.top .top-header { top: 0px; }
 #sheet .header.top .memu { margin-top: 0; }
-#sheet .header .top-header { position: relative; top: -60px; background: white; height: 56px; border-radius: 0 0 3px 3px; box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23); transition: top .2s; }
+#sheet .header .top-header { position: relative; top: -60px; background: white; height: 56px; border-radius: 0 0 3px 3px; transition: top .2s; }
 #sheet .header .memu { transition: all .2s; position: relative; margin-top: -56px; }
 #sheet .header .logo { padding: 12px; }
 #sheet .header .logo .img { display: inline-block; background-image: url(../img/white-logo.png); background-repeat: no-repeat; background-size: contain; vertical-align: bottom; width: 60px; height: 30px; }
@@ -23,7 +25,7 @@ h1, h2, h3, h4, h5, h6 { font-family: 'Roboto', sans-serif; }
 #sheet .header nav ul li a { display: block; padding: 16px; text-decoration: none; color: white; }
 #sheet .header nav ul li a span { transition: width .2s; position: relative; margin-top: 3px; display: block; width: 0; }
 #sheet .header nav ul li a:hover span { border: 1px solid white; width: 30%; }
-#sheet .content { background: white; flex: 2; overflow: auto; }
+#sheet .content { flex: 2; overflow: auto; }
 #sheet .content [class^="col-"] { border: 1px solid red; }
 
 .row { width: 1200px; }
@@ -49,7 +51,10 @@ h1, h2, h3, h4, h5, h6 { font-family: 'Roboto', sans-serif; }
 
 .center { display: flex; justify-content: center; }
 
-footer .power [class^="col-"] { padding: 16px; }
+.card { padding: 16px; border-radius: 4px; background: white; margin-top: 4px; margin-bottom: 4px; }
+
+footer.card { width: 99%; border-radius: 3px 3px 0 0; padding-bottom: 0; margin-bottom: 0; }
+footer .power [class^="col-"] { border-top: 1px solid #555; padding: 16px; }
 footer h3 { padding-left: 16px; }
 footer ul { padding: 0; margin: 0; list-style: none; padding-bottom: 12px; }
 footer ul > li { padding: 4px 16px; }
