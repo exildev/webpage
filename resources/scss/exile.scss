@@ -1,9 +1,14 @@
 @import "utils";
 @import "mixin";
-*{
+$primary: rgb(89, 106, 96);
+
+* {
     box-sizing: border-box;
 }
-html, body, #sheet{
+
+#sheet,
+body,
+html {
     @extend %wh1;
     padding: 0;
     margin: 0;
@@ -11,45 +16,67 @@ html, body, #sheet{
     background: #d4e8e3;
 }
 
-h1, h2, h3, h4, h5, h6{
+body {
+    transition: opacity 0.2s;
+}
+
+body.hidden {
+    opacity: 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
     font-family: 'Roboto', sans-serif;
 }
-#sheet{
+
+#sheet {
     display: flex;
     flex-flow: column;
-    .header{
+
+    .header {
         height: 56px;
-        background: rgb(89, 106, 96);
-        transition: height .2s;
+        background: $primary;
+        transition: height 0.2s;
         color: white;
-        &.top{
+
+        &.top {
             height: 128px;
-            .top-header{
-                top: 0px;
+
+            .top-header {
+                top: 0;
             }
-            .memu{
+
+            .memu {
                 margin-top: 0;
             }
         }
-        .top-header{
+
+        .top-header {
             position: relative;
             top: -60px;
             background: white;
             height: 56px;
             border-radius: 0 0 3px 3px;
             @extend %shadow;
-            transition: top .2s;
+            transition: top 0.2s;
         }
-        .memu{
-            transition: all .2s;
+
+        .memu {
+            transition: all 0.2s;
             position: relative;
             margin-top: -56px;
         }
-        .logo{
+
+        .logo {
             padding: 12px;
-            .img{
+
+            .img {
                 display: inline-block;
-                background-image: url(../img/white-logo.png);
+                background-image: url("../img/white-logo.png");
                 background-repeat: no-repeat;
                 background-size: contain;
                 vertical-align: bottom;
@@ -57,78 +84,114 @@ h1, h2, h3, h4, h5, h6{
                 height: 30px;
             }
         }
-        nav{
+
+        nav {
             margin-top: 2px;
-            ul{
+
+            > ul {
                 list-style: none;
                 margin: 0;
                 padding: 0;
                 position: relative;
                 right: 0;
-                li{
+
+                > li {
                     display: inline-block;
-                    a{
+
+                    > a {
                         display: block;
                         @extend %wh1;
                         padding: 16px;
                         text-decoration: none;
                         color: white;
-                        span {
-                            transition: width .2s;
+
+                        > span {
+                            transition: width 0.2s;
                             position: relative;
                             margin-top: 3px;
                             display: block;
                             width: 0;
                         }
-                        &:hover{
-                            span{
+
+                        &:hover {
+                            > span {
                                 border: 1px solid white;
                                 width: 30%;
                             }
+                        }
+                    }
+
+                    .sub {
+                        display: none;
+                    }
+
+                    &.selected {
+                        .sub {
+                            display: block;
+                            position: fixed;
+                            background: rgba($primary,1);
+                            background: -moz-linear-gradient(top, rgba($primary,1) 0%, rgba($primary,1) 19%, rgba($primary,0.85) 100%);
+                            background: -webkit-gradient(left top, left bottom, color-stop(0%, rgba($primary,1)), color-stop(49%, rgba($primary,1)), color-stop(100%, rgba($primary,0.85)));
+                            background: -webkit-linear-gradient(top, rgba($primary,1) 0%, rgba($primary,1) 19%, rgba($primary,0.85) 100%);
+                            background: -o-linear-gradient(top, rgba($primary,1) 0%, rgba($primary,1) 19%, rgba($primary,0.85) 100%);
+                            background: -ms-linear-gradient(top, rgba($primary,1) 0%, rgba($primary,1) 19%, rgba($primary,0.85) 100%);
+                            background: linear-gradient(to bottom, rgba($primary,1) 0%, rgba($primary,1) 19%, rgba($primary,0.85) 100%);
+                            z-index: 1000;
+                            left: 0;
+                            right: 0;
                         }
                     }
                 }
             }
         }
     }
-    .content{
+
+    .content {
         // background: white;
         flex: 2;
         overflow: auto;
-        [class^="col-"]{
-            border: 1px solid red;
-        }
+
+
     }
 }
-.row{
+[class^="col-"] {
+    border: 1px solid red;
+}
+.row {
     width: 1200px;
-    @media screen and (max-width:  1200px) {
+    @media screen and (max-width: 1200px) {
         width: 100%;
     }
 }
-.rowf{
+
+.rowf {
     @extend %w1;
 }
-.row, .rowf{
+
+.row,
+.rowf {
     margin: 0 auto;
     display: flex;
     flex-wrap: wrap;
     @include cols(12);
 }
-.right{
+
+.right {
     display: flex;
     justify-content: flex-end;
 }
-.left{
+
+.left {
     display: flex;
     justify-content: flex-start;
 }
-.center{
-  display: flex;
-  justify-content: center;
+
+.center {
+    display: flex;
+    justify-content: center;
 }
 
-.card{
+.card {
     padding: 16px;
     @extend %shadow;
     border-radius: 4px;
@@ -136,27 +199,33 @@ h1, h2, h3, h4, h5, h6{
     margin-top: 4px;
     margin-bottom: 4px;
 }
-footer{
-    &.card{
+
+footer {
+    &.card {
         width: 99%;
         border-radius: 3px 3px 0 0;
         padding-bottom: 0;
         margin-bottom: 0;
     }
-    .power [class^="col-"]{
+
+    .power [class^="col-"] {
         border-top: 1px solid #555;
         padding: 16px;
     }
-    h3{
+
+    h3 {
         padding-left: 16px;
     }
-    ul{
+
+    ul {
         padding: 0;
         margin: 0;
         list-style: none;
         padding-bottom: 12px;
+
         > li {
             padding: 4px 16px;
+
             > a {
                 text-decoration: none;
                 color: #555;
