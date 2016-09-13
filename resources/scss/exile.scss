@@ -18,23 +18,43 @@ h1, h2, h3, h4, h5, h6{
     flex-flow: column;
     .header{
         height: 56px;
-        background: navy;
+        background: rgb(89, 106, 96);
         transition: height .2s;
         color: white;
         &.top{
             height: 128px;
+            .top-header{
+                top: 0px;
+            }
+            .memu{
+                margin-top: 0;
+            }
         }
-        // > *:first-child{
-        //     margin-top: 3px;
-        // }
         .top-header{
+            position: relative;
+            top: -60px;
             background: white;
             height: 56px;
             border-radius: 0 0 3px 3px;
             box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+            transition: top .2s;
+        }
+        .memu{
+            transition: all .2s;
+            position: relative;
+            margin-top: -56px;
         }
         .logo{
-            padding: 12px,
+            padding: 12px;
+            .img{
+                display: inline-block;
+                background-image: url(../img/white-logo.png);
+                background-repeat: no-repeat;
+                background-size: contain;
+                vertical-align: bottom;
+                width: 60px;
+                height: 30px;
+            }
         }
         nav{
             margin-top: 2px;
@@ -107,6 +127,24 @@ h1, h2, h3, h4, h5, h6{
   justify-content: center;
 }
 
-[class^="col-"] > *:not(input):not(p):not(h1){
-    // padding: 16px;
+footer{
+    .power [class^="col-"]{
+        padding: 16px;
+    }
+    h3{
+        padding-left: 16px;
+    }
+    ul{
+        padding: 0;
+        margin: 0;
+        list-style: none;
+        padding-bottom: 12px;
+        > li {
+            padding: 4px 16px;
+            > a {
+                text-decoration: none;
+                color: #555;
+            }
+        }
+    }
 }
