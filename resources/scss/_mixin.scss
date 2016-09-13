@@ -1,8 +1,9 @@
 @mixin cols($n) {
-     @if $n > 0{
+    @if $n > 0{
+        $val: 100%/$n;
         @for $i from 1 through $n {
             .col-#{$i} {
-                width: (100%/$n) * $i;
+                width: $val * $i;
             }
         }
     }
