@@ -1,7 +1,7 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
 from django import forms
-from suit_redactor.widgets import RedactorWidget
+from suit_ckeditor.widgets import CKEditorWidget
 import models
 
 
@@ -11,7 +11,7 @@ class PageForm(forms.ModelForm):
         model = models.Page
         exclude = ()
         widgets = {
-         'contenido': RedactorWidget(editor_options={'lang': 'es'})
+         'contenido': CKEditorWidget(editor_options={'lang': 'es', 'startupFocus': True})
         }
     # end class
 # end class

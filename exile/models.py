@@ -9,7 +9,6 @@ from django.db import models
 
 class Page(models.Model):
     nombre = models.CharField(max_length=400)
-    contenido = models.TextField()
 
     class Meta:
         verbose_name = "Pagina"
@@ -23,12 +22,24 @@ class Page(models.Model):
 
 
 class Seccion(models.Model):
+    pagina = models.ForeignKey(Page)
     nombre = models.CharField(max_length=400)
-    principal = models.ForeignKey(Page, blank=True, null=True)
+    contenido = models.TextField()
 
     class Meta:
         verbose_name = "Sección"
         verbose_name_plural = "Secciones"
+    # end class
+# end class
+
+
+class Item(models.Model):
+    nombre = models.CharField(max_length=400)
+    principal = models.ForeignKey(Page, blank=True, null=True)
+
+    class Meta:
+        verbose_name = "Item"
+        verbose_name_plural = "Item's"
     # end class
 
     def __unicode__(self):
@@ -38,7 +49,7 @@ class Seccion(models.Model):
 
 
 class OrdenPagina(models.Model):
-    seccion = models.ForeignKey(Seccion)
+    item = models.ForeignKey(Item)
     posicion = models.IntegerField()
     pagina = models.ForeignKey(Page)
 
@@ -48,7 +59,7 @@ class OrdenPagina(models.Model):
     # end class
 
     def __unicode__(self):
-        return u"%s pagina: %s" % (self.seccion.nombre, self.pagina.nombre)
+        return u"%s pagina: %s" % (self.item.nombre, self.pagina.nombre)
     # end def
 # end class
 
@@ -62,18 +73,18 @@ class Menu(models.Model):
 # end class
 
 
-class OrdenSeccion(models.Model):
+class OrdenItem(models.Model):
     menu = models.ForeignKey(Menu)
     posicion = models.IntegerField()
-    seccion = models.ForeignKey(Seccion)
+    item = models.ForeignKey(Item)
 
     class Meta:
-        verbose_name = "Orden de sección"
-        verbose_name_plural = "Orden de secciones"
+        verbose_name = "Orden de item"
+        verbose_name_plural = "Orden de items"
     # end class
 
     def __unicode__(self):
-        return u"%s sección: %s" % (self.menu.nombre, self.seccion.nombre)
+        return u"%s item: %s" % (self.menu.nombre, self.seccion.nombre)
     # end def
 # end class
 
