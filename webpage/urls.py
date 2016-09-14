@@ -20,7 +20,8 @@ import settings
 
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
-    url(r'^$', include('exile.urls')),
+    #url(r'^redactor/', include('redactor.urls')),
+    url(r'^', include('exile.urls')),
 ]
 
 if settings.DEBUG:
