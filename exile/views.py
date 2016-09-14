@@ -4,5 +4,10 @@ import models
 
 
 def index(request):
-    return render(request, 'exile/index.html', {})
+    principal = models.MenuPrincipal.objects.all().first()
+    items = []
+    if principal:
+        items = models.OrdenItem.objects.filter(menu=principal.menu).first()
+    # end if
+    return render(request, 'exile/index.html', {'items': items})
 # end def

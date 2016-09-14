@@ -33,9 +33,47 @@ class Seccion(models.Model):
 # end class
 
 
+class ItemSeccion(models.Model):
+    nombre = models.CharField(max_length=400)
+
+    def __unicode__(self):
+        return u"%s" % (self.nombre)
+    # end def
+# end class
+
+
+class SubItem(models.Model):
+    nombre = models.CharField(max_length=400)
+    pagina = models.ForeignKey(Page)
+
+    class Meta:
+        verbose_name = "SubItem"
+        verbose_name_plural = "SubItem's"
+    # end class
+
+    def __unicode__(self):
+        return u"%s pagina: %s" % (self.nombre, self.pagina.nombre)
+    # end def
+# end class
+
+
+class OrdenSubItem(models.Model):
+    subitem = models.ForeignKey(SubItem)
+    item = models.ForeignKey('Item')
+    posicion = models.IntegerField()
+    seccion = models.ForeignKey(ItemSeccion, blank=True, null=True)
+
+    class Meta:
+        verbose_name = "Orden de subitem"
+        verbose_name_plural = "Ordenes de subitem"
+    # end class
+# end class
+
+
 class Item(models.Model):
     nombre = models.CharField(max_length=400)
     principal = models.ForeignKey(Page, blank=True, null=True, verbose_name="Pagina Principal")
+    subitems = models.ManyToManyField(SubItem, through=OrdenSubItem)
 
     class Meta:
         verbose_name = "Item"
@@ -48,33 +86,8 @@ class Item(models.Model):
 # end class
 
 
-class OrdenPagina(models.Model):
-    item = models.ForeignKey(Item)
-    posicion = models.IntegerField()
-    pagina = models.ForeignKey(Page)
-
-    class Meta:
-        verbose_name = "Orden de la pagina"
-        verbose_name_plural = "Orden de las paginas"
-    # end class
-
-    def __unicode__(self):
-        return u"%s pagina: %s" % (self.item.nombre, self.pagina.nombre)
-    # end def
-# end class
-
-
-class Menu(models.Model):
-    nombre = models.CharField(max_length=400)
-
-    def __unicode__(self):
-        return u"%s" % (self.nombre)
-    # end def
-# end class
-
-
 class OrdenItem(models.Model):
-    menu = models.ForeignKey(Menu)
+    menu = models.ForeignKey('Menu')
     posicion = models.IntegerField()
     item = models.ForeignKey(Item)
 
@@ -84,7 +97,17 @@ class OrdenItem(models.Model):
     # end class
 
     def __unicode__(self):
-        return u"%s item: %s" % (self.menu.nombre, self.seccion.nombre)
+        return u"%s item: %s" % (self.menu.nombre, self.item.nombre)
+    # end def
+# end class
+
+
+class Menu(models.Model):
+    nombre = models.CharField(max_length=400)
+    items = models.ManyToManyField(Item, through=OrdenItem)
+
+    def __unicode__(self):
+        return u"%s" % (self.nombre)
     # end def
 # end class
 
