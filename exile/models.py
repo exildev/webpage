@@ -35,7 +35,7 @@ class Seccion(models.Model):
 
 class Item(models.Model):
     nombre = models.CharField(max_length=400)
-    principal = models.ForeignKey(Page, blank=True, null=True)
+    principal = models.ForeignKey(Page, blank=True, null=True, verbose_name="Pagina Principal")
 
     class Meta:
         verbose_name = "Item"

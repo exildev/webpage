@@ -5,10 +5,10 @@ from suit_ckeditor.widgets import CKEditorWidget
 import models
 
 
-class PageForm(forms.ModelForm):
+class SeccionForm(forms.ModelForm):
 
     class Meta:
-        model = models.Page
+        model = models.Seccion
         exclude = ()
         widgets = {
          'contenido': CKEditorWidget(editor_options={'lang': 'es', 'startupFocus': True})
