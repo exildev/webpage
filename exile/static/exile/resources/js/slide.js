@@ -15,8 +15,17 @@
 		   		parents[i].classList.remove("open");
 	   		}
 	   	};
+	   	window.setInterval(function(){
+	   		if (parents[i]){
+				slide_down();
+	   		}else{
+	   			var fix = i;
+	   			for (var j = 0; j < fix; j++){
+	   				slide_up();
+	   			}
+	   		}
+	   	}, 3000);
    	}
-
 
 	document.addEventListener("DOMContentLoaded", load, false);
 })();
