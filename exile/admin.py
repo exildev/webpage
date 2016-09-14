@@ -45,13 +45,18 @@ class MenuAdmin(admin.ModelAdmin):
 # end class
 
 
+class SubitemAdmin(admin.ModelAdmin):
+    list_display = ('nombre', 'pagina')
+# end class
+
+
 class MenuPrincipalAdmin(admin.ModelAdmin):
     list_display = ('menu', 'fecha')
 # end class
 
 admin.site.register(models.Page, PageAdmin)
 admin.site.register(models.Item, ItemAdmin)
-admin.site.register(models.SubItem)
+admin.site.register(models.SubItem, SubitemAdmin)
 admin.site.register(models.ItemSeccion)
 admin.site.register(models.Menu, MenuAdmin)
 admin.site.register(models.MenuPrincipal, MenuPrincipalAdmin)
