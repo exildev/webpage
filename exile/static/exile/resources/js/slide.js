@@ -1,5 +1,5 @@
 (function() {
-		
+
 	function load(){
 		var parents = document.querySelectorAll(".parent");
 		var i = 0;
@@ -16,7 +16,6 @@
 	   		}
 	   	};
 	   	window.setInterval(function(){
-	   		console.log("ff", parents[i]);
 	   		if (parents[i]){
 				slide_down();
 	   		}else{
