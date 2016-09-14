@@ -111,13 +111,12 @@ h6 {
                         > span {
                             transition: width 1s;
                             position: relative;
-                            margin-top: 3px;
                             display: block;
                             width: 0;
                         }
 
-                        &:hover {
-                            > span {
+                        &:hover{
+                            > span{
                                 border: 1px solid white;
                                 width: 100%;
                             }
@@ -136,8 +135,13 @@ h6 {
                             z-index: 1000;
                             right: 0;
                             left: 0;
+                            margin-top: -4px;
                             a{
                                 color: white;
+                                > span{
+                                    border: 1px solid white;
+                                    width: 100%;
+                                }
                             }
                         }
                     }

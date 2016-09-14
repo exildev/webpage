@@ -90,7 +90,6 @@ h6 {
             #sheet .header nav > ul > li > a > span {
               transition: width 1s;
               position: relative;
-              margin-top: 3px;
               display: block;
               width: 0; }
             #sheet .header nav > ul > li > a:hover > span {
@@ -110,9 +109,13 @@ h6 {
             position: fixed;
             z-index: 1000;
             right: 0;
-            left: 0; }
+            left: 0;
+            margin-top: -4px; }
             #sheet .header nav > ul > li.selected .sub a {
               color: white; }
+              #sheet .header nav > ul > li.selected .sub a > span {
+                border: 1px solid white;
+                width: 100%; }
   #sheet .content {
     flex: 2;
     overflow: auto; }
