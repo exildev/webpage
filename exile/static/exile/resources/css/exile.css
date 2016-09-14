@@ -190,10 +190,14 @@ footer.card {
   padding-bottom: 0;
   margin-bottom: 0; }
 footer .power [class^="col-"] {
+  align-items: baseline;
   border-top: 1px solid #555;
   padding: 16px; }
 footer h3 {
-  padding-left: 16px; }
+  padding-left: 16px;
+  text-align: right; }
+footer ul > li {
+  text-align: right; }
 
 ul {
   padding: 0;
@@ -201,9 +205,15 @@ ul {
   list-style: none;
   padding-bottom: 12px; }
   ul > li {
-    padding: 4px 16px; }
+    padding: 4px 0; }
     ul > li > a {
       text-decoration: none;
       color: #555; }
+      ul > li > a:hover {
+        text-decoration: underline;
+        color: #30158b; }
+  .social ul > li {
+    display: inline-block;
+    padding: 4px 8px; }
 
 /*# sourceMappingURL=exile.css.map */

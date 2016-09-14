@@ -1,6 +1,7 @@
 @import "utils";
 @import "mixin";
 $primary: rgb(93, 61, 115);
+$accent: rgb(48, 21, 139);
 $radio: 3px;
 
 * {
@@ -209,12 +210,16 @@ footer {
     }
 
     .power [class^="col-"] {
+        align-items: baseline;
         border-top: 1px solid #555;
         padding: 16px;
     }
-
     h3 {
         padding-left: 16px;
+        text-align: right;
+    }
+    ul > li{
+        text-align: right;
     }
 }
 
@@ -225,11 +230,21 @@ ul {
     padding-bottom: 12px;
 
     > li {
-        padding: 4px 16px;
-
+        padding: 4px 0;
         > a {
             text-decoration: none;
             color: #555;
+            &:hover{
+                text-decoration: underline;
+                color: $accent;
+            }
+        }
+
+    }
+    .social &{
+        > li{
+            display: inline-block;
+            padding: 4px 8px;
         }
     }
 }
