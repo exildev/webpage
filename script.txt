@@ -1,0 +1,92 @@
+<style type="text/css">
+    .container.expand {
+        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.17);
+        border-radius: 0;
+        width: 80%;
+        height: 500px;
+        max-width: 600px;
+        padding: 0;
+        -webkit-transition: all 0.2s, max-width 0.2s cubic-bezier(0.4, 0, 0.2, 1) 0.1s, height 0.3s ease 0.25s;
+        transition: all 0.2s, max-width 0.2s cubic-bezier(0.4, 0, 0.2, 1) 0.1s, height 0.3s ease 0.25s;
+    }
+</style>
+<script type="text/javascript">
+    (function(){
+        function funciones(){
+
+        }
+    })();
+</script>
+/****************************************************************************************************/
+<script type="text/javascript">
+    (function() {
+        function funciones() {
+            var tmax_options = {
+                delay: 0,
+                paused: false,
+                onComplete: function() {
+                    console.log('animation is complete');
+                },
+                onCompleteScope: function() {
+                    console.log('animation scope is complete');
+                },
+                tweens: [],
+                stagger: 0,
+                align: 'normal',
+                useFrames: false,
+                onStart: function() {
+                    console.log('on start called');
+                },
+                onStartScope: function() {
+                    console.log('on start scope called');
+                },
+                onUpdate: function() {
+                    console.log('on update called');
+                },
+                onUpdateScope: function() {
+                    console.log('on update scope called');
+                },
+                onRepeat: function() {
+                    console.log('on repeat called');
+                },
+                onRepeatScope: function() {
+                    console.log('on repeat scope called');
+                },
+                onReverseComplete: function() {
+                    console.log('on reverse complete');
+                },
+                onReverseCompleteScope: function() {
+                    console.log('on reverse complete scope called');
+                },
+                autoRemoveChildren: false,
+                smoothChildTiming: false,
+                repeat: 0,
+                repeatDelay: 0,
+                yoyo: false,
+                onCompleteParams: [],
+                onReverseCompleteParams: [],
+                onStartParams: [],
+                onUpdateParams: [],
+                onRepeatParams: []
+            };
+
+
+            var tl = new TimelineMax(tmax_options),
+                circle_top = $('#act');
+            window.iniciarAnimacion = function() {
+                tl.to(this, 1, {
+                    scale: 0.05
+                });
+                tl.to(circle_top, 0.4, {
+                  scale:2.05,
+                  ease: Quad.easeInOut,
+                  delay: 0.2
+                });
+            };
+            var servi = document.getElementById('act');
+            servi.addEventListener('mouseover', iniciarAnimacion);
+
+        }
+        document.addEventListener("DOMContentLoaded", funciones, false);
+    })();
+</script>

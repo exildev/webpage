@@ -1,5 +1,5 @@
 (function() {
-		
+
 	function load(){
 		var parents = document.querySelectorAll(".parent");
 		var i = 0;

@@ -1,0 +1,94 @@
+<!--DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style type="text/css">
+        div {
+            position: absolute;
+            bottom: 130px;
+            left: 130px;
+            width: 100px;
+            height: 100px;
+            background: red;
+            -webkit-transition: left 2s, width 2s;
+        }
+
+        div:hover {
+            left: 30px;
+            width: 200px;
+        }
+
+        .center {
+            margin: auto;
+            width: 50%;
+            border: 3px solid green;
+            padding: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="center">Hola mundo</div>
+
+</body>
+
+</html-->
+
+<!DOCTYPE HTML>
+<html>
+
+<head>
+    <style type="text/css">
+        div.sample1 {
+            width: 100px;
+            height: 100px;
+            background: red;
+            transition: width 2s;
+            -moz-transition: width 2s;
+            /* Firefox 4 */
+            -webkit-transition: width 2s;
+            /* Safari and Chrome */
+            -o-transition: width 2s;
+            /* Opera */
+        }
+
+        div.sample1:hover {
+            width: 300px;
+        }
+    </style>
+    <script type="text/javascript">
+        function doStuff(obj, boolStateChange) {
+            console.log('test');
+            if (boolStateChange == true) {
+                obj.style.cssText = "width:300px;height:100px;background:green;transition:width 2s;-moz-transition:width 2s;-webkit-transition:width 2s;-o-transition:width 2s;";
+
+            } else {
+                obj.style.cssText = "width:100px;height:100px;background:green;transition:width 2s;-moz-transition:width 2s;-webkit-transition:width 2s;-o-transition:width 2s;";
+            }
+        }
+    </script>
+</head>
+
+<body>
+
+    <p><b>Note:</b> This example does not work in Internet Explorer.</p>
+
+    <div class="sample1"></div>
+
+    <p>Hover over the div element above, to see the transition effect.</p>
+
+    <br/>
+    <br/>
+    <br/>
+
+    <div id="javaHover" style="background-color:green;width:100px;height:100px;" onMouseOver="doStuff(this,true);" onMouseOut="doStuff(this,false);"></div>
+
+    <p>Hover over the div element above, to see the Javascript transition effect.</p>
+
+</body>
+
+</html>
