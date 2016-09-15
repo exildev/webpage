@@ -8,7 +8,7 @@ body,
 html, #sheet .header nav > ul > li > a {
   height: 100%; }
 
-#sheet .header .top-header, .card {
+#sheet .header .top-header, .card, a.btn, button, input[type=button], input[type=submit] {
   box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23); }
 
 * {
@@ -20,7 +20,8 @@ html {
   padding: 0;
   margin: 0;
   font-family: 'Roboto Condensed', sans-serif;
-  background: #d4e8e3; }
+  background: #d4e8e3;
+  color: #333; }
 
 body {
   transition: opacity 0.2s; }
@@ -34,7 +35,9 @@ h3,
 h4,
 h5,
 h6 {
-  font-family: 'Roboto', sans-serif; }
+  font-family: 'Roboto', sans-serif;
+  color: #30158b;
+  text-transform: uppercase; }
 
 #sheet {
   display: flex;
@@ -57,6 +60,13 @@ h6 {
       height: 56px;
       border-radius: 0 0 3px 3px;
       transition: top 0.2s; }
+      #sheet .header .top-header .social {
+        color: #333;
+        padding: 12px; }
+        #sheet .header .top-header .social > span {
+          margin-top: 4px; }
+        #sheet .header .top-header .social a > span {
+          vertical-align: sub; }
     #sheet .header .memu {
       transition: all 0.2s;
       position: relative;
@@ -218,5 +228,36 @@ ul {
   .social ul > li {
     display: inline-block;
     padding: 4px 8px; }
+
+.social a > span {
+  vertical-align: sub;
+  margin-right: 2px; }
+
+a.btn, button, input[type=button], input[type=submit] {
+  font-family: 'Roboto Condensed', sans-serif;
+  padding: 10px 30px;
+  margin: 0 4px;
+  color: white;
+  background: #30158b;
+  border: 1px solid transparent;
+  font-size: 18px;
+  text-transform: capitalize;
+  text-decoration: none;
+  cursor: pointer;
+  text-align: center;
+  display: inline-block;
+  border-radius: 3px;
+  transition: all .2s; }
+  a.btn:hover, button:hover, input[type=button]:hover, input[type=submit]:hover {
+    background: #3f1cb7; }
+  a.btn:active, button:active, input[type=button]:active, input[type=submit]:active {
+    box-shadow: none; }
+  a.btn.outline, button.outline, input[type=button].outline, input[type=submit].outline {
+    background: transparent;
+    border: 1px solid #30158b;
+    color: #30158b; }
+
+video {
+  background: black; }
 
 /*# sourceMappingURL=exile.css.map */

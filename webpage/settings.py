@@ -1,3 +1,5 @@
+#!/usr/bin/env python
+# -*- coding: utf-8 -*-
 """
 Django settings for webpage project.
 
@@ -56,17 +58,18 @@ SUIT_CONFIG = {
     # menu
     # 'SEARCH_URL': '/admin/auth/user/',
      'MENU_ICONS': {
-        'sites': 'icon-leaf',
         'auth': 'icon-lock',
+        'exile': 'icon-fire'
      },
     # 'MENU_OPEN_FIRST_CHILD': True, # Default True
     # 'MENU_EXCLUDE': ('auth.group',),
-    # 'MENU': (
-    #     'sites',
-    #     {'app': 'auth', 'icon':'icon-lock', 'models': ('user', 'group')},
-    #     {'label': 'Settings', 'icon':'icon-cog', 'models': ('auth.user', 'auth.group')},
-    #     {'label': 'Support', 'icon':'icon-question-sign', 'url': '/support/'},
-    # ),
+    'MENU': (
+         'sites',
+         {'app': 'auth', 'icon':'icon-lock', 'models': ('user', 'group')},
+         {'app': 'exile', 'models': ('page', 'item', 'subitem', 'menu')},
+         {'label': 'Configuracion', 'icon':'icon-cog', 'models': ('exile.itemseccion',)},
+         {'label': 'Principal', 'icon':'icon-star', 'models': ('exile.menuprincipal', 'exile.paginaprincipal')},
+    ),
 
     # misc
     'LIST_PER_PAGE': 15
@@ -108,11 +111,14 @@ WSGI_APPLICATION = 'webpage.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+        'ENGINE': 'django.db.backends.postgresql_psycopg2',
+        'NAME': 'webpage',
+        'USER': 'postgres',
+        'PASSWORD': 'Exile*74522547',
+        'HOST': '104.236.33.228',
+        'POST': '5432'
     }
 }
-
 
 # Password validation
 # https://docs.djangoproject.com/en/1.10/ref/settings/#auth-password-validators

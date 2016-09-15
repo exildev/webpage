@@ -1,5 +1,7 @@
 {% extends "exile/index.html" %}
+{% load menu_filter %}
 {% block boby %}
-{% endblock %}
-{% block footer %}
+  {% for c in contenido|contenido_tag %}
+      {{c.contenido|safe}}
+  {% endfor%}
 {% endblock %}

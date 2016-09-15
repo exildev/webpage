@@ -7,15 +7,15 @@
         function menuOnClick(e){
             var menu_li = exile.querySelectorAll('.header nav > ul > li');
             for (var i = 0; i < menu_li.length; i++){
-                if(menu_li[i] == e.path[1]){
-                    e.path[1].classList.toggle('selected');
+                if(menu_li[i] == e.target.parentElement){
+                    e.target.parentElement.classList.toggle('selected');
                 }else
                 if(menu_li[i].classList.contains('selected')){
                     menu_li[i].classList.remove('selected');
                 }
             }
 
-            e.preventDefault();
+            // e.preventDefault();
         }
         var c = exile.querySelector('.content');
         var h = exile.querySelector('.header');
@@ -28,7 +28,7 @@
                 }
             }
         }, false);
-        var menu_li = exile.querySelectorAll('.header nav > ul > li');
+        var menu_li = exile.querySelectorAll('.header nav > ul > li > a');
         for (var i = 0; i < menu_li.length; i++){
             menu_li[i].addEventListener('click', menuOnClick, false);
         }

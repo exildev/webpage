@@ -7,7 +7,14 @@ import forms
 class SeccionStack(admin.StackedInline):
     model = models.Seccion
     form = forms.SeccionForm
+    fieldsets = [
+       (None, {'fields': ['nombre', 'posicion']}),
 
+       ('CK Editor', {
+           'classes': ('full-width',),
+           'description': 'Escribir su codigo html aqui',
+           'fields': ['contenido']})
+       ]
 # end class
 
 
