@@ -1,5 +1,12 @@
 {% extends "base.html" %}
 {% load menu_filter %}
+{% block style %}
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="{% static "exile/resources/css/contacto.css" %}">
+{% endblock %}
+{% block script %}
+    <script src="{% static "exile/js/contacto.js" %}" charset="utf-8"></script>
+{% endblock %}
 {% block menu %}
 <ul>
     {% for i in menu|items_tag %}

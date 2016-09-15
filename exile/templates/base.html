@@ -6,12 +6,17 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <title>Exile</title>
-    <script src="http://localhost:35729/livereload.js" charset="utf-8"></script>
-    <script src="{% static "exile/resources/js/exile.js" %}" charset="utf-8"></script>
     <link rel="stylesheet" href="{% static "exile/resources/css/exile.css" %}" media="screen" title="no title" charset="utf-8">
     <link href="https://fonts.googleapis.com/css?family=Roboto+Condensed:300|Roboto:300" rel="stylesheet">
-    <script src="{% static "exile/resources/js/slide.js" %}" charset="utf-8"></script>
     <link rel="stylesheet" href="{% static "exile/resources/css/slide.css" %}">
+    {% block style %}
+    {% endblock %}
+    <script src="http://localhost:35729/livereload.js" charset="utf-8"></script>
+    <script src="{% static "exile/resources/js/exile.js" %}" charset="utf-8"></script>
+    <script src="{% static "exile/resources/js/slide.js" %}" charset="utf-8"></script>
+    {% block script %}
+    {% endblock %}
+
 </head>
 
 <body class="hidden">
@@ -20,7 +25,15 @@
             <div class="row">
                 <div class="col-12 top-header" >
                     <div class="right social">
-                        {% include "exile/social.html" %}
+                        <span>Sigenos en: </span>
+                        <ul>
+                            <li><a href="#"><span></span>Facebook</a></li>
+                            <li><a href="#"><span></span>Github</a></li>
+                            <li><a href="#"><span></span>Twitter</a></li>
+                            <li><a href="#"><span></span>LinkedIn</a></li>
+                            <li><a href="#"><span></span>Youtube</a></li>
+                            <li><a href="#"><span></span>Google+</a></li>
+                        </ul>
                     </div>
                 </div>
             </div>
@@ -154,7 +167,7 @@
                                 <div class="sub"></div>
                             </li>
                         </ul>
-                        {% endblock %}
+                            {% endblock %}
                     </nav>
                 </div>
             </div>
@@ -191,12 +204,8 @@
 
             </div>
             <div class="row">
-                <div class="col-12 nosotros center">
+                <div class="col-12 nosotros">
                     <h2>nosotros</h2>
-                    <a href="" class="btn">Button</a>
-                    <button type="button" name="button">Button</button>
-                    <input type="button" name="name" value="Button">
-                    <input type="submit" name="name" value="Button">
                 </div>
             </div>
             <div class="row">
@@ -252,9 +261,8 @@
             </div>
             {% endblock %}
             <footer class="rowf card">
-
+            {% block footer %}
                 <div class="row">
-                    {% block footer %}
                     <div class="col-3">
                         <h3>Servicios</h3>
                         <ul>
@@ -341,17 +349,24 @@
                             </li>
                         </ul>
                     </div>
-                    {% endblock %}
                 </div>
                 <div class="row power">
                     <div class="col-2">
-                        2016 Power by Exile dfsd
+                        2016 Power by Exile
                     </div>
                     <div class="col-10 right social">
-                        {% include "exile/social.html" %}
+                        <span>Sigenos en: </span>
+                        <ul>
+                            <li><a href="#"><span></span>Facebook</a></li>
+                            <li><a href="#"><span></span>Github</a></li>
+                            <li><a href="#"><span></span>Twitter</a></li>
+                            <li><a href="#"><span></span>LinkedIn</a></li>
+                            <li><a href="#"><span></span>Youtube</a></li>
+                            <li><a href="#"><span></span>Google+</a></li>
+                        </ul>
                     </div>
                 </div>
-
+            {% endblock %}
             </footer>
         </div>
     </body>
