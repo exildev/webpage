@@ -64,7 +64,7 @@ SUIT_CONFIG = {
     'MENU': (
          'sites',
          {'app': 'auth', 'icon':'icon-lock', 'models': ('user', 'group')},
-         {'label': 'Settings', 'icon':'icon-cog', 'models': ('auth.user', 'auth.group')},
+         #{'label': 'Settings', 'icon':'icon-cog', 'models': ('auth.user', 'auth.group')},
          {'app': 'exile', 'models': ('page', 'item', 'itemseccion', 'subitem', 'menu', 'menuprincipal', 'paginaprincipal')}
     ),
 
