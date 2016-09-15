@@ -22,6 +22,7 @@ class SeccionAdmin(admin.ModelAdmin):
     list_display = ('nombre', 'pagina', 'posicion')
     search_fields = ('nombre',)
     list_filter = ('pagina', )
+    form = forms.SeccionForm
 # end class
 
 
