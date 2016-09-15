@@ -1,6 +1,6 @@
 from markdownx.widgets import AdminMarkdownxWidget
 from django.contrib import admin
-from django.db import models
+from django.db import models as model
 import models
 import forms
 # Register your models here.
@@ -25,7 +25,7 @@ class SeccionAdmin(admin.ModelAdmin):
     search_fields = ('nombre',)
     list_filter = ('pagina', )
     formfield_overrides = {
-       models.TextField: {'widget': AdminMarkdownxWidget},
+       model.TextField: {'widget': AdminMarkdownxWidget},
     }
 # end class
 
