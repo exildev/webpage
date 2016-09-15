@@ -34,7 +34,7 @@ ALLOWED_HOSTS = []
 
 INSTALLED_APPS = [
     'suit',
-    'suit_ckeditor',
+    'suit_redactor',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -66,7 +66,7 @@ SUIT_CONFIG = {
     'MENU': (
          'sites',
          {'app': 'auth', 'icon':'icon-lock', 'models': ('user', 'group')},
-         {'app': 'exile', 'models': ('page', 'item', 'subitem', 'menu')},
+         {'app': 'exile', 'models': ('page', 'seccion','item', 'subitem', 'menu')},
          {'label': 'Configuracion', 'icon':'icon-cog', 'models': ('exile.itemseccion',)},
          {'label': 'Principal', 'icon':'icon-star', 'models': ('exile.menuprincipal', 'exile.paginaprincipal')},
     ),

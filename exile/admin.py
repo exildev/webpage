@@ -18,6 +18,14 @@ class SeccionStack(admin.StackedInline):
 # end class
 
 
+class SeccionAdmin(admin.ModelAdmin):
+    list_display = ('nombre', 'pagina', 'posicion')
+    search_fields = ('nombre',)
+    list_filter = ('pagina', )
+    form = forms.SeccionForm
+# end class
+
+
 class PageAdmin(admin.ModelAdmin):
     search_fields = ('nombre',)
     inlines = [
@@ -68,6 +76,7 @@ class PaginaPrincipalAdmin(admin.ModelAdmin):
 
 
 admin.site.register(models.Page, PageAdmin)
+admin.site.register(models.Seccion, SeccionAdmin)
 admin.site.register(models.Item, ItemAdmin)
 admin.site.register(models.SubItem, SubitemAdmin)
 admin.site.register(models.ItemSeccion)
