@@ -25,7 +25,7 @@ $('#form-close, .form-overlay').click(function(e) {
 function toggleForm(){
   $(formContainer).toggleClass('expand');
   $(formContainer).children().toggleClass('expand');
-  $('body').toggleClass('show-form-overlay');
+  $('.contacto').toggleClass('show-form-overlay');
   $('.form-submitted').removeClass('form-submitted');
 }
 
@@ -51,7 +51,7 @@ $('form').submit(function() {
   });
 
   if (!formError) {
-    $('body').addClass('form-submitted');
+    $('.contacto').addClass('form-submitted');
     $('#form-head').addClass('form-submitted');
     setTimeout(function(){
       $(form).trigger("reset");
