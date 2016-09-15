@@ -29,7 +29,7 @@
                       <ul>
                           {% for s in i|subitems_tag:None %}
                           <li>
-                              <a href="/page/{{s.id}}/">{{s.nombre}}</a>
+                              <a href="/page/{{s.pagina.id}}/">{{s.nombre}}</a>
                           </li>
                           {% endfor %}
                       </ul>
