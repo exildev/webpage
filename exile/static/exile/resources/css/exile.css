@@ -36,7 +36,8 @@ h4,
 h5,
 h6 {
   font-family: 'Roboto', sans-serif;
-  color: #30158b; }
+  color: #30158b;
+  text-transform: uppercase; }
 
 #sheet {
   display: flex;

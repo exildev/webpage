@@ -15,7 +15,7 @@
                 }
             }
 
-            e.preventDefault();
+            // e.preventDefault();
         }
         var c = exile.querySelector('.content');
         var h = exile.querySelector('.header');
