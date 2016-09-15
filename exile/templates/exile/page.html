@@ -2,8 +2,6 @@
 {% load menu_filter %}
 {% block boby %}
   {% for c in contenido|contenido_tag %}
-    {% autoescape off %}
-      {{c.contenido|escape}}
-    {% endautoescape %}
+      {{c.contenido|safe}}
   {% endfor%}
 {% endblock %}
