@@ -1,27 +1,5 @@
-
-.form-overlay {
-  width: 0%;
-  height: 100%;
-  top: 0;
-  left: 0;
-  position: fixed;
-  opacity: 0;
-  background: #000;
-  -webkit-transition: background 1s, opacity 0.4s, width 0s 0.4s;
-  transition: background 1s, opacity 0.4s, width 0s 0.4s;
-}
-
-.show-form-overlay .form-overlay {
-  width: 100%;
-  opacity: 0.7;
-  z-index: 999;
-  -webkit-transition: background 1s, opacity 0.4s, width 0s;
-  transition: background 1s, opacity 0.4s, width 0s;
-}
-.show-form-overlay.form-submitted .form-overlay {
-  background: #119DA4;
-  -webkit-transition: background 0.6s;
-  transition: background 0.6s;
+.form-contacto{
+  height: 500px; 
 }
 
 #form-container {
@@ -45,9 +23,9 @@
   cursor: auto;
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.17);
   border-radius: 0;
-  width: 70%;
-  height: 610px;
-  max-width: 610px;
+  width: 99%;
+  height: 100%;
+  max-width: 100%;
   padding: 0;
   -webkit-transition: all 0.2s, max-width 0.2s cubic-bezier(0.4, 0, 0.2, 1) 0.1s, height 0.3s ease 0.25s;
   transition: all 0.2s, max-width 0.2s cubic-bezier(0.4, 0, 0.2, 1) 0.1s, height 0.3s ease 0.25s;
@@ -209,7 +187,7 @@ input, select, textarea {
 
 .input.message {
   resize: none;
-  height: 150px;
+  height: 75px;
   padding: 10px;
 }
 
@@ -233,20 +211,6 @@ input, select, textarea {
   -webkit-animation: error 0.8s ease;
           animation: error 0.8s ease;
   background: rgba(0, 0, 0, 0.7);
-}
-
-select option {
-  background: #f72f4e;
-  color: #FFF;
-  border: none;
-  box-shadow: none;
-  outline: none;
-}
-
-select option:disabled {
-  font-style: italic;
-  color: rgba(255, 255, 255, 0.9);
-  font-size: 90%;
 }
 
 .input {
@@ -309,11 +273,7 @@ input:-webkit-autofill {
             animation: none;
   }
 
-  .form-overlay {
-    display: none;
-    -webkit-transition: none;
-    transition: none;
-  }
+
 }
 @-webkit-keyframes error {
   0%, 100% {
