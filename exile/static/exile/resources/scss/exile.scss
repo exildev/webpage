@@ -36,6 +36,9 @@ h6 {
     font-family: 'Roboto', sans-serif;
     color: $accent;
     text-transform: uppercase;
+    .header &{
+        color: white;
+    }
 }
 
 #sheet {
@@ -209,15 +212,27 @@ h6 {
     justify-content: center;
 }
 
+.bottom {
+    display: flex;
+    align-items: flex-end;
+}
+
 .card {
-    padding: 16px;
+    width: 99%;
+    padding: 40px 0;
     @extend %shadow;
     border-radius: $radio;
     background: white;
-    margin-top: 4px;
-    margin-bottom: 4px;
+    margin-top: 16px;
+    margin-bottom: 16px;
+    p, h2{
+        font-size: larger;
+        padding-left: 16px;
+    }
 }
-
+.pd{
+    padding: 16px;
+}
 footer {
     &.card {
         width: 99%;
@@ -302,5 +317,5 @@ a.btn, button, input[type=button], input[type=submit]{
 }
 
 video {
-    background: black;
+    background: white;
 }

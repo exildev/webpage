@@ -38,6 +38,13 @@ h6 {
   font-family: 'Roboto', sans-serif;
   color: #30158b;
   text-transform: uppercase; }
+  .header h1, .header
+  h2, .header
+  h3, .header
+  h4, .header
+  h5, .header
+  h6 {
+    color: white; }
 
 #sheet {
   display: flex;
@@ -190,12 +197,23 @@ h6 {
   display: flex;
   justify-content: center; }
 
+.bottom {
+  display: flex;
+  align-items: flex-end; }
+
 .card {
-  padding: 16px;
+  width: 99%;
+  padding: 40px 0;
   border-radius: 3px;
   background: white;
-  margin-top: 4px;
-  margin-bottom: 4px; }
+  margin-top: 16px;
+  margin-bottom: 16px; }
+  .card p, .card h2 {
+    font-size: larger;
+    padding-left: 16px; }
+
+.pd {
+  padding: 16px; }
 
 footer.card {
   width: 99%;
@@ -258,6 +276,6 @@ a.btn, button, input[type=button], input[type=submit] {
     color: #30158b; }
 
 video {
-  background: black; }
+  background: white; }
 
 /*# sourceMappingURL=exile.css.map */
