@@ -38,11 +38,10 @@ def subItemsSeccion(item):
 
 @register.filter(name="col_num")
 def colNum(total, col):
-    print total, col
     if total == 0:
         num = col
     else:
         num = col/total
     # end if
-    return col
+    return num
 # end def
