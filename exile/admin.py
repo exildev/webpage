@@ -8,10 +8,6 @@ import forms
 
 class SeccionStack(admin.StackedInline):
     model = models.Seccion
-
-    class Media:
-        js = ('exile/js/jquery.min.js',)
-    # end class
 # end class
 
 
@@ -22,10 +18,6 @@ class SeccionAdmin(admin.ModelAdmin):
     formfield_overrides = {
        model.TextField: {'widget': AdminMarkdownxWidget},
     }
-
-    class Media:
-        js = ('exile/js/jquery.min.js',)
-    # end class
 # end class
 
 
