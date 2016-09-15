@@ -78,7 +78,7 @@ SUIT_CONFIG = {
     'LIST_PER_PAGE': 15
 }
 
-
+"""
 # Markdownify
 # Default function that compiles markdown using defined extensions. Using
 # custom function can allow you to pre-process or post-process markdown
@@ -112,6 +112,7 @@ MARKDOWNX_IMAGE_MAX_SIZE = {'size': (500, 500), 'quality': 90, }
 # Editor
 # Update editor's height to inner content height while typing
 MARKDOWNX_EDITOR_RESIZABLE = True
+"""
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
