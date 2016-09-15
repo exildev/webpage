@@ -208,7 +208,7 @@ h6 {
   background: white;
   margin-top: 16px;
   margin-bottom: 16px; }
-  .card p, .card h2 {
+  .card p, .card h2, .card h4 {
     font-size: larger;
     padding-left: 16px; }
 
