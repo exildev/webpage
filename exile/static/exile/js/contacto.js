@@ -2,6 +2,7 @@ var formContainer = $('#form-container');
 
 //Opening the form
 function bindFormClick(){
+  console.log("cargada");
   $(formContainer).on('click', function(e) {
     e.preventDefault();
     toggleForm();
