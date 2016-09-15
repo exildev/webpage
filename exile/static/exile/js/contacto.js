@@ -1,8 +1,10 @@
 var formContainer = $('#form-container');
 
+
+bindFormClick();
 //Opening the form
 function bindFormClick(){
-  console.log("cargada");
+  console.log("contacto form");
   $(formContainer).on('click', function(e) {
     e.preventDefault();
     toggleForm();
