@@ -20,6 +20,7 @@ import settings
 
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
+    url(r'^tinymce/', include('tinymce.urls')),
     url(r'^', include('exile.urls')),
 ]
 
