@@ -1,7 +1,7 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
 from django import forms
-from suit_ckeditor.widgets import CKEditorWidget
+from suit_redactor.widgets import RedactorWidget
 import models
 
 
@@ -22,7 +22,7 @@ class SeccionForm(forms.ModelForm):
         model = models.Seccion
         exclude = ()
         widgets = {
-            'contenido': CKEditorWidget(editor_options=ck_editor_config)
+            'contenido': RedactorWidget
         }
     # end class
 # end class
