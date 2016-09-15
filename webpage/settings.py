@@ -1,3 +1,5 @@
+#!/usr/bin/env python
+# -*- coding: utf-8 -*-
 """
 Django settings for webpage project.
 
@@ -64,8 +66,9 @@ SUIT_CONFIG = {
     'MENU': (
          'sites',
          {'app': 'auth', 'icon':'icon-lock', 'models': ('user', 'group')},
-         #{'label': 'Settings', 'icon':'icon-cog', 'models': ('auth.user', 'auth.group')},
-         {'app': 'exile', 'models': ('page', 'item', 'itemseccion', 'subitem', 'menu', 'menuprincipal', 'paginaprincipal')}
+         {'app': 'exile', 'models': ('page', 'item', 'subitem', 'menu')},
+         {'label': 'Configuración', 'icon':'icon-cog', 'models': ('exile.itemseccion')},
+         {'label': 'Principal', 'icon':'icon-star', 'models': ('exile.menuprincipal', 'exile.paginaprincipal')},
     ),
 
     # misc
