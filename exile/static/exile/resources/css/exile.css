@@ -276,6 +276,18 @@ a.btn, button, input[type=button], input[type=submit] {
     color: #30158b; }
 
 video {
-  background: white; }
+  background: #848385; }
+
+.title {
+  background: white;
+  background-image: url(../img/Aqua-ux-787980_1920.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 100%;
+  height: 400px;
+  margin-top: -16px;
+  display: flex;
+  justify-content: center;
+  align-items: center; }
 
 /*# sourceMappingURL=exile.css.map */
