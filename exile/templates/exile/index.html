@@ -8,21 +8,30 @@
         <div class="sub">
             <div class="row">
                 <div class="col-6"></div>
-                {% for t in i|subseccion_tag %}
-                <div class="col-{{i|subseccion_tag|length|col_num:6}}">
-                    {% if t is not None %}
-                    <h3>{{t.nombre}}</h3> {% endif %}
-                    <ul>
-                        <ul>
-                            {% for s in i|subitems_tag:t %}
-                            <li>
-                                <a href="/page/{{s.id}}/">{{s.nombre}}</a>
-                            </li>
-                            {% endfor %}
-                        </ul>
-                    </ul>
-                </div>
-                {% endfor %}
+                {% if i|subseccion_tag|length > 0 %}
+                  {% for t in i|subseccion_tag %}
+                  <div class="col-{{i|subseccion_tag|length|col_num:6}}">
+                      <h3>{{t.nombre}}</h3>
+                      <ul>
+                          {% for s in i|subitems_tag:t %}
+                          <li>
+                              <a href="/page/{{s.id}}/">{{s.nombre}}</a>
+                          </li>
+                          {% endfor %}
+                      </ul>
+                  </div>
+                  {% endfor %}
+                {% else %}
+                  <div class="col-6">
+                      <ul>
+                          {% for s in i|subitems_tag:None %}
+                          <li>
+                              <a href="/page/{{s.id}}/">{{s.nombre}}</a>
+                          </li>
+                          {% endfor %}
+                      </ul>
+                  </div>
+                {% endif %}
             </div>
         </div>
         {% endif %}
