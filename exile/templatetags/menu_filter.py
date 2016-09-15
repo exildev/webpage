@@ -11,7 +11,10 @@ def ordenItem(menu):
 
 @register.filter(name="subitems_tag")
 def ordenSubItem(item, seccion):
-    return item.subitems.all().filter(ordensubitem__seccion=seccion).order_by('ordensubitem__posicion')
+    if seccion:
+        return item.subitems.all().filter(ordensubitem__seccion=seccion).order_by('ordensubitem__posicion')
+    # end if
+    return item.subitems.all().order_by('ordensubitem__posicion')
 # end def
 
 
