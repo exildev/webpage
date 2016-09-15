@@ -1,7 +1,9 @@
 var formContainer = $('#form-container');
 
 
-bindFormClick();
+$(document).ready(function() {
+  bindFormClick();
+});
 //Opening the form
 function bindFormClick(){
   $(formContainer).on('click', function(e) {
