@@ -1,1 +1,136 @@
 {% extends "base.html" %}
+{% load static %}
+{% load menu_filter %}
+{% block style %}
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="{% static "exile/resources/css/contacto.css" %}">
+{% endblock %}
+{% block menu %}
+<ul>
+    {% for i in menu|items_tag %}
+    <li>
+      <a href="{% if i.principal %}/page/{{i.principal.id}}/{% else %}#{% endif %}">
+        {{i.nombre}}<span></span>
+      </a>
+      {% if i.subitems.all|length > 0 %}
+        <div class="sub">
+            <div class="row">
+                <div class="col-6"></div>
+                {% if i|subseccion_tag|length > 0 %}
+                  {% for t in i|subseccion_tag %}
+                  <div class="col-{{i|subseccion_tag|length|col_num:6}}">
+                      <h3>{{t.nombre}}</h3>
+                      <ul>
+                          {% for s in i|subitems_tag:t %}
+                          <li>
+                              <a href="/page/{{s.pagina.id}}/">{{s.nombre}}</a>
+                          </li>
+                          {% endfor %}
+                      </ul>
+                  </div>
+                  {% endfor %}
+                {% else %}
+                  <div class="col-6">
+                      <ul>
+                          {% for s in i|subitems_tag:None %}
+                          <li>
+                              <a href="/page/{{s.pagina.id}}/">{{s.nombre}}</a>
+                          </li>
+                          {% endfor %}
+                      </ul>
+                  </div>
+                {% endif %}
+            </div>
+        </div>
+        {% endif %}
+    </li>
+    {% endfor %}
+</ul>
+{% endblock %} {% block boby %} {% for c in contenido|contenido_tag %} {{c.contenido|safe}} {% endfor%} {% endblock %} {% block footer %}
+<div class="col-3">
+    <h3>Servicios</h3>
+    <ul>
+        <li>
+            <a href="#">Digitalización de procesos de negocios</a>
+        </li>
+        <li>
+            <a href="#">Apps móviles</a>
+        </li>
+        <li>
+            <a href="#">Apps web</a>
+        </li>
+        <li>
+            <a href="#">Data & analytics</a>
+        </li>
+        <li>
+            <a href="#">Internet de las cosas IoT</a>
+        </li>
+        <li>
+            <a href="#">Integración a soluciones hardware</a>
+        </li>
+        <li>
+            <a href="#">Sistemas de información geográfica</a>
+        </li>
+        <li>
+            <a href="#">Digitalización</a>
+        </li>
+    </ul>
+</div>
+<div class="col-3">
+    <h3>Productos</h3>
+    <ul>
+        <li>
+            <a href="#">Huella</a>
+        </li>
+        <li>
+            <a href="#">Picix</a>
+        </li>
+        <li>
+            <a href="#">Lapix</a>
+        </li>
+        <li>
+            <a href="#">GeoActivos</a>
+        </li>
+    </ul>
+</div>
+<div class="col-3">
+    <h3>Experiencia</h3>
+    <ul>
+        <li>
+            <a href="#">Servicios Públicos</a>
+        </li>
+        <li>
+            <a href="#">Minería</a>
+        </li>
+        <li>
+            <a href="#">Gestión Ambiental</a>
+        </li>
+        <li>
+            <a href="#">Mensajería y Logística</a>
+        </li>
+        <li>
+            <a href="#">Inventario y Mantenimiento</a>
+        </li>
+        <li>
+            <a href="#">Georeferenciación</a>
+        </li>
+    </ul>
+</div>
+<div class="col-3">
+    <h3>Nosotros</h3>
+    <ul>
+        <li>
+            <a href="#">Misión</a>
+        </li>
+        <li>
+            <a href="#">Visión</a>
+        </li>
+        <li>
+            <a href="#">Valores</a>
+        </li>
+        <li>
+            <a href="#">Objetivos</a>
+        </li>
+    </ul>
+</div>
+{% endblock %}

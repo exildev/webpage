@@ -24,6 +24,7 @@ class Page(models.Model):
 class Seccion(models.Model):
     pagina = models.ForeignKey(Page)
     nombre = models.CharField(max_length=400)
+    posicion = models.IntegerField()
     contenido = models.TextField()
 
     class Meta:
@@ -123,4 +124,18 @@ class MenuPrincipal(models.Model):
 
     def __unicode__(self):
         return u"%s" % (self.menu.nombre)
+# end class
+
+
+class PaginaPrincipal(models.Model):
+    pagina = models.OneToOneField(Page)
+    fecha = models.DateField(auto_now_add=True)
+
+    class Meta:
+        verbose_name = "Pagina principal"
+        verbose_name_plural = "Pagina principal"
+    # end class
+
+    def __unicode__(self):
+        return u"%s" % (self.pagina.nombre)
 # end class

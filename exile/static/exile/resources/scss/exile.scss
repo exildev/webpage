@@ -16,6 +16,7 @@ html {
     margin: 0;
     font-family: 'Roboto Condensed', sans-serif;
     background: #d4e8e3;
+    color: #333;
 }
 
 body {
@@ -33,6 +34,11 @@ h4,
 h5,
 h6 {
     font-family: 'Roboto', sans-serif;
+    color: $accent;
+    text-transform: uppercase;
+    .header &{
+        color: white;
+    }
 }
 
 #sheet {
@@ -65,6 +71,16 @@ h6 {
             border-radius: 0 0 $radio $radio;
             @extend %shadow;
             transition: top 0.2s;
+            .social{
+                color: #333;
+                padding: 12px;
+                > span{
+                    margin-top: 4px;
+                }
+                a > span{
+                    vertical-align: sub;
+                }
+            }
         }
 
         .memu {
@@ -196,15 +212,27 @@ h6 {
     justify-content: center;
 }
 
+.bottom {
+    display: flex;
+    align-items: flex-end;
+}
+
 .card {
-    padding: 16px;
+    width: 99%;
+    padding: 40px 0;
     @extend %shadow;
     border-radius: $radio;
     background: white;
-    margin-top: 4px;
-    margin-bottom: 4px;
+    margin-top: 16px;
+    margin-bottom: 16px;
+    p, h2{
+        font-size: larger;
+        padding-left: 16px;
+    }
 }
-
+.pd{
+    padding: 16px;
+}
 footer {
     &.card {
         width: 99%;
@@ -251,4 +279,43 @@ ul {
             padding: 4px 8px;
         }
     }
+}
+.social {
+    a > span {
+        vertical-align: sub;
+        margin-right: 2px;
+    }
+}
+
+a.btn, button, input[type=button], input[type=submit]{
+    font-family: 'Roboto Condensed', sans-serif;
+    padding: 10px 30px;
+    margin: 0 4px;
+    color: white;
+    background: #30158b;
+    border: 1px solid transparent;
+    font-size: 18px;
+    text-transform: capitalize;
+    text-decoration: none;
+    cursor: pointer;
+    text-align: center;
+    display: inline-block;
+    @extend %shadow;
+    border-radius: $radio;
+    transition: all .2s;
+    &:hover{
+        background: lighten($accent, 10%)
+    }
+    &:active{
+        box-shadow: none;
+    }
+    &.outline{
+        background: transparent;
+        border: 1px solid $accent;
+        color: $accent;
+    }
+}
+
+video {
+    background: white;
 }
