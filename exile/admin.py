@@ -1,3 +1,4 @@
+from markdownx.widgets import AdminMarkdownxWidget
 from django.contrib import admin
 from django.db import models as model
 import models
@@ -7,7 +8,10 @@ import forms
 
 class SeccionStack(admin.StackedInline):
     model = models.Seccion
-    form = forms.SeccionForm
+    formfield_overrides = {
+       model.TextField: {'widget': AdminMarkdownxWidget},
+    }
+
     fieldsets = [
        (None, {'fields': ['nombre', 'posicion']}),
        ('Editor', {
@@ -25,7 +29,9 @@ class SeccionAdmin(admin.ModelAdmin):
     list_display = ('nombre', 'pagina', 'posicion')
     search_fields = ('nombre',)
     list_filter = ('pagina', )
-    form = forms.SeccionForm
+    formfield_overrides = {
+       model.TextField: {'widget': AdminMarkdownxWidget},
+    }
 
     class Media:
         js = ('exile/js/jquery.min.js',)

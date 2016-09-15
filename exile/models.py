@@ -2,6 +2,7 @@
 # -*- coding: utf-8 -*-
 from __future__ import unicode_literals
 from django.db import models
+from markdownx.models import MarkdownxField
 
 # Create your models here.
 
@@ -24,7 +25,7 @@ class Seccion(models.Model):
     pagina = models.ForeignKey(Page)
     nombre = models.CharField(max_length=400)
     posicion = models.IntegerField()
-    contenido = models.TextField()
+    contenido = MarkdownxField()
 
     class Meta:
         verbose_name = "Sección"
