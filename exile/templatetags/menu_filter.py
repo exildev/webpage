@@ -32,13 +32,13 @@ def subItemsSeccion(item):
                 secciones.append(orden.seccion)
             # end if
     # end if
-    print secciones
     return secciones
 # end def
 
 
 @register.filter(name="col_num")
 def colNum(total, col):
+    print total, col
     if total == 0:
         num = col
     else:
