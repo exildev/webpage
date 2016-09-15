@@ -23,6 +23,11 @@ class PageAdmin(admin.ModelAdmin):
     inlines = [
         SeccionStack,
     ]
+
+    class Media:
+        css = {
+            'all': ('exile/resources/css/exile.css', )
+        }
 # end class
 
 

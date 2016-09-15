@@ -11,8 +11,6 @@ def ordenItem(menu):
 
 @register.filter(name="subitems_tag")
 def ordenSubItem(item, seccion):
-    print item
-    print seccion
     if seccion:
         return item.subitems.all().filter(ordensubitem__seccion=seccion).order_by('ordensubitem__posicion')
     # end if
