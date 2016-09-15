@@ -1,9 +1,8 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
 from __future__ import unicode_literals
-
 from django.db import models
-from tinymce.models import HTMLField
+from markdownx.models import MarkdownxField
 
 # Create your models here.
 
@@ -26,7 +25,7 @@ class Seccion(models.Model):
     pagina = models.ForeignKey(Page)
     nombre = models.CharField(max_length=400)
     posicion = models.IntegerField()
-    contenido = HTMLField()
+    contenido = MarkdownxField()
 
     class Meta:
         verbose_name = "Sección"
