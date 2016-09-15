@@ -54,9 +54,16 @@ class MenuPrincipalAdmin(admin.ModelAdmin):
     list_display = ('menu', 'fecha')
 # end class
 
+
+class PaginaPrincipalAdmin(admin.ModelAdmin):
+    list_display = ('pagina', 'fecha')
+# end class
+
+
 admin.site.register(models.Page, PageAdmin)
 admin.site.register(models.Item, ItemAdmin)
 admin.site.register(models.SubItem, SubitemAdmin)
 admin.site.register(models.ItemSeccion)
 admin.site.register(models.Menu, MenuAdmin)
 admin.site.register(models.MenuPrincipal, MenuPrincipalAdmin)
+admin.site.register(models.PaginaPrincipal, PaginaPrincipalAdmin)
