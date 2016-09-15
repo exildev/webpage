@@ -20,7 +20,7 @@ class SeccionStack(admin.StackedInline):
            'fields': ['contenido']})]
 
     class Media:
-        js = ('exile/js/jquery.min.js',)
+        js = ('exile/js/jquery-2.1.1.min.js',)
     # end class
 # end class
 
@@ -34,7 +34,7 @@ class SeccionAdmin(admin.ModelAdmin):
     }
 
     class Media:
-        js = ('exile/js/jquery.min.js',)
+        js = ('exile/jquery-2.1.1.min.js',)
     # end class
 # end class
 
