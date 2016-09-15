@@ -1,5 +1,5 @@
 .form-contacto{
-  height: 500px; 
+  height: 500px;
 }
 
 #form-container {
@@ -8,7 +8,7 @@
   z-index: 1000;
   margin: 0 auto;
   bottom: 5vh;
-  background-color: #f72f4e;
+  background-color: #023147;
   overflow: hidden;
   border-radius: 50%;
   width: 60px;
@@ -193,7 +193,7 @@ input, select, textarea {
 
 .input.submit {
   background-color: #FFF;
-  color: #f72f4e;
+  color: #B94735;
   font-size: 120%;
   height: 80px;
   box-shadow: 0 5px rgba(0, 0, 0, 0.5);
