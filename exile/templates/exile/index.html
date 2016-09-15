@@ -1,1 +1,29 @@
 {% extends "base.html" %}
+{% block menu %}
+<ul>
+  {% for i in menu.items.all %}
+    <li>
+      <a href="#">
+        {{i.nombre}}<span></span>
+      </a>
+      {% if i.subitems.all|length > 0 %}
+      <div class="sub">
+          <div class="row">
+            <div class="col-6"></div>
+            <div class="col-6">
+              <h3>Titulo</h3>
+              <ul>
+                 {% for s in i.subitems.all %}
+                 <li>
+                   <a href="/page/{{s.id}}/">{{s.nombre}}</a>
+                 </li>
+                 {% endfor %}
+              </ul>
+            </div>
+          </div>
+      </div>
+      {% endif %}
+    </li>
+  {% endfor %}
+</ul>
+{% endblock %}
