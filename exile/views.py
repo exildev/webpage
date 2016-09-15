@@ -7,11 +7,8 @@ import models
 def index(request):
     principal = models.MenuPrincipal.objects.all().first()
     home = models.PaginaPrincipal.objects.all().first()
-
-    if principal:
-        items = models.OrdenItem.objects.filter(menu=principal.menu).first()
     # end if
-    return render(request, 'exile/index.html', {'contenido': principal.pagina, 'items': items})
+    return render(request, 'exile/index.html', {'contenido': home.pagina, 'menu': principal.menu})
 # end def
 
 
