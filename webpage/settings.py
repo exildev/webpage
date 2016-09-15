@@ -47,33 +47,71 @@ INSTALLED_APPS = [
 # Django Suit configuration example
 SUIT_CONFIG = {
     # header
-     'ADMIN_NAME': 'Exile page',
-     'HEADER_DATE_FORMAT': 'l, j. F Y',
-     'HEADER_TIME_FORMAT': 'H:i',
+    'ADMIN_NAME': 'Exile page',
+    'HEADER_DATE_FORMAT': 'l, j. F Y',
+    'HEADER_TIME_FORMAT': 'H:i',
 
     # forms
-     'SHOW_REQUIRED_ASTERISK': True,  # Default True
-     'CONFIRM_UNSAVED_CHANGES': True, # Default True
+    'SHOW_REQUIRED_ASTERISK': True,  # Default True
+    'CONFIRM_UNSAVED_CHANGES': True,  # Default True
 
     # menu
     # 'SEARCH_URL': '/admin/auth/user/',
-     'MENU_ICONS': {
+    'MENU_ICONS': {
         'auth': 'icon-lock',
         'exile': 'icon-fire'
-     },
+    },
     # 'MENU_OPEN_FIRST_CHILD': True, # Default True
     # 'MENU_EXCLUDE': ('auth.group',),
     'MENU': (
-         'sites',
-         {'app': 'auth', 'icon':'icon-lock', 'models': ('user', 'group')},
-         {'app': 'exile', 'models': ('page', 'seccion','item', 'subitem', 'menu')},
-         {'label': 'Configuracion', 'icon':'icon-cog', 'models': ('exile.itemseccion',)},
-         {'label': 'Principal', 'icon':'icon-star', 'models': ('exile.menuprincipal', 'exile.paginaprincipal')},
+        'sites',
+        {'app': 'auth', 'icon': 'icon-lock', 'models': ('user', 'group')},
+        {'app': 'exile', 'models': (
+            'page', 'seccion', 'item', 'subitem', 'menu')},
+        {'label': 'Configuracion', 'icon': 'icon-cog',
+         'models': ('exile.itemseccion',)},
+        {'label': 'Principal', 'icon': 'icon-star',
+         'models': ('exile.menuprincipal', 'exile.paginaprincipal')},
     ),
 
     # misc
     'LIST_PER_PAGE': 15
 }
+
+
+# Markdownify
+# Default function that compiles markdown using defined extensions. Using
+# custom function can allow you to pre-process or post-process markdown
+# text. See below for more info.
+MARKDOWNX_MARKDOWNIFY_FUNCTION = 'markdownx.utils.markdownify'
+
+# Markdown extensions
+# List of used markdown extensions. See below for more info.
+MARKDOWNX_MARKDOWN_EXTENSIONS = []
+# Configuration object for used markdown extensions
+MARKDOWNX_MARKDOWN_EXTENSION_CONFIGS = {}
+
+# Markdown urls
+# URL that returns compiled markdown text.
+MARKDOWNX_URLS_PATH = '/markdownx/markdownify/'
+# URL that accepts file uploads, returns markdown notation of the image.
+MARKDOWNX_UPLOAD_URLS_PATH = '/markdownx/upload/'
+
+# Media path
+# Path, where images will be stored in MEDIA_ROOT folder
+MARKDOWNX_MEDIA_PATH = 'markdownx/'
+
+# Image
+MARKDOWNX_UPLOAD_MAX_SIZE = 52428800  # 50MB - maximum file size
+# Acceptable file content types
+MARKDOWNX_UPLOAD_CONTENT_TYPES = ['image/jpeg', 'image/png']
+# Different options describing final image processing: size, compression
+# etc. See below for more info.
+MARKDOWNX_IMAGE_MAX_SIZE = {'size': (500, 500), 'quality': 90, }
+
+# Editor
+# Update editor's height to inner content height while typing
+MARKDOWNX_EDITOR_RESIZABLE = True
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',

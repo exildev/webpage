@@ -9,14 +9,20 @@ import forms
 class SeccionStack(admin.StackedInline):
     model = models.Seccion
     form = forms.SeccionForm
+    formfield_overrides = {
+       model.TextField: {'widget': AdminMarkdownxWidget},
+    }
+
     fieldsets = [
        (None, {'fields': ['nombre', 'posicion']}),
-
-       ('CK Editor', {
+       ('Editor', {
            'classes': ('full-width',),
            'description': 'Escribir su codigo html aqui',
-           'fields': ['contenido']})
-       ]
+           'fields': ['contenido']})]
+
+    class Media:
+        js = ('exile/js/jquery.min.js',)
+    # end class
 # end class
 
 
@@ -27,6 +33,10 @@ class SeccionAdmin(admin.ModelAdmin):
     formfield_overrides = {
        model.TextField: {'widget': AdminMarkdownxWidget},
     }
+        
+    class Media:
+        js = ('exile/js/jquery.min.js',)
+    # end class
 # end class
 
 
