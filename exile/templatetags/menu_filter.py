@@ -32,6 +32,7 @@ def subItemsSeccion(item):
                 secciones.append(orden.seccion)
             # end if
     # end if
+    print secciones
     return secciones
 # end def
 
