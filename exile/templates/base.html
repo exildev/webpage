@@ -20,15 +20,7 @@
             <div class="row">
                 <div class="col-12 top-header" >
                     <div class="right social">
-                        <span>Sigenos en: </span>
-                        <ul>
-                            <li><a href="#"><span></span>Facebook</a></li>
-                            <li><a href="#"><span></span>Github</a></li>
-                            <li><a href="#"><span></span>Twitter</a></li>
-                            <li><a href="#"><span></span>LinkedIn</a></li>
-                            <li><a href="#"><span></span>Youtube</a></li>
-                            <li><a href="#"><span></span>Google+</a></li>
-                        </ul>
+                        {% include "exile/social.html" %}
                     </div>
                 </div>
             </div>
@@ -199,8 +191,12 @@
 
             </div>
             <div class="row">
-                <div class="col-12 nosotros">
+                <div class="col-12 nosotros center">
                     <h2>nosotros</h2>
+                    <a href="" class="btn">Button</a>
+                    <button type="button" name="button">Button</button>
+                    <input type="button" name="name" value="Button">
+                    <input type="submit" name="name" value="Button">
                 </div>
             </div>
             <div class="row">
@@ -256,8 +252,9 @@
             </div>
             {% endblock %}
             <footer class="rowf card">
-            {% block footer %}
+
                 <div class="row">
+                    {% block footer %}
                     <div class="col-3">
                         <h3>Servicios</h3>
                         <ul>
@@ -344,24 +341,17 @@
                             </li>
                         </ul>
                     </div>
+                    {% endblock %}
                 </div>
                 <div class="row power">
                     <div class="col-2">
-                        2016 Power by Exile
+                        2016 Power by Exile dfsd
                     </div>
                     <div class="col-10 right social">
-                        <span>Sigenos en: </span>
-                        <ul>
-                            <li><a href="#"><span></span>Facebook</a></li>
-                            <li><a href="#"><span></span>Github</a></li>
-                            <li><a href="#"><span></span>Twitter</a></li>
-                            <li><a href="#"><span></span>LinkedIn</a></li>
-                            <li><a href="#"><span></span>Youtube</a></li>
-                            <li><a href="#"><span></span>Google+</a></li>
-                        </ul>
+                        {% include "exile/social.html" %}
                     </div>
                 </div>
-            {% endblock %}
+
             </footer>
         </div>
     </body>
