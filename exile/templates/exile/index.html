@@ -1,7 +1,8 @@
 {% extends "base.html" %}
+{% load menu_filter %}
 {% block menu %}
 <ul>
-  {% for i in menu.items.all %}
+  {% for i in menu|items_tag %}
     <li>
       <a href="#">
         {{i.nombre}}<span></span>
@@ -10,7 +11,7 @@
       <div class="sub">
           <div class="row">
             <div class="col-6"></div>
-            <div class="col-6">
+            <div class="col-3 right">
               <h3>Titulo</h3>
               <ul>
                  {% for s in i.subitems.all %}
@@ -26,6 +27,11 @@
     </li>
   {% endfor %}
 </ul>
+{% endblock %}
+{% block boby %}
+  {% for c in contenido|contenido_tag %}
+        {{c.contenido|safe}}
+  {% endfor%}
 {% endblock %}
 {% block footer %}
   <div class="row">

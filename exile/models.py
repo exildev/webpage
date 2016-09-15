@@ -24,6 +24,7 @@ class Page(models.Model):
 class Seccion(models.Model):
     pagina = models.ForeignKey(Page)
     nombre = models.CharField(max_length=400)
+    posicion = models.IntegerField()
     contenido = models.TextField()
 
     class Meta:
