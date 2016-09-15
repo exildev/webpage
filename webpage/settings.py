@@ -67,7 +67,7 @@ SUIT_CONFIG = {
          'sites',
          {'app': 'auth', 'icon':'icon-lock', 'models': ('user', 'group')},
          {'app': 'exile', 'models': ('page', 'item', 'subitem', 'menu')},
-         {'label': 'Configuracion', 'icon':'icon-cog', 'models': ('exile.itemseccion')},
+         {'label': 'Configuracion', 'icon':'icon-cog', 'models': ('exile.itemseccion',)},
          {'label': 'Principal', 'icon':'icon-star', 'models': ('exile.menuprincipal', 'exile.paginaprincipal')},
     ),
 
