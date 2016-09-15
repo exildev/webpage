@@ -8,9 +8,9 @@ import forms
 
 class SeccionStack(admin.StackedInline):
     model = models.Seccion
-    formfield_overrides = {
-       model.TextField: {'widget': AdminMarkdownxWidget},
-    }
+    #formfield_overrides = {
+    #  model.TextField: {'widget': AdminMarkdownxWidget},
+    #}
 
     fieldsets = [
        (None, {'fields': ['nombre', 'posicion']}),
