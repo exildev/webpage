@@ -112,7 +112,7 @@ DATABASES = {
         'NAME': 'webpage',
         'USER': 'postgres',
         'PASSWORD': 'Exile*74522547',
-        'HOST': 'localhost',
+        'HOST': '104.236.33.228',
         'POST': '5432'
     }
 }
