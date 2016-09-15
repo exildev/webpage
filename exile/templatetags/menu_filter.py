@@ -28,7 +28,7 @@ def subItemsSeccion(item):
     for s in item.subitems.all():
         orden = models.OrdenSubItem.objects.filter(item=item, subitem=s).first()
         if orden.seccion:
-            if secciones.count(orden.seccion.nombre) == 0:
+            if secciones.count(orden.seccion) == 0:
                 secciones.append(orden.seccion)
             # end if
     # end if
