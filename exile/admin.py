@@ -1,4 +1,3 @@
-from markdownx.widgets import AdminMarkdownxWidget
 from django.contrib import admin
 from django.db import models as model
 import models
