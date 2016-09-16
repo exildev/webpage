@@ -43,6 +43,9 @@ h6 {
     .title &{
         color: $secundary;
     }
+    .card &{
+        color: $secundary;
+    }
 }
 
 #sheet {
@@ -262,8 +265,10 @@ h6 {
     background: white;
     margin-top: 16px;
     margin-bottom: 16px;
-    p, h2, h4, ul{
+    p{
         font-size: larger;
+    }
+    p, h2, h4, ul{
         padding-left: 16px;
     }
     a{
@@ -293,6 +298,7 @@ footer {
     h3 {
         padding-left: 16px;
         text-align: right;
+        color: $primary;
     }
     ul > li{
         text-align: right;
@@ -377,7 +383,6 @@ video {
     display: flex;
     justify-content: center;
     align-items: center;
-    background-position: 0 -250px;
 
     &.i2{
         background-image: url(/media/Imagenes/Duotono/2.jpg);
@@ -403,7 +408,6 @@ video {
 }
 
 .img{
-    background-position: 0 -250px;
     background-repeat: no-repeat;
     background-size: cover;
     background-image: url(../img/Aqua-ux-787980_1920.jpg);
@@ -433,23 +437,18 @@ video {
     }
     &.m1{
         background-image: url(/media/Menus/1.png);
-        background-position: 0 0;
     }
     &.m2{
         background-image: url(/media/Menus/2.png);
-        background-position: 0 0;
     }
     &.m3{
         background-image: url(/media/Menus/3.png);
-        background-position: 0 0;
     }
     &.m4{
         background-image: url(/media/Menus/4.png);
-        background-position: 0 0;
     }
     &.m5{
         background-image: url(/media/Menus/5.png);
-        background-position: 0 0;
     }
 }
 
@@ -475,4 +474,9 @@ video {
 
 .pd0{
     padding: 0px;
+}
+
+.blur{
+    padding: 16px;
+    background: rgba(255, 255, 255, 0.4);
 }
