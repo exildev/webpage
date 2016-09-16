@@ -8,7 +8,7 @@
   z-index: 1000;
   margin: 0 auto;
   bottom: 5vh;
-  background-color: #8da7b1;
+  background-color: #023147;
   overflow: hidden;
   border-radius: 50%;
   width: 60px;
@@ -203,7 +203,7 @@ input, select, textarea {
 }
 
 .input.submit:hover{
-  color: #fff;  
+  color: #fff;
 }
 
 .input.submit:active {
