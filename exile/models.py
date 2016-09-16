@@ -150,3 +150,44 @@ class Contacto(models.Model):
         return u"%s %s" % (self.nombre, self.email)
     # end def
 # end class
+
+
+class SeccionFooter(models.Model):
+    nombre = models.CharField(max_length=400)
+
+    def __unicode__(self):
+        return u"%s" % (self.nombre)
+    # end def
+# end class
+
+
+class OrdenFooter(models.Model):
+    pagina = models.ForeignKey(Page)
+    seccion = models.ForeignKey(SeccionFooter)
+    posicion = models.IntegerField()
+    footer = models.ForeignKey('Footer')
+
+
+class Footer(models.Model):
+    nombre = models.CharField(max_length=300)
+    paginas = models.ManyToManyField(Page, through=OrdenFooter)
+
+    def __unicode__(self):
+        return u"%s" % (self.nombre)
+    # end def
+# end class
+
+
+class FooterPrincipal(models.Model):
+    footer = models.OneToOneField(Footer)
+    fecha = models.DateField(auto_now_add=True)
+
+    class Meta:
+        verbose_name = "Footer Principal"
+        verbose_name_plural = "Footer Principal"
+    # end class
+
+    def __unicode__(self):
+        return u"%s" % (self.footer.nombre)
+    # end def
+# end class

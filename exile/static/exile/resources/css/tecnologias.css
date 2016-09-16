@@ -1,0 +1,239 @@
+body:after{
+    position:absolute; width:0; height:0; overflow:hidden; z-index:-1;
+    content: url("/media/Tecnologias/B_W/1.png") url("/media/Tecnologias/Color/1.png") url("/media/Tecnologias/B_W/10.png") url("/media/Tecnologias/Color/10.png") url("/media/Tecnologias/B_W/11.png") url("/media/Tecnologias/Color/11.png") url("/media/Tecnologias/B_W/12.png") url("/media/Tecnologias/Color/12.png") url("/media/Tecnologias/B_W/13.png") url("/media/Tecnologias/Color/13.png") url("/media/Tecnologias/B_W/14.png") url("/media/Tecnologias/Color/14.png") url("/media/Tecnologias/B_W/15.png") url("/media/Tecnologias/Color/15.png") url("/media/Tecnologias/B_W/16.png") url("/media/Tecnologias/Color/16.png") url("/media/Tecnologias/B_W/17.png") url("/media/Tecnologias/Color/17.png") url("/media/Tecnologias/B_W/18.png") url("/media/Tecnologias/Color/18.png") url("/media/Tecnologias/B_W/19.png") url("/media/Tecnologias/Color/19.png") url("/media/Tecnologias/B_W/2.png") url("/media/Tecnologias/Color/2.png") url("/media/Tecnologias/B_W/20.png") url("/media/Tecnologias/Color/20.png") url("/media/Tecnologias/B_W/21.png") url("/media/Tecnologias/Color/21.png") url("/media/Tecnologias/B_W/22.png") url("/media/Tecnologias/Color/22.png") url("/media/Tecnologias/B_W/23.png") url("/media/Tecnologias/Color/23.png") url("/media/Tecnologias/B_W/24.png") url("/media/Tecnologias/Color/24.png") url("/media/Tecnologias/B_W/25.png") url("/media/Tecnologias/Color/25.png") url("/media/Tecnologias/B_W/3.png") url("/media/Tecnologias/Color/3.png") url("/media/Tecnologias/B_W/4.png") url("/media/Tecnologias/Color/4.png") url("/media/Tecnologias/B_W/5.png") url("/media/Tecnologias/Color/5.png") url("/media/Tecnologias/B_W/6.png") url("/media/Tecnologias/Color/6.png") url("/media/Tecnologias/B_W/7.png") url("/media/Tecnologias/Color/7.png") url("/media/Tecnologias/B_W/8.png") url("/media/Tecnologias/Color/8.png") url("/media/Tecnologias/B_W/9.png") url("/media/Tecnologias/Color/9.png");
+}
+.tec ul {
+	text-align: justify;
+}
+.tec ul li{
+	list-style: none;
+	padding: 0px;
+	margin: 10px;
+	display: inline-block;
+}
+
+.img1{
+	width: 150px;
+	height: 150px;
+	background-size: contain;
+	background-image: url("/media/Tecnologias/B_W/1.png");
+}
+.img1:hover {
+	background-image: url("/media/Tecnologias/Color/1.png");
+}
+.img10{
+	width: 150px;
+	height: 150px;
+	background-size: contain;
+	background-image: url("/media/Tecnologias/B_W/10.png");
+}
+.img10:hover {
+	background-image: url("/media/Tecnologias/Color/10.png");
+}
+.img11{
+	width: 150px;
+	height: 150px;
+	background-size: contain;
+	background-image: url("/media/Tecnologias/B_W/11.png");
+}
+.img11:hover {
+	background-image: url("/media/Tecnologias/Color/11.png");
+}
+.img12{
+	width: 150px;
+	height: 150px;
+	background-size: contain;
+	background-image: url("/media/Tecnologias/B_W/12.png");
+}
+.img12:hover {
+	background-image: url("/media/Tecnologias/Color/12.png");
+}
+.img13{
+	width: 150px;
+	height: 150px;
+	background-size: contain;
+	background-image: url("/media/Tecnologias/B_W/13.png");
+}
+.img13:hover {
+	background-image: url("/media/Tecnologias/Color/13.png");
+}
+.img14{
+	width: 150px;
+	height: 150px;
+	background-size: contain;
+	background-image: url("/media/Tecnologias/B_W/14.png");
+}
+.img14:hover {
+	background-image: url("/media/Tecnologias/Color/14.png");
+}
+.img15{
+	width: 150px;
+	height: 150px;
+	background-size: contain;
+	background-image: url("/media/Tecnologias/B_W/15.png");
+}
+.img15:hover {
+	background-image: url("/media/Tecnologias/Color/15.png");
+}
+.img16{
+	width: 150px;
+	height: 150px;
+	background-size: contain;
+	background-image: url("/media/Tecnologias/B_W/16.png");
+}
+.img16:hover {
+	background-image: url("/media/Tecnologias/Color/16.png");
+}
+.img17{
+	width: 150px;
+	height: 150px;
+	background-size: contain;
+	background-image: url("/media/Tecnologias/B_W/17.png");
+}
+.img17:hover {
+	background-image: url("/media/Tecnologias/Color/17.png");
+}
+.img18{
+	width: 150px;
+	height: 150px;
+	background-size: contain;
+	background-image: url("/media/Tecnologias/B_W/18.png");
+}
+.img18:hover {
+	background-image: url("/media/Tecnologias/Color/18.png");
+}
+.img19{
+	width: 150px;
+	height: 150px;
+	background-size: contain;
+	background-image: url("/media/Tecnologias/B_W/19.png");
+}
+.img19:hover {
+	background-image: url("/media/Tecnologias/Color/19.png");
+}
+.img2{
+	width: 150px;
+	height: 150px;
+	background-size: contain;
+	background-image: url("/media/Tecnologias/B_W/2.png");
+}
+.img2:hover {
+	background-image: url("/media/Tecnologias/Color/2.png");
+}
+.img20{
+	width: 150px;
+	height: 150px;
+	background-size: contain;
+	background-image: url("/media/Tecnologias/B_W/20.png");
+}
+.img20:hover {
+	background-image: url("/media/Tecnologias/Color/20.png");
+}
+.img21{
+	width: 150px;
+	height: 150px;
+	background-size: contain;
+	background-image: url("/media/Tecnologias/B_W/21.png");
+}
+.img21:hover {
+	background-image: url("/media/Tecnologias/Color/21.png");
+}
+.img22{
+	width: 150px;
+	height: 150px;
+	background-size: contain;
+	background-image: url("/media/Tecnologias/B_W/22.png");
+}
+.img22:hover {
+	background-image: url("/media/Tecnologias/Color/22.png");
+}
+.img23{
+	width: 150px;
+	height: 150px;
+	background-size: contain;
+	background-image: url("/media/Tecnologias/B_W/23.png");
+}
+.img23:hover {
+	background-image: url("/media/Tecnologias/Color/23.png");
+}
+.img24{
+	width: 150px;
+	height: 150px;
+	background-size: contain;
+	background-image: url("/media/Tecnologias/B_W/24.png");
+}
+.img24:hover {
+	background-image: url("/media/Tecnologias/Color/24.png");
+}
+.img25{
+	width: 150px;
+	height: 150px;
+	background-size: contain;
+	background-image: url("/media/Tecnologias/B_W/25.png");
+}
+.img25:hover {
+	background-image: url("/media/Tecnologias/Color/25.png");
+}
+.img3{
+	width: 150px;
+	height: 150px;
+	background-size: contain;
+	background-image: url("/media/Tecnologias/B_W/3.png");
+}
+.img3:hover {
+	background-image: url("/media/Tecnologias/Color/3.png");
+}
+.img4{
+	width: 150px;
+	height: 150px;
+	background-size: contain;
+	background-image: url("/media/Tecnologias/B_W/4.png");
+}
+.img4:hover {
+	background-image: url("/media/Tecnologias/Color/4.png");
+}
+.img5{
+	width: 150px;
+	height: 150px;
+	background-size: contain;
+	background-image: url("/media/Tecnologias/B_W/5.png");
+}
+.img5:hover {
+	background-image: url("/media/Tecnologias/Color/5.png");
+}
+.img6{
+	width: 150px;
+	height: 150px;
+	background-size: contain;
+	background-image: url("/media/Tecnologias/B_W/6.png");
+}
+.img6:hover {
+	background-image: url("/media/Tecnologias/Color/6.png");
+}
+.img7{
+	width: 150px;
+	height: 150px;
+	background-size: contain;
+	background-image: url("/media/Tecnologias/B_W/7.png");
+}
+.img7:hover {
+	background-image: url("/media/Tecnologias/Color/7.png");
+}
+.img8{
+	width: 150px;
+	height: 150px;
+	background-size: contain;
+	background-image: url("/media/Tecnologias/B_W/8.png");
+}
+.img8:hover {
+	background-image: url("/media/Tecnologias/Color/8.png");
+}
+.img9{
+	width: 150px;
+	height: 150px;
+	background-size: contain;
+	background-image: url("/media/Tecnologias/B_W/9.png");
+}
+.img9:hover {
+	background-image: url("/media/Tecnologias/Color/9.png");
+}

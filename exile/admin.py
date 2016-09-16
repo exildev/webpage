@@ -82,7 +82,20 @@ class PaginaPrincipalAdmin(admin.ModelAdmin):
 
 class ContactoAdmin(admin.ModelAdmin):
     list_display = ('nombre', 'email', 'asunto', 'mensaje')
+    readonly_fields = list_display
     search_fields = list_display
+# end class
+
+
+class OrdenFooterstack(admin.StackedInline):
+    model = models.OrdenFooter
+# end class
+
+
+class FooterAdmin(admin.ModelAdmin):
+    list_display = ("nombre",)
+    search_fields = list_display
+    inlines = [OrdenFooterstack,]
 # end class
 
 
@@ -95,3 +108,4 @@ admin.site.register(models.Menu, MenuAdmin)
 admin.site.register(models.MenuPrincipal, MenuPrincipalAdmin)
 admin.site.register(models.PaginaPrincipal, PaginaPrincipalAdmin)
 admin.site.register(models.Contacto, ContactoAdmin)
+admin.site.register(models.Footer, FooterAdmin)

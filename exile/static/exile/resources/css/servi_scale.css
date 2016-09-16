@@ -1,4 +1,5 @@
 .modal {
+<<<<<<< HEAD
 
 }
 
@@ -30,6 +31,11 @@ to {
 
 .des_scale{
     width : 60% !important;
+=======
+   /* background-color: yellow;
+    border: 1px solid black;
+    border: 1px solid black;*/
+>>>>>>> 9949f28df9e4748d6ae3848b97a4460776d64213
 }
 
 .model:hover{
