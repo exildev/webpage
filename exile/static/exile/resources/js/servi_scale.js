@@ -5,11 +5,20 @@
         window.coordenadas=null;
         window.scalar = function(event){
             if(window.animando){
+                document.removeEventListener('transitionend', mostrarTexto);
                 window.animando=false;
                 event.preventDefault();
                 event.stopImmediatePropagation();
+                var ima = window.item.querySelectorAll('img');
+                if (ima != undefined){
+                    ima[0].className="des_scale"
+                }
+                var texto = window.item.querySelectorAll("span.act_complem");
+                if (texto != undefined){
+                    texto[0].className="des_complem";
+                }
                 console.log("termino la animacion");
-                var css = "z-index: 10;position: relative;-ms-transform: translate(50px,100px);/* IE 9 */";
+                var css = "z-index: 0;position: relative;-ms-transform: translate(50px,100px);/* IE 9 */";
                     css+="-webkit-transform: translate("+(-1*window.coordenadas.mover_x)+"px,"+(-1*window.coordenadas.mover_y)+"px);/*Safari */";
                     css+="transform: translate("+(-1*window.coordenadas.mover_x)+"px,"+(-1*window.coordenadas.mover_y)+"px); /* Standard syntax */";
                     css+="-webkit-transition-property: transform ; /* Safari */";
@@ -20,13 +29,19 @@
                     css+="transition-delay: 2s;"
                     css+="-webkit-transition: all 0.5s cubic-bezier(0.23, 1, 0.32, 1);";
                     css+="transition: all 0.5s cubic-bezier(0.23, 1, 0.32, 1);";
-                    css+="background-color: lightblue;";
+                    css+="background-color: white;";
                     css+="width:"+window.coordenadas.w+"px";
                     //css+="height:"+window.coordenadas.h+"px";
-                    console.log("esto es el tamaño de y "+window.coordenadas.h);
+                console.log("esto es el tamaño de y "+window.coordenadas.h);
+
                 window.item.style.cssText= css;
                 window.item.className ="modal";
             }
+        };
+        window.mostrarTexto = function(event){
+            event.preventDefault();
+            event.stopImmediatePropagation();
+
         };
         window.mover = function(event){
             if(!window.animando){
@@ -74,11 +89,24 @@
                 }else if(y_prima >= __y){
                     mover_y = __y-y_prima;
                 }
+                var ima = this.querySelectorAll('img');
+                if (ima != undefined){
+                    //ima[0].style.width="60%";
+                }
+                var ima = this.querySelectorAll('img');
+                if (ima != undefined){
+                    ima[0].className="act_scale"
+                }
+                window.animando=true;
+                var texto = this.querySelectorAll("span.des_complem");
+                if (texto != undefined && window.animando){
+                    texto[0].className="act_complem";
+                }
                 console.log("valores para y ( ",__y,y_prima," )");
                 var abuelo = this.parentNode.parentNode;
                 var css = "z-index: 10;position: relative;-ms-transform: translate("+mover_x+"px,"+mover_y+"px);/* IE 9 */";
-                    css+="-webkit-transform: translate("+mover_x+"px,"+mover_y+"px) scaley(5);/*Safari */";
-                    css+="transform: translate("+mover_x+"px,"+mover_y+"px)  scaley(5); /* Standard syntax */";
+                    css+="-webkit-transform: translate("+mover_x+"px,"+mover_y+"px) scaley(2) scalex(3);/*Safari */";
+                    css+="transform: translate("+mover_x+"px,"+mover_y+"px)  scaley(2) scalex(3); /* Standard syntax */";
                     css+="-webkit-transition-property: transform ; /* Safari */";
                     css+="-webkit-transition-duration: 5s; /* Safari */";
                     css+="-webkit-transition-delay: 2s; /* Safari */";
@@ -87,13 +115,14 @@
                     css+="transition-delay: 2s;"
                     css+="-webkit-transition: all 0.5s cubic-bezier(0.23, 1, 0.32, 1);";
                     css+="transition: all 0.5s cubic-bezier(0.23, 1, 0.32, 1);";
-                    css+="background-color: lightblue;";
+                    css+="background-color: white;";
                     css+="width:300px";
                 window.item =this;
-                window.animando=true;
+
                 window.coordenadas = {x:mover_x,y:mover_y,w:this.getBoundingClientRect().width,h:y_retorno};
                 this.style.cssText= css;
                 this.className = "mod_temp";
+                this.addEventListener('transitionend', mostrarTexto, false);
             }
         };
         var item = document.getElementsByClassName("modal");
@@ -101,7 +130,16 @@
             item[i].addEventListener("click",mover,false);
             item[i].addEventListener("click",scalar,false);
         }
-        //this.addEventListener('transitionend', scalar, false);
+        window.redireccionar = function(event){
+            event.preventDefault();
+            event.stopImmediatePropagation();
+            window.location.href = this.getAttribute("href");
+        }
+        var redireccion = document.getElementsByClassName("action_btn");
+        for(var i=0;i < redireccion.length; i++){
+            redireccion[i].addEventListener("click",redireccionar,false);
+        }
+        //
     }
     document.addEventListener("DOMContentLoaded", funciones, false);
 })();

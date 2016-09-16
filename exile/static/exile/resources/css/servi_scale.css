@@ -1,7 +1,35 @@
 .modal {
-    background-color: yellow;
-    border: 1px solid black;
-    border: 1px solid black;
+
+}
+
+.act_scale{
+    width: 100px !important;
+}
+
+.des_complem{
+    display: none !important;
+}
+
+.act_complem{
+    animation-duration: 3s;
+    animation-name: slidein;
+}
+
+
+@keyframes slidein {
+from {
+  margin-left: 100%;
+  width: 300%
+}
+
+to {
+  margin-left: 0%;
+  width: 100%;
+}
+}
+
+.des_scale{
+    width : 60% !important;
 }
 
 .model:hover{
