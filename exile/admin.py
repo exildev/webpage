@@ -82,7 +82,6 @@ class PaginaPrincipalAdmin(admin.ModelAdmin):
 
 class ContactoAdmin(admin.ModelAdmin):
     list_display = ('nombre', 'email', 'asunto', 'mensaje')
-    readonly_fields = list_display
     search_fields = list_display
 # end class
 
@@ -98,6 +97,10 @@ class FooterAdmin(admin.ModelAdmin):
     inlines = [OrdenFooterstack,]
 # end class
 
+
+class FooterPrincipalAdmin(admin.ModelAdmin):
+    list_display = ("footer", "fecha")
+# end class
 
 admin.site.register(models.Page, PageAdmin)
 admin.site.register(models.Seccion, SeccionAdmin)
