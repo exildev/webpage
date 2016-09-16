@@ -1,3 +1,4 @@
+from markdownx.widgets import AdminMarkdownxWidget
 from django.contrib import admin
 from django.db import models as model
 import models
@@ -7,6 +8,14 @@ import forms
 
 class SeccionStack(admin.StackedInline):
     model = models.Seccion
+
+    fieldsets = [
+       (None, {'fields': ['nombre', 'posicion']}),
+       ('Editor', {
+           'classes': ('full-width',),
+           'description': 'Escribir su codigo html aqui',
+           'fields': ['contenido']})]
+
 # end class
 
 
@@ -14,7 +23,12 @@ class SeccionAdmin(admin.ModelAdmin):
     list_display = ('nombre', 'pagina', 'posicion')
     search_fields = ('nombre',)
     list_filter = ('pagina', )
-
+    fieldsets = [
+       (None, {'fields': ['nombre', 'posicion']}),
+       ('Editor', {
+           'classes': ('full-width',),
+           'description': 'Escribir su codigo html aqui',
+           'fields': ['contenido']})]
 # end class
 
 
