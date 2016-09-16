@@ -40,6 +40,9 @@ h6 {
     .header &{
         color: white;
     }
+    .title &{
+        color: $secundary;
+    }
 }
 
 #sheet {
@@ -96,6 +99,7 @@ h6 {
             .img {
                 display: inline-block;
                 background-image: url("../img/white-logo.png");
+                background-position: 0 0;
                 background-repeat: no-repeat;
                 background-size: contain;
                 vertical-align: bottom;

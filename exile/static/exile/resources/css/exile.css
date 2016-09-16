@@ -46,6 +46,13 @@ h6 {
   h5, .header
   h6 {
     color: white; }
+  .title h1, .title
+  h2, .title
+  h3, .title
+  h4, .title
+  h5, .title
+  h6 {
+    color: #B94735; }
 
 #sheet {
   display: flex;
@@ -84,6 +91,7 @@ h6 {
       #sheet .header .logo .img {
         display: inline-block;
         background-image: url("../img/white-logo.png");
+        background-position: 0 0;
         background-repeat: no-repeat;
         background-size: contain;
         vertical-align: bottom;
