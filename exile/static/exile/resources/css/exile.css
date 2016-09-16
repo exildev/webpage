@@ -51,7 +51,7 @@ h6 {
   flex-flow: column; }
   #sheet .header {
     height: 56px;
-    background: #8da7b1;
+    background: #023147;
     transition: height 0.2s;
     color: white; }
     #sheet .header.top {
@@ -115,13 +115,13 @@ h6 {
           #sheet .header nav > ul > li .sub {
             display: none; }
           #sheet .header nav > ul > li.selected .sub {
-            background: #8da7b1;
-            background: -moz-linear-gradient(top, #8da7b1 0%, #8da7b1 19%, rgba(141, 167, 177, 0.85) 100%);
-            background: -webkit-gradient(left top, left bottom, color-stop(0%, #8da7b1), color-stop(49%, #8da7b1), color-stop(100%, rgba(141, 167, 177, 0.85)));
-            background: -webkit-linear-gradient(top, #8da7b1 0%, #8da7b1 19%, rgba(141, 167, 177, 0.85) 100%);
-            background: -o-linear-gradient(top, #8da7b1 0%, #8da7b1 19%, rgba(141, 167, 177, 0.85) 100%);
-            background: -ms-linear-gradient(top, #8da7b1 0%, #8da7b1 19%, rgba(141, 167, 177, 0.85) 100%);
-            background: linear-gradient(to bottom, #8da7b1 0%, #8da7b1 19%, rgba(141, 167, 177, 0.85) 100%);
+            background: #023147;
+            background: -moz-linear-gradient(top, #023147 0%, #023147 19%, rgba(2, 49, 71, 0.85) 100%);
+            background: -webkit-gradient(left top, left bottom, color-stop(0%, #023147), color-stop(49%, #023147), color-stop(100%, rgba(2, 49, 71, 0.85)));
+            background: -webkit-linear-gradient(top, #023147 0%, #023147 19%, rgba(2, 49, 71, 0.85) 100%);
+            background: -o-linear-gradient(top, #023147 0%, #023147 19%, rgba(2, 49, 71, 0.85) 100%);
+            background: -ms-linear-gradient(top, #023147 0%, #023147 19%, rgba(2, 49, 71, 0.85) 100%);
+            background: linear-gradient(to bottom, #023147 0%, #023147 19%, rgba(2, 49, 71, 0.85) 100%);
             display: block;
             position: fixed;
             z-index: 1000;
@@ -215,11 +215,11 @@ h6 {
   .servicios a span {
     display: block; }
   .servicios a:hover {
-    background: #0587c3;
+    background: #80d4fb;
     border-radius: 3px; }
 
 .rowf .servicios:nth-child(2n+1) a:hover {
-  background: white; }
+  background: #df9a8f; }
 
 .card {
   width: 99%;
