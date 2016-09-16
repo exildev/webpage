@@ -229,16 +229,6 @@ h6 {
     align-items: flex-end;
 }
 
-.top{
-    display: flex;
-    align-items: flex-start;
-}
-
-.middle{
-    display: flex;
-    align-items: center;
-}
-
 .servicios{
     a{
         display: block;
@@ -285,7 +275,7 @@ h6 {
         color: $secundary;
     }
     ul{
-        padding-left: 24px;
+        padding: 50px;
         list-style: circle;
     }
 }
@@ -363,7 +353,7 @@ a.btn, button, input[type=button], input[type=submit]{
     display: inline-block;
     @extend %shadow;
     border-radius: $radio;
-    transition: all .2s;
+    transition: all .1s;
     &:hover{
         background: lighten($accent, 10%);
     }
@@ -374,6 +364,10 @@ a.btn, button, input[type=button], input[type=submit]{
         background: transparent;
         border: 1px solid $accent;
         color: $accent;
+        &:hover{
+            color: white;
+            background: lighten($accent, 10%);
+        }
     }
 }
 
@@ -486,7 +480,27 @@ video {
     padding: 0px;
 }
 
-.blur{
+.blur, .title h1 {
     padding: 16px;
     background: rgba(255, 255, 255, 0.4);
+}
+
+ul.info{
+    list-style: none;
+    > li{
+        display: block;
+        > * {
+            display: inline-block;
+        }
+        &.fa:before{
+            font-size: 20px;
+        }
+        h2{
+            color: $accent;
+            padding-right: 16px;
+            &:after{
+                content: ':';
+            }
+        }
+    }
 }

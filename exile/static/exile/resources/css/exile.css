@@ -219,14 +219,6 @@ h6 {
   display: flex;
   align-items: flex-end; }
 
-.top {
-  display: flex;
-  align-items: flex-start; }
-
-.middle {
-  display: flex;
-  align-items: center; }
-
 .servicios a {
   display: block;
   width: 100%;
@@ -261,7 +253,7 @@ h6 {
   .card a {
     color: #B94735; }
   .card ul {
-    padding-left: 24px;
+    padding: 50px;
     list-style: circle; }
 
 .pd {
@@ -319,7 +311,7 @@ a.btn, button, input[type=button], input[type=submit] {
   text-align: center;
   display: inline-block;
   border-radius: 3px;
-  transition: all .2s; }
+  transition: all .1s; }
   a.btn:hover, button:hover, input[type=button]:hover, input[type=submit]:hover {
     background: #035379; }
   a.btn:active, button:active, input[type=button]:active, input[type=submit]:active {
@@ -328,6 +320,9 @@ a.btn, button, input[type=button], input[type=submit] {
     background: transparent;
     border: 1px solid #023147;
     color: #023147; }
+    a.btn.outline:hover, button.outline:hover, input[type=button].outline:hover, input[type=submit].outline:hover {
+      color: white;
+      background: #035379; }
 
 video {
   background: #848385; }
@@ -408,8 +403,22 @@ video {
 .pd0 {
   padding: 0px; }
 
-.blur {
+.blur, .title h1 {
   padding: 16px;
   background: rgba(255, 255, 255, 0.4); }
+
+ul.info {
+  list-style: none; }
+  ul.info > li {
+    display: block; }
+    ul.info > li > * {
+      display: inline-block; }
+    ul.info > li.fa:before {
+      font-size: 20px; }
+    ul.info > li h2 {
+      color: #023147;
+      padding-right: 16px; }
+      ul.info > li h2:after {
+        content: ':'; }
 
 /*# sourceMappingURL=exile.css.map */
