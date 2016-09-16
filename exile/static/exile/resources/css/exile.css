@@ -1,58 +1,306 @@
-/*
-Error: Invalid CSS after "...      @include ": expected identifier, was "%shadow;"
-        on line 233 of resources/scss/exile.scss
+#sheet,
+body,
+html, #sheet .header nav > ul > li > a, .rowf {
+  width: 100%; }
 
-228:         span {
-229:             display: block;
-230:         }
-231:         &:hover{
-232:             background: lighten($accent, 55%);
-233:             @include %shadow;
-234:             border-radius: $radio;
-235:         }
-236:     }
-237: }
-238: 
+#sheet,
+body,
+html, #sheet .header nav > ul > li > a {
+  height: 100%; }
 
-Backtrace:
-resources/scss/exile.scss:233
-/var/lib/gems/2.3.0/gems/sass-3.4.22/lib/sass/scss/parser.rb:1189:in `expected'
-/var/lib/gems/2.3.0/gems/sass-3.4.22/lib/sass/scss/parser.rb:1125:in `expected'
-/var/lib/gems/2.3.0/gems/sass-3.4.22/lib/sass/scss/parser.rb:1120:in `tok!'
-/var/lib/gems/2.3.0/gems/sass-3.4.22/lib/sass/scss/parser.rb:238:in `include_directive'
-/var/lib/gems/2.3.0/gems/sass-3.4.22/lib/sass/scss/parser.rb:222:in `special_directive'
-/var/lib/gems/2.3.0/gems/sass-3.4.22/lib/sass/scss/parser.rb:197:in `directive'
-/var/lib/gems/2.3.0/gems/sass-3.4.22/lib/sass/scss/parser.rb:676:in `block_child'
-/var/lib/gems/2.3.0/gems/sass-3.4.22/lib/sass/scss/parser.rb:668:in `block_contents'
-/var/lib/gems/2.3.0/gems/sass-3.4.22/lib/sass/scss/parser.rb:657:in `block'
-/var/lib/gems/2.3.0/gems/sass-3.4.22/lib/sass/scss/parser.rb:726:in `declaration_or_ruleset'
-/var/lib/gems/2.3.0/gems/sass-3.4.22/lib/sass/scss/parser.rb:676:in `block_child'
-/var/lib/gems/2.3.0/gems/sass-3.4.22/lib/sass/scss/parser.rb:668:in `block_contents'
-/var/lib/gems/2.3.0/gems/sass-3.4.22/lib/sass/scss/parser.rb:657:in `block'
-/var/lib/gems/2.3.0/gems/sass-3.4.22/lib/sass/scss/parser.rb:726:in `declaration_or_ruleset'
-/var/lib/gems/2.3.0/gems/sass-3.4.22/lib/sass/scss/parser.rb:676:in `block_child'
-/var/lib/gems/2.3.0/gems/sass-3.4.22/lib/sass/scss/parser.rb:665:in `block_contents'
-/var/lib/gems/2.3.0/gems/sass-3.4.22/lib/sass/scss/parser.rb:657:in `block'
-/var/lib/gems/2.3.0/gems/sass-3.4.22/lib/sass/scss/parser.rb:649:in `ruleset'
-/var/lib/gems/2.3.0/gems/sass-3.4.22/lib/sass/scss/parser.rb:675:in `block_child'
-/var/lib/gems/2.3.0/gems/sass-3.4.22/lib/sass/scss/parser.rb:668:in `block_contents'
-/var/lib/gems/2.3.0/gems/sass-3.4.22/lib/sass/scss/parser.rb:125:in `stylesheet'
-/var/lib/gems/2.3.0/gems/sass-3.4.22/lib/sass/scss/parser.rb:41:in `parse'
-/var/lib/gems/2.3.0/gems/sass-3.4.22/lib/sass/engine.rb:406:in `_to_tree'
-/var/lib/gems/2.3.0/gems/sass-3.4.22/lib/sass/engine.rb:381:in `_render_with_sourcemap'
-/var/lib/gems/2.3.0/gems/sass-3.4.22/lib/sass/engine.rb:298:in `render_with_sourcemap'
-/var/lib/gems/2.3.0/gems/sass-3.4.22/lib/sass/plugin/compiler.rb:492:in `update_stylesheet'
-/var/lib/gems/2.3.0/gems/sass-3.4.22/lib/sass/plugin/compiler.rb:215:in `block in update_stylesheets'
-/var/lib/gems/2.3.0/gems/sass-3.4.22/lib/sass/plugin/compiler.rb:209:in `each'
-/var/lib/gems/2.3.0/gems/sass-3.4.22/lib/sass/plugin/compiler.rb:209:in `update_stylesheets'
-/var/lib/gems/2.3.0/gems/sass-3.4.22/lib/sass/plugin/compiler.rb:473:in `on_file_changed'
-/var/lib/gems/2.3.0/gems/sass-3.4.22/lib/sass/plugin/compiler.rb:331:in `block in watch'
-/var/lib/gems/2.3.0/gems/sass-3.4.22/vendor/listen/lib/listen/listener.rb:252:in `on_change'
-/var/lib/gems/2.3.0/gems/sass-3.4.22/vendor/listen/lib/listen/listener.rb:290:in `block in initialize_adapter'
-/var/lib/gems/2.3.0/gems/sass-3.4.22/vendor/listen/lib/listen/adapters/polling.rb:48:in `poll_changed_directories'
-/var/lib/gems/2.3.0/gems/sass-3.4.22/vendor/listen/lib/listen/adapter.rb:299:in `block in start_poller'
-*/
-body:before {
-  white-space: pre;
-  font-family: monospace;
-  content: "Error: Invalid CSS after \"...      @include \": expected identifier, was \"%shadow;\"\A         on line 233 of resources/scss/exile.scss\A \A 228:         span {\A 229:             display: block;\A 230:         }\A 231:         &:hover{\A 232:             background: lighten($accent, 55%);\A 233:             @include %shadow;\A 234:             border-radius: $radio;\A 235:         }\A 236:     }\A 237: }\A 238: "; }
+#sheet .header .top-header, .servicios a:hover, .card, a.btn, button, input[type=button], input[type=submit] {
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23); }
+
+* {
+  box-sizing: border-box; }
+
+#sheet,
+body,
+html {
+  padding: 0;
+  margin: 0;
+  font-family: 'Roboto Condensed', sans-serif;
+  background: #d4e8e3;
+  color: #333; }
+
+body {
+  transition: opacity 0.2s; }
+
+body.hidden {
+  opacity: 0; }
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: 'Roboto', sans-serif;
+  color: #30158b;
+  text-transform: uppercase; }
+  .header h1, .header
+  h2, .header
+  h3, .header
+  h4, .header
+  h5, .header
+  h6 {
+    color: white; }
+
+#sheet {
+  display: flex;
+  flex-flow: column; }
+  #sheet .header {
+    height: 56px;
+    background: #5d3d73;
+    transition: height 0.2s;
+    color: white; }
+    #sheet .header.top {
+      height: 128px; }
+      #sheet .header.top .top-header {
+        top: 0; }
+      #sheet .header.top .memu {
+        margin-top: 0; }
+    #sheet .header .top-header {
+      position: relative;
+      top: -60px;
+      background: white;
+      height: 56px;
+      border-radius: 0 0 3px 3px;
+      transition: top 0.2s; }
+      #sheet .header .top-header .social {
+        color: #333;
+        padding: 12px; }
+        #sheet .header .top-header .social > span {
+          margin-top: 4px; }
+        #sheet .header .top-header .social a > span {
+          vertical-align: sub; }
+    #sheet .header .memu {
+      transition: all 0.2s;
+      position: relative;
+      margin-top: -56px; }
+    #sheet .header .logo {
+      padding: 12px; }
+      #sheet .header .logo .img {
+        display: inline-block;
+        background-image: url("../img/white-logo.png");
+        background-repeat: no-repeat;
+        background-size: contain;
+        vertical-align: bottom;
+        width: 60px;
+        height: 30px; }
+    #sheet .header nav {
+      margin-top: 2px; }
+      #sheet .header nav > ul {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        position: relative;
+        right: 0; }
+        #sheet .header nav > ul > li {
+          display: inline-block; }
+          #sheet .header nav > ul > li > a {
+            display: block;
+            padding: 16px;
+            text-decoration: none;
+            color: white;
+            text-transform: uppercase; }
+            #sheet .header nav > ul > li > a > span {
+              transition: width 1s;
+              position: relative;
+              display: block;
+              width: 0; }
+            #sheet .header nav > ul > li > a:hover > span {
+              border: 1px solid white;
+              width: 100%; }
+          #sheet .header nav > ul > li .sub {
+            display: none; }
+          #sheet .header nav > ul > li.selected .sub {
+            background: #5d3d73;
+            background: -moz-linear-gradient(top, #5d3d73 0%, #5d3d73 19%, rgba(93, 61, 115, 0.85) 100%);
+            background: -webkit-gradient(left top, left bottom, color-stop(0%, #5d3d73), color-stop(49%, #5d3d73), color-stop(100%, rgba(93, 61, 115, 0.85)));
+            background: -webkit-linear-gradient(top, #5d3d73 0%, #5d3d73 19%, rgba(93, 61, 115, 0.85) 100%);
+            background: -o-linear-gradient(top, #5d3d73 0%, #5d3d73 19%, rgba(93, 61, 115, 0.85) 100%);
+            background: -ms-linear-gradient(top, #5d3d73 0%, #5d3d73 19%, rgba(93, 61, 115, 0.85) 100%);
+            background: linear-gradient(to bottom, #5d3d73 0%, #5d3d73 19%, rgba(93, 61, 115, 0.85) 100%);
+            display: block;
+            position: fixed;
+            z-index: 1000;
+            right: 0;
+            left: 0;
+            margin-top: -4px; }
+            #sheet .header nav > ul > li.selected .sub a {
+              color: white; }
+              #sheet .header nav > ul > li.selected .sub a > span {
+                border: 1px solid white;
+                width: 100%; }
+  #sheet .content {
+    flex: 2;
+    overflow: auto; }
+
+.row {
+  width: 1200px; }
+  @media screen and (max-width: 1200px) {
+    .row {
+      width: 100%; } }
+
+.row,
+.rowf {
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap; }
+  .row .col-1,
+  .rowf .col-1 {
+    width: 8.33333%; }
+  .row .col-2,
+  .rowf .col-2 {
+    width: 16.66667%; }
+  .row .col-3,
+  .rowf .col-3 {
+    width: 25%; }
+  .row .col-4,
+  .rowf .col-4 {
+    width: 33.33333%; }
+  .row .col-5,
+  .rowf .col-5 {
+    width: 41.66667%; }
+  .row .col-6,
+  .rowf .col-6 {
+    width: 50%; }
+  .row .col-7,
+  .rowf .col-7 {
+    width: 58.33333%; }
+  .row .col-8,
+  .rowf .col-8 {
+    width: 66.66667%; }
+  .row .col-9,
+  .rowf .col-9 {
+    width: 75%; }
+  .row .col-10,
+  .rowf .col-10 {
+    width: 83.33333%; }
+  .row .col-11,
+  .rowf .col-11 {
+    width: 91.66667%; }
+  .row .col-12,
+  .rowf .col-12 {
+    width: 100%; }
+
+.right {
+  display: flex;
+  justify-content: flex-end; }
+
+.left {
+  display: flex;
+  justify-content: flex-start; }
+
+.center {
+  display: flex;
+  justify-content: center; }
+
+.bottom {
+  display: flex;
+  align-items: flex-end; }
+
+.servicios a {
+  display: block;
+  width: 100%;
+  text-align: center;
+  text-decoration: none;
+  color: #30158b;
+  padding: 16px 0; }
+  .servicios a span {
+    display: block; }
+  .servicios a:hover {
+    background: #cec3f6;
+    border-radius: 3px; }
+
+.card {
+  width: 99%;
+  padding: 40px 0;
+  border-radius: 3px;
+  background: white;
+  margin-top: 16px;
+  margin-bottom: 16px; }
+  .card p, .card h2, .card h4 {
+    font-size: larger;
+    padding-left: 16px; }
+
+.pd {
+  padding: 16px; }
+
+footer.card {
+  width: 99%;
+  border-radius: 3px 3px 0 0;
+  padding-bottom: 0;
+  margin-bottom: 0; }
+footer .power [class^="col-"] {
+  align-items: baseline;
+  border-top: 1px solid #555;
+  padding: 16px; }
+footer h3 {
+  padding-left: 16px;
+  text-align: right; }
+footer ul > li {
+  text-align: right; }
+
+ul {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  padding-bottom: 12px; }
+  ul > li {
+    padding: 4px 0; }
+    ul > li > a {
+      text-decoration: none;
+      color: #555; }
+      ul > li > a:hover {
+        text-decoration: underline;
+        color: #30158b; }
+  .social ul > li {
+    display: inline-block;
+    padding: 4px 8px; }
+
+.social a > span {
+  vertical-align: sub;
+  margin-right: 2px; }
+
+a.btn, button, input[type=button], input[type=submit] {
+  font-family: 'Roboto Condensed', sans-serif;
+  padding: 10px 30px;
+  margin: 0 4px;
+  color: white;
+  background: #30158b;
+  border: 1px solid transparent;
+  font-size: 18px;
+  text-transform: capitalize;
+  text-decoration: none;
+  cursor: pointer;
+  text-align: center;
+  display: inline-block;
+  border-radius: 3px;
+  transition: all .2s; }
+  a.btn:hover, button:hover, input[type=button]:hover, input[type=submit]:hover {
+    background: #3f1cb7; }
+  a.btn:active, button:active, input[type=button]:active, input[type=submit]:active {
+    box-shadow: none; }
+  a.btn.outline, button.outline, input[type=button].outline, input[type=submit].outline {
+    background: transparent;
+    border: 1px solid #30158b;
+    color: #30158b; }
+
+video {
+  background: #848385; }
+
+.title {
+  background: white;
+  background-image: url(../img/Aqua-ux-787980_1920.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 100%;
+  height: 400px;
+  margin-top: -16px;
+  display: flex;
+  justify-content: center;
+  align-items: center; }
+
+/*# sourceMappingURL=exile.css.map */
