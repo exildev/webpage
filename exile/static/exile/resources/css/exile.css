@@ -325,7 +325,8 @@ a.btn, button, input[type=button], input[type=submit] {
       background: #035379; }
 
 video {
-  background: #848385; }
+  background: #848385;
+  max-width: 850px; }
 
 .title {
   background: white;
