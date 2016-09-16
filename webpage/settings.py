@@ -34,7 +34,6 @@ ALLOWED_HOSTS = []
 
 INSTALLED_APPS = [
     'suit',
-    'markdownx',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -77,42 +76,6 @@ SUIT_CONFIG = {
     # misc
     'LIST_PER_PAGE': 15
 }
-
-"""
-# Markdownify
-# Default function that compiles markdown using defined extensions. Using
-# custom function can allow you to pre-process or post-process markdown
-# text. See below for more info.
-MARKDOWNX_MARKDOWNIFY_FUNCTION = 'markdownx.utils.markdownify'
-
-# Markdown extensions
-# List of used markdown extensions. See below for more info.
-MARKDOWNX_MARKDOWN_EXTENSIONS = []
-# Configuration object for used markdown extensions
-MARKDOWNX_MARKDOWN_EXTENSION_CONFIGS = {}
-
-# Markdown urls
-# URL that returns compiled markdown text.
-MARKDOWNX_URLS_PATH = '/markdownx/markdownify/'
-# URL that accepts file uploads, returns markdown notation of the image.
-MARKDOWNX_UPLOAD_URLS_PATH = '/markdownx/upload/'
-
-# Media path
-# Path, where images will be stored in MEDIA_ROOT folder
-MARKDOWNX_MEDIA_PATH = 'markdownx/'
-
-# Image
-MARKDOWNX_UPLOAD_MAX_SIZE = 52428800  # 50MB - maximum file size
-# Acceptable file content types
-MARKDOWNX_UPLOAD_CONTENT_TYPES = ['image/jpeg', 'image/png']
-# Different options describing final image processing: size, compression
-# etc. See below for more info.
-MARKDOWNX_IMAGE_MAX_SIZE = {'size': (500, 500), 'quality': 90, }
-
-# Editor
-# Update editor's height to inner content height while typing
-MARKDOWNX_EDITOR_RESIZABLE = True
-"""
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',

@@ -9,9 +9,13 @@ import forms
 class SeccionStack(admin.StackedInline):
     model = models.Seccion
 
-    class Media:
-        js = ('exile/js/jquery.min.js',)
-    # end class
+    fieldsets = [
+       (None, {'fields': ['nombre', 'posicion']}),
+       ('Editor', {
+           'classes': ('full-width',),
+           'description': 'Escribir su codigo html aqui',
+           'fields': ['contenido']})]
+
 # end class
 
 
@@ -19,13 +23,12 @@ class SeccionAdmin(admin.ModelAdmin):
     list_display = ('nombre', 'pagina', 'posicion')
     search_fields = ('nombre',)
     list_filter = ('pagina', )
-    formfield_overrides = {
-       model.TextField: {'widget': AdminMarkdownxWidget},
-    }
-
-    class Media:
-        js = ('exile/js/jquery.min.js',)
-    # end class
+    fieldsets = [
+       (None, {'fields': ['nombre', 'posicion']}),
+       ('Editor', {
+           'classes': ('full-width',),
+           'description': 'Escribir su codigo html aqui',
+           'fields': ['contenido']})]
 # end class
 
 
