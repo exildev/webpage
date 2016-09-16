@@ -219,6 +219,14 @@ h6 {
   display: flex;
   align-items: flex-end; }
 
+.top {
+  display: flex;
+  align-items: flex-start; }
+
+.middle {
+  display: flex;
+  align-items: center; }
+
 .servicios a {
   display: block;
   width: 100%;
@@ -253,8 +261,8 @@ h6 {
   .card a {
     color: #B94735; }
   .card ul {
-    padding: 24px;
-    list-style: inherit; }
+    padding-left: 24px;
+    list-style: circle; }
 
 .pd {
   padding: 16px; }
@@ -271,7 +279,7 @@ footer .power [class^="col-"] {
 footer h3 {
   padding-left: 16px;
   text-align: right;
-  color: #023147; }
+  color: #023147 !important; }
 footer ul > li {
   text-align: right;
   list-style: none; }
@@ -345,11 +353,11 @@ video {
   .title.i5 {
     background-image: url(/media/Imagenes/Duotono/5.jpg); }
   .title.i6 {
-    background-image: url(media/Imagenes/Duotono/6.jpg); }
+    background-image: url(/media/Imagenes/Duotono/6.jpg); }
   .title.i7 {
-    background-image: url(media/Imagenes/Duotono/7.jpg); }
+    background-image: url(/media/Imagenes/Duotono/7.jpg); }
   .title.i8 {
-    background-image: url(media/Imagenes/Duotono/8.jpg); }
+    background-image: url(/media/Imagenes/Duotono/8.jpg); }
 
 .img {
   background-repeat: no-repeat;
