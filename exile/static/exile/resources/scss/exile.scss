@@ -367,25 +367,25 @@ video {
     display: flex;
     justify-content: center;
     align-items: center;
-    .2{
+    &.2{
         background-image: url(/media/Imagenes/2.jpg);
     }
-    .3{
+    &.3{
         background-image: url(/media/Imagenes/3.jpg);
     }
-    .4{
+    &.4{
         background-image: url(/media/Imagenes/4.jpg);
     }
-    .5{
+    &.5{
         background-image: url(/media/Imagenes/5.jpg);
     }
-    .6{
+    &.6{
         background-image: url(/media/Imagenes/6.jpg);
     }
-    .7{
+    &.7{
         background-image: url(/media/Imagenes/7.jpg);
     }
-    .8{
+    &.8{
         background-image: url(/media/Imagenes/8.jpg);
     }
 }
