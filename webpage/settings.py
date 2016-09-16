@@ -71,7 +71,7 @@ SUIT_CONFIG = {
         {'label': 'Configuracion', 'icon': 'icon-cog',
          'models': ('exile.itemseccion', 'exile.footerseccion')},
         {'label': 'Principal', 'icon': 'icon-star',
-         'models': ('exile.menuprincipal', 'exile.paginaprincipal')},
+         'models': ('exile.menuprincipal', 'exile.paginaprincipal', 'exile.footerprincipal')},
         {'label': 'Contacto', 'icon': 'icon-user',
          'models': ('exile.contacto',)}
     ),
