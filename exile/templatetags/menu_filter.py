@@ -48,12 +48,14 @@ def footerSeccion(footer):
             secciones.append(orden.seccion)
         # end if
     # end for
+    print secciones
     return secciones
 # end def
 
 
 @register.filter(name="footerPage_tag")
 def footerPage(footer, seccion):
+    print footer.paginas.all().filter(ordenfooter__seccion=seccion).order_by('ordenfooter__posicion')
     return footer.paginas.all().filter(ordenfooter__seccion=seccion).order_by('ordenfooter__posicion')
 # end def
 
