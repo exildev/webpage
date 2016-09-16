@@ -1,12 +1,16 @@
 .form-contacto{
-    margin-top: 0;
-    transition: all 2s;
-}
-.form-contacto.show-form-overlay {
     position: relative;
-    margin-top: -410px;
-    z-index: 10;
+    height: 275px;
 }
+
+.form-contacto.col-12{
+  position: absolute;
+}
+
+.form-container.col-12:nth-child(2){
+  bottom: 0px;
+}
+
 #form-container {
   cursor: pointer;
   color: #FFF;
