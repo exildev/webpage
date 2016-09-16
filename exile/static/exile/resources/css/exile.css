@@ -315,6 +315,20 @@ video {
   justify-content: center;
   align-items: center;
   background-position: 0 -250px; }
+  .title.i2 {
+    background-image: url(/media/Imagenes/Duotono/2.jpg); }
+  .title.i3 {
+    background-image: url(/media/Imagenes/Duotono/3.jpg); }
+  .title.i4 {
+    background-image: url(/media/Imagenes/Duotono/4.jpg); }
+  .title.i5 {
+    background-image: url(/media/Imagenes/Duotono/5.jpg); }
+  .title.i6 {
+    background-image: url(media/Imagenes/Duotono/6.jpg); }
+  .title.i7 {
+    background-image: url(media/Imagenes/Duotono/7.jpg); }
+  .title.i8 {
+    background-image: url(media/Imagenes/Duotono/8.jpg); }
 
 .img {
   background-position: 0 -250px;
