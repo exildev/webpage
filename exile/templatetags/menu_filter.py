@@ -47,8 +47,8 @@ def footerSeccion(footer):
         if secciones.count(orden.seccion) == 0:
             secciones.append(orden.seccion)
         # end if
-# end if
-return secciones
+    # end for
+    return secciones
 # end def
 
 
