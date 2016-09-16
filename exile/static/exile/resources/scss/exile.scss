@@ -325,7 +325,7 @@ a.btn, button, input[type=button], input[type=submit]{
     padding: 10px 30px;
     margin: 0 4px;
     color: white;
-    background: #30158b;
+    background: $accent;
     border: 1px solid transparent;
     font-size: 18px;
     text-transform: capitalize;
@@ -337,7 +337,7 @@ a.btn, button, input[type=button], input[type=submit]{
     border-radius: $radio;
     transition: all .2s;
     &:hover{
-        background: lighten($accent, 10%)
+        background: lighten($accent, 10%);
     }
     &:active{
         box-shadow: none;
