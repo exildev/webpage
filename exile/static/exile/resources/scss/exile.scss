@@ -1,6 +1,6 @@
 @import "utils";
 @import "mixin";
-$primary: #8da7b1;
+$primary: #023147;
 $secundary: #B94735;
 $accent: #023147;
 $radio: 3px;
@@ -235,7 +235,7 @@ h6 {
             display: block;
         }
         &:hover{
-            background: lighten($accent, 25%);
+            background: lighten($accent, 60%);
             @extend %shadow;
             border-radius: $radio;
         }
@@ -243,7 +243,7 @@ h6 {
 }
 
 .rowf .servicios:nth-child(2n+1) a:hover{
-    background: lighten($secundary, 60%);
+    background: lighten($secundary, 25%);
 }
 
 
