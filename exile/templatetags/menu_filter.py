@@ -39,6 +39,25 @@ def subItemsSeccion(item):
 # end def
 
 
+@register.filter(name="footerSeccion_tag")
+def footerSeccion(footer):
+    secciones = []
+    for f in footer.paginas.all():
+        orden = models.OrdenFooter.objects.filter(footer=footer, page=Page)
+        if secciones.count(orden.seccion) == 0:
+            secciones.append(orden.seccion)
+        # end if
+# end if
+return secciones
+# end def
+
+
+@register.filter(name="footerPage_tag")
+def footerPage(footer, seccion):
+    return footer.paginas.all().filter(ordenfooter__seccion=seccion).order_by('posicion')
+# end def
+
+
 @register.filter(name="col_num")
 def colNum(total, col):
     if total == 0:
