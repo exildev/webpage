@@ -351,13 +351,13 @@ video {
   .img.i8 {
     background-image: url(/media/Imagenes/Duotono/8.jpg); }
   .img.m1 {
-    background-image: url(/media/Menús/1.jpg); }
+    background-image: url(/media/Menus/1.jpg); }
   .img.m2 {
-    background-image: url(/media/Menús/2.jpg); }
+    background-image: url(/media/Menus/2.jpg); }
   .img.m3 {
-    background-image: url(/media/Menús/3.jpg); }
+    background-image: url(/media/Menus/3.jpg); }
   .img.m4 {
-    background-image: url(/media/Menús/4.jpg); }
+    background-image: url(/media/Menus/4.jpg); }
   .img.m5 {
     background-image: url(/media/Menús/5.jpg); }
 
@@ -375,5 +375,8 @@ video {
 
 .pd80 {
   padding: 80px; }
+
+.pd0 {
+  padding: 0px; }
 
 /*# sourceMappingURL=exile.css.map */

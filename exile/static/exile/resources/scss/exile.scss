@@ -420,16 +420,16 @@ video {
         background-image: url(/media/Imagenes/Duotono/8.jpg);
     }
     &.m1{
-        background-image: url(/media/Menús/1.jpg);
+        background-image: url(/media/Menus/1.jpg);
     }
     &.m2{
-        background-image: url(/media/Menús/2.jpg);
+        background-image: url(/media/Menus/2.jpg);
     }
     &.m3{
-        background-image: url(/media/Menús/3.jpg);
+        background-image: url(/media/Menus/3.jpg);
     }
     &.m4{
-        background-image: url(/media/Menús/4.jpg);
+        background-image: url(/media/Menus/4.jpg);
     }
     &.m5{
         background-image: url(/media/Menús/5.jpg);
@@ -454,4 +454,8 @@ video {
 
 .pd80{
     padding: 80px;
+}
+
+.pd0{
+    padding: 0px; 
 }
