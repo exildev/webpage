@@ -20,7 +20,7 @@ html {
   padding: 0;
   margin: 0;
   font-family: 'Roboto Condensed', sans-serif;
-  background: #d4e8e3;
+  background: #f3f3f3;
   color: #333; }
 
 body {
@@ -253,7 +253,7 @@ h6 {
   .card a {
     color: #B94735; }
   .card ul {
-    padding: 50px;
+    padding-left: 50px;
     list-style: circle; }
 
 .pd {
@@ -408,7 +408,8 @@ video {
 
 .blur, .title h1 {
   padding: 16px;
-  background: rgba(255, 255, 255, 0.4); }
+  background: rgba(255, 255, 255, 0.4);
+  border: 3px; }
 
 ul.info {
   list-style: none; }

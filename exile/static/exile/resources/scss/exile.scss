@@ -16,7 +16,7 @@ html {
     padding: 0;
     margin: 0;
     font-family: 'Roboto Condensed', sans-serif;
-    background: #d4e8e3;
+    background: #f3f3f3;
     color: #333;
 }
 
@@ -275,7 +275,7 @@ h6 {
         color: $secundary;
     }
     ul{
-        padding: 50px;
+        padding-left: 50px;
         list-style: circle;
     }
 }
@@ -487,6 +487,7 @@ video {
 .blur, .title h1 {
     padding: 16px;
     background: rgba(255, 255, 255, 0.4);
+    border: $radio;
 }
 
 ul.info{

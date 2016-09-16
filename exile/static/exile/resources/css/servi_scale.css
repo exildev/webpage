@@ -1,49 +1,45 @@
-.modal {
-<<<<<<< HEAD
+.modal {}
 
-}
-
-.act_scale{
+.act_scale {
     width: 100px !important;
 }
 
-.des_complem{
+.des_complem {
     display: none !important;
 }
 
-.act_complem{
+.act_complem {
     animation-duration: 3s;
     animation-name: slidein;
 }
 
-
 @keyframes slidein {
-from {
-  margin-left: 100%;
-  width: 300%
+    from {
+        margin-left: 100%;
+        width: 300%
+    }
+    to {
+        margin-left: 0%;
+        width: 100%;
+    }
 }
 
-to {
-  margin-left: 0%;
-  width: 100%;
-}
-}
-
-.des_scale{
-    width : 60% !important;
-=======
-   /* background-color: yellow;
+.des_scale {
+    width: 60% !important;
+    /*background-color: yellow;
     border: 1px solid black;
     border: 1px solid black;*/
->>>>>>> 9949f28df9e4748d6ae3848b97a4460776d64213
 }
 
-.model:hover{
+.model:hover {
     z-index: 10;
     position: absolute;
-    -ms-transform: translate(50px,100px); /* IE 9 */
-    -webkit-transform: translate(50px,100px); /* Safari */
-    transform: translate(50px,100px); /* Standard syntax */
+    -ms-transform: translate(50px, 100px);
+    /* IE 9 */
+    -webkit-transform: translate(50px, 100px);
+    /* Safari */
+    transform: translate(50px, 100px);
+    /* Standard syntax */
     -webkit-transition: all 0.5s cubic-bezier(0.23, 1, 0.32, 1);
     transition: all 0.5s cubic-bezier(0.23, 1, 0.32, 1);
 }
@@ -56,9 +52,9 @@ to {
     right: 200px;
     -ms-transform: scaley(5);
     /* IE 9 */
-    -webkit-transform: scale(2,3);
+    -webkit-transform: scale(2, 3);
     /* Safari */
-    transform: scale(2,3);
+    transform: scale(2, 3);
     /* Standard syntax */
     -webkit-transition: all 0.5s cubic-bezier(0.23, 1, 0.32, 1);
     transition: all 0.5s cubic-bezier(0.23, 1, 0.32, 1);
