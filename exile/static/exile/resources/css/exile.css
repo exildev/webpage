@@ -319,7 +319,8 @@ video {
 .img {
   background-position: 0 -250px;
   background-repeat: no-repeat;
-  background-size: cover; }
+  background-size: cover;
+  background-image: url(../img/Aqua-ux-787980_1920.jpg); }
   .img.i2 {
     background-image: url(/media/Imagenes/Duotono/2.jpg); }
   .img.i3 {
