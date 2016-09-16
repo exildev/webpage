@@ -94,6 +94,7 @@ class OrdenFooterstack(admin.StackedInline):
 class FooterAdmin(admin.ModelAdmin):
     list_display = ("nombre",)
     search_fields = list_display
+    inlines = [OrdenFooterstack,]
 # end class
 
 
