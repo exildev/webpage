@@ -319,6 +319,7 @@ video {
   background: white;
   background-image: url(../img/Aqua-ux-787980_1920.jpg);
   background-repeat: no-repeat;
+  background-attachment: fixed;
   background-size: cover;
   width: 100%;
   height: 400px;
@@ -347,6 +348,8 @@ video {
   background-repeat: no-repeat;
   background-size: cover;
   background-image: url(../img/Aqua-ux-787980_1920.jpg); }
+  .img.parallax {
+    background-attachment: fixed; }
   .img.i2 {
     background-image: url(/media/Imagenes/Duotono/2.jpg); }
   .img.i3 {
