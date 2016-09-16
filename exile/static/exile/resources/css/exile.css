@@ -320,6 +320,9 @@ a.btn, button, input[type=button], input[type=submit] {
     background: transparent;
     border: 1px solid #023147;
     color: #023147; }
+    a.btn.outline:hover, button.outline:hover, input[type=button].outline:hover, input[type=submit].outline:hover {
+      color: white;
+      background: #035379; }
 
 video {
   background: #848385; }

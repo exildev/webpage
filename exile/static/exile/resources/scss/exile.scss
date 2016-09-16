@@ -364,6 +364,10 @@ a.btn, button, input[type=button], input[type=submit]{
         background: transparent;
         border: 1px solid $accent;
         color: $accent;
+        &:hover{
+            color: white;
+            background: lighten($accent, 10%);
+        }
     }
 }
 
