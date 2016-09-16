@@ -229,6 +229,16 @@ h6 {
     align-items: flex-end;
 }
 
+.top{
+    display: flex;
+    align-items: flex-start;
+}
+
+.middle{
+    display: flex;
+    align-items: center;
+}
+
 .servicios{
     a{
         display: block;
