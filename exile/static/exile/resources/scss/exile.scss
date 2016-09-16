@@ -369,13 +369,6 @@ video {
     align-items: center;
     background-position: 0 -250px;
 
-}
-
-.img{
-    background-position: 0 -250px;
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-image: url(../img/Aqua-ux-787980_1920.jpg);
     &.i2{
         background-image: url(/media/Imagenes/Duotono/2.jpg);
     }
@@ -397,4 +390,68 @@ video {
     &.i8{
         background-image: url(media/Imagenes/Duotono/8.jpg);
     }
+}
+
+.img{
+    background-position: 0 -250px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-image: url(../img/Aqua-ux-787980_1920.jpg);
+
+    &.i2{
+        background-image: url(/media/Imagenes/Duotono/2.jpg);
+    }
+    &.i3{
+        background-image: url(/media/Imagenes/Duotono/3.jpg);
+    }
+    &.i4{
+        background-image: url(/media/Imagenes/Duotono/4.jpg);
+    }
+    &.i5{
+        background-image: url(/media/Imagenes/Duotono/5.jpg);
+    }
+    &.i6{
+        background-image: url(/media/Imagenes/Duotono/6.jpg);
+    }
+    &.i7{
+        background-image: url(/media/Imagenes/Duotono/7.jpg);
+    }
+    &.i8{
+        background-image: url(/media/Imagenes/Duotono/8.jpg);
+    }
+    &.m1{
+        background-image: url(/media/Menús/1.jpg);
+    }
+    &.m2{
+        background-image: url(/media/Menús/2.jpg);
+    }
+    &.m3{
+        background-image: url(/media/Menús/3.jpg);
+    }
+    &.m4{
+        background-image: url(/media/Menús/4.jpg);
+    }
+    &.m5{
+        background-image: url(/media/Menús/5.jpg);
+    }
+}
+
+.text-center{
+    text-align: center;
+}
+
+.text-left{
+    text-align: left;
+}
+
+.text-justify{
+    text-align: justify;
+}
+
+.text-right{
+    text-align: right;
+}
+
+.pd80{
+    padding: 80px;
 }
