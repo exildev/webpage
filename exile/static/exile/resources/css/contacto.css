@@ -1,5 +1,5 @@
 .form-contacto{
-  height: 500px;
+  height: 410px;
 }
 
 #form-container {
@@ -8,7 +8,7 @@
   z-index: 1000;
   margin: 0 auto;
   bottom: 5vh;
-  background-color: #023147;
+  background-color: #8da7b1;
   overflow: hidden;
   border-radius: 50%;
   width: 60px;
@@ -190,20 +190,16 @@ input, select, textarea {
   height: 75px;
   padding: 10px;
 }
-/*
+
 .input.submit {
   background-color: #FFF;
   color: #B94735;
   font-size: 120%;
-  height: 80px;
   box-shadow: 0 5px rgba(0, 0, 0, 0.5);
   -webkit-transition: all 0.1s, -webkit-transform 0s 0.6s;
   transition: all 0.1s, -webkit-transform 0s 0.6s;
   transition: all 0.1s, transform 0s 0.6s;
   transition: all 0.1s, transform 0s 0.6s, -webkit-transform 0s 0.6s;
-}
-.input.submit:hover{
-
 }
 
 .input.submit:active {
