@@ -242,10 +242,13 @@ h6 {
     }
 }
 
-.rowf .servicios:nth-child(2n+1) a:hover{
+.rowf .rowf:nth-child(1) .servicios:nth-child(2n+1) a:hover{
     background: lighten($secundary, 25%);
 }
 
+.rowf .rowf:nth-child(2) .servicios:nth-child(2n) a:hover{
+    background: lighten($accent, 60%);
+}
 
 .card {
     width: 99%;
@@ -255,7 +258,7 @@ h6 {
     background: white;
     margin-top: 16px;
     margin-bottom: 16px;
-    p, h2, h4{
+    p, h2, h4, ul{
         font-size: larger;
         padding-left: 16px;
     }
@@ -364,4 +367,25 @@ video {
     display: flex;
     justify-content: center;
     align-items: center;
+    .2{
+        background-image: url(/media/Imagenes/2.jpg);
+    }
+    .3{
+        background-image: url(/media/Imagenes/3.jpg);
+    }
+    .4{
+        background-image: url(/media/Imagenes/4.jpg);
+    }
+    .5{
+        background-image: url(/media/Imagenes/5.jpg);
+    }
+    .6{
+        background-image: url(/media/Imagenes/6.jpg);
+    }
+    .7{
+        background-image: url(/media/Imagenes/7.jpg);
+    }
+    .8{
+        background-image: url(/media/Imagenes/8.jpg);
+    }
 }
