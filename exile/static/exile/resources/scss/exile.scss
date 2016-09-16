@@ -480,3 +480,23 @@ video {
     padding: 16px;
     background: rgba(255, 255, 255, 0.4);
 }
+
+ul.info{
+    list-style: none;
+    > li{
+        display: block;
+        > * {
+            display: inline-block;
+        }
+        &.fa:before{
+            font-size: 20px;
+        }
+        h2{
+            color: $accent;
+            padding-right: 16px;
+            &:after{
+                content: ':';
+            }
+        }
+    }
+}

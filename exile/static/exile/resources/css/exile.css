@@ -404,4 +404,18 @@ video {
   padding: 16px;
   background: rgba(255, 255, 255, 0.4); }
 
+ul.info {
+  list-style: none; }
+  ul.info > li {
+    display: block; }
+    ul.info > li > * {
+      display: inline-block; }
+    ul.info > li.fa:before {
+      font-size: 20px; }
+    ul.info > li h2 {
+      color: #023147;
+      padding-right: 16px; }
+      ul.info > li h2:after {
+        content: ':'; }
+
 /*# sourceMappingURL=exile.css.map */
