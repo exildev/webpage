@@ -72,6 +72,8 @@ SUIT_CONFIG = {
          'models': ('exile.itemseccion',)},
         {'label': 'Principal', 'icon': 'icon-star',
          'models': ('exile.menuprincipal', 'exile.paginaprincipal')},
+        {'label': 'Contacto', 'icon': 'icon-user',
+         'models': ('exile.contacto')}
     ),
 
     # misc
