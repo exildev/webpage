@@ -26,6 +26,10 @@
 	   		}
 	   	}, 3000);
    	}
-
+	$("#btn-down").click(function() {
+	    $('html, body').animate({
+	        scrollTop: 1070
+	    }, 1000);
+	});
 	document.addEventListener("DOMContentLoaded", load, false);
 })();
