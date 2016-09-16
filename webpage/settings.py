@@ -69,7 +69,7 @@ SUIT_CONFIG = {
         {'app': 'exile', 'models': (
             'page', 'seccion', 'item', 'subitem', 'menu', 'footer')},
         {'label': 'Configuracion', 'icon': 'icon-cog',
-         'models': ('exile.itemseccion',)},
+         'models': ('exile.itemseccion', 'exile.footerseccion')},
         {'label': 'Principal', 'icon': 'icon-star',
          'models': ('exile.menuprincipal', 'exile.paginaprincipal')},
         {'label': 'Contacto', 'icon': 'icon-user',

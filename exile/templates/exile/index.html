@@ -46,91 +46,23 @@
     </li>
     {% endfor %}
 </ul>
-{% endblock %} {% block boby %} {% for c in contenido|contenido_tag %} {{c.contenido|safe}} {% endfor%} {% endblock %} {% block footer %}
-<div class="col-3">
-    <h3>Servicios</h3>
-    <ul>
-        <li>
-            <a href="#">Digitalización de procesos de negocios</a>
-        </li>
-        <li>
-            <a href="#">Apps móviles</a>
-        </li>
-        <li>
-            <a href="#">Apps web</a>
-        </li>
-        <li>
-            <a href="#">Data & analytics</a>
-        </li>
-        <li>
-            <a href="#">Internet de las cosas IoT</a>
-        </li>
-        <li>
-            <a href="#">Integración a soluciones hardware</a>
-        </li>
-        <li>
-            <a href="#">Sistemas de información geográfica</a>
-        </li>
-        <li>
-            <a href="#">Digitalización</a>
-        </li>
-    </ul>
-</div>
-<div class="col-3">
-    <h3>Productos</h3>
-    <ul>
-        <li>
-            <a href="#">Huella</a>
-        </li>
-        <li>
-            <a href="#">Picix</a>
-        </li>
-        <li>
-            <a href="#">Lapix</a>
-        </li>
-        <li>
-            <a href="#">GeoActivos</a>
-        </li>
-    </ul>
-</div>
-<div class="col-3">
-    <h3>Experiencia</h3>
-    <ul>
-        <li>
-            <a href="#">Servicios Públicos</a>
-        </li>
-        <li>
-            <a href="#">Minería</a>
-        </li>
-        <li>
-            <a href="#">Gestión Ambiental</a>
-        </li>
-        <li>
-            <a href="#">Mensajería y Logística</a>
-        </li>
-        <li>
-            <a href="#">Inventario y Mantenimiento</a>
-        </li>
-        <li>
-            <a href="#">Georeferenciación</a>
-        </li>
-    </ul>
-</div>
-<div class="col-3">
-    <h3>Nosotros</h3>
-    <ul>
-        <li>
-            <a href="#">Misión</a>
-        </li>
-        <li>
-            <a href="#">Visión</a>
-        </li>
-        <li>
-            <a href="#">Valores</a>
-        </li>
-        <li>
-            <a href="#">Objetivos</a>
-        </li>
-    </ul>
-</div>
+{% endblock %}
+{% block boby %}
+  {% for c in contenido|contenido_tag %}
+  {{c.contenido|safe}}
+  {% endfor%}
+{% endblock %}
+{% block footer %}
+  {% for f in footer|footerSeccion_tag %}
+      <div class="col-{{footer|footerSeccion_tag|length|col_num:12}}">
+          <h3>{{f.nombre}}</h3>
+          <ul>
+            {% for p in footer|footerPage_tag:f %}
+              <li>
+                <a href="{{p.id}}">{{p.nombre}}</a>
+              </li>
+            {% endfor %}
+          </ul>
+      </div>
+  {% endfor %}
 {% endblock %}
