@@ -353,7 +353,7 @@ a.btn, button, input[type=button], input[type=submit]{
     display: inline-block;
     @extend %shadow;
     border-radius: $radio;
-    transition: all .2s;
+    transition: all .1s;
     &:hover{
         background: lighten($accent, 10%);
     }
