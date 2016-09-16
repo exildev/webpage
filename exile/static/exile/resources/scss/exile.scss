@@ -367,25 +367,33 @@ video {
     display: flex;
     justify-content: center;
     align-items: center;
-    &.2{
-        background-image: url(/media/Imagenes/2.jpg);
+    background-position: 0 -250px;
+
+}
+
+.img{
+    background-position: 0 -250px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    &.i2{
+        background-image: url(/media/Imagenes/Duotono/2.jpg);
     }
-    &.3{
-        background-image: url(/media/Imagenes/3.jpg);
+    &.i3{
+        background-image: url(/media/Imagenes/Duotono/3.jpg);
     }
-    &.4{
-        background-image: url(/media/Imagenes/4.jpg);
+    &.i4{
+        background-image: url(/media/Imagenes/Duotono/4.jpg);
     }
-    &.5{
-        background-image: url(/media/Imagenes/5.jpg);
+    &.i5{
+        background-image: url(/media/Imagenes/Duotono/5.jpg);
     }
-    &.6{
-        background-image: url(/media/Imagenes/6.jpg);
+    &.i6{
+        background-image: url(media/Imagenes/Duotono/6.jpg);
     }
-    &.7{
-        background-image: url(/media/Imagenes/7.jpg);
+    &.i7{
+        background-image: url(media/Imagenes/Duotono/7.jpg);
     }
-    &.8{
-        background-image: url(/media/Imagenes/8.jpg);
+    &.i8{
+        background-image: url(media/Imagenes/Duotono/8.jpg);
     }
 }
