@@ -6,12 +6,12 @@ Error: Invalid CSS after "...      @include ": expected identifier, was "%shadow
 229:             display: block;
 230:         }
 231:         &:hover{
-232:             background: lighten($accent, 50%);
+232:             background: lighten($accent, 55%);
 233:             @include %shadow;
-234:         }
-235:     }
-236: }
-237: 
+234:             border-radius: $radio;
+235:         }
+236:     }
+237: }
 238: 
 
 Backtrace:
@@ -55,4 +55,4 @@ resources/scss/exile.scss:233
 body:before {
   white-space: pre;
   font-family: monospace;
-  content: "Error: Invalid CSS after \"...      @include \": expected identifier, was \"%shadow;\"\A         on line 233 of resources/scss/exile.scss\A \A 228:         span {\A 229:             display: block;\A 230:         }\A 231:         &:hover{\A 232:             background: lighten($accent, 50%);\A 233:             @include %shadow;\A 234:         }\A 235:     }\A 236: }\A 237: \A 238: "; }
+  content: "Error: Invalid CSS after \"...      @include \": expected identifier, was \"%shadow;\"\A         on line 233 of resources/scss/exile.scss\A \A 228:         span {\A 229:             display: block;\A 230:         }\A 231:         &:hover{\A 232:             background: lighten($accent, 55%);\A 233:             @include %shadow;\A 234:             border-radius: $radio;\A 235:         }\A 236:     }\A 237: }\A 238: "; }

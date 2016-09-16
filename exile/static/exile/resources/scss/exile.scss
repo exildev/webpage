@@ -229,8 +229,9 @@ h6 {
             display: block;
         }
         &:hover{
-            background: lighten($accent, 50%);
+            background: lighten($accent, 55%);
             @include %shadow;
+            border-radius: $radio;
         }
     }
 }
