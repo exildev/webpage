@@ -60,6 +60,6 @@
     transition: all 0.5s cubic-bezier(0.23, 1, 0.32, 1);
 }
 
-.no-scale{
+.mod_temp .no-scale{
     transform: scaleX(0.3334) scaleY(0.5);
 }
