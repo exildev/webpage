@@ -40,7 +40,8 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'exile'
+    'exile',
+    'supra'
 ]
 
 # Django Suit configuration example
@@ -71,6 +72,8 @@ SUIT_CONFIG = {
          'models': ('exile.itemseccion',)},
         {'label': 'Principal', 'icon': 'icon-star',
          'models': ('exile.menuprincipal', 'exile.paginaprincipal')},
+        {'label': 'Contacto', 'icon': 'icon-user',
+         'models': ('exile.contacto')}
     ),
 
     # misc
@@ -140,6 +143,14 @@ AUTH_PASSWORD_VALIDATORS = [
     },
 ]
 
+# Email configuration
+
+EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
+EMAIL_USE_TLS = True
+EMAIL_HOST = 'smtp.gmail.com'
+EMAIL_PORT = 587
+EMAIL_HOST_USER = 'mariobarrios@exile.com.co'
+EMAIL_HOST_PASSWORD = 'rrljhuvayivgzmms'
 
 # Internationalization
 # https://docs.djangoproject.com/en/1.10/topics/i18n/

@@ -138,3 +138,15 @@ class PaginaPrincipal(models.Model):
     def __unicode__(self):
         return u"%s" % (self.pagina.nombre)
 # end class
+
+
+class Contacto(models.Model):
+    nombre = models.CharField(max_length=300)
+    email = models.EmailField()
+    asunto = models.CharField(max_length=300)
+    mensaje = models.TextField()
+
+    def __unicode__(self):
+        return u"%s %s" % (self.nombre, self.email)
+    # end def
+# end class

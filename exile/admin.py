@@ -81,6 +81,12 @@ class PaginaPrincipalAdmin(admin.ModelAdmin):
 # end class
 
 
+class ContactoAdmin(admin.ModelAdmin):
+    list_display = ('nombre', 'email', 'asunto', 'mensaje')
+    search_fields = list_display
+# end class
+
+
 admin.site.register(models.Page, PageAdmin)
 admin.site.register(models.Seccion, SeccionAdmin)
 admin.site.register(models.Item, ItemAdmin)
@@ -89,3 +95,4 @@ admin.site.register(models.ItemSeccion)
 admin.site.register(models.Menu, MenuAdmin)
 admin.site.register(models.MenuPrincipal, MenuPrincipalAdmin)
 admin.site.register(models.PaginaPrincipal, PaginaPrincipalAdmin)
+admin.site.register(models.Contacto, ContactoAdmin)
