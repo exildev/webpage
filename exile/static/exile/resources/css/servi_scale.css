@@ -60,6 +60,6 @@
     transition: all 0.5s cubic-bezier(0.23, 1, 0.32, 1);
 }
 
-.des_scale{
-    transform: scaleX(1) scaleY(1);
+.no_scale{
+    transform: scaleX(0.3334) scaleY(0.5);
 }
