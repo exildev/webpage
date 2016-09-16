@@ -272,9 +272,11 @@ footer h3 {
   padding-left: 16px;
   text-align: right;
   color: #023147 !important; }
-footer ul > li {
-  text-align: right;
-  list-style: none; }
+footer ul {
+  padding: 0; }
+  footer ul > li {
+    text-align: right;
+    list-style: none; }
 
 ul {
   padding: 0;
