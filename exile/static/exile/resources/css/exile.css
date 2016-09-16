@@ -1,3 +1,4 @@
+@charset "UTF-8";
 #sheet,
 body,
 html, #sheet .header nav > ul > li > a, .rowf {
@@ -344,10 +345,20 @@ video {
   .img.i5 {
     background-image: url(/media/Imagenes/Duotono/5.jpg); }
   .img.i6 {
-    background-image: url(media/Imagenes/Duotono/6.jpg); }
+    background-image: url(/media/Imagenes/Duotono/6.jpg); }
   .img.i7 {
-    background-image: url(media/Imagenes/Duotono/7.jpg); }
+    background-image: url(/media/Imagenes/Duotono/7.jpg); }
   .img.i8 {
-    background-image: url(media/Imagenes/Duotono/8.jpg); }
+    background-image: url(/media/Imagenes/Duotono/8.jpg); }
+  .img.m1 {
+    background-image: url(/media/Menús/1.jpg); }
+  .img.m2 {
+    background-image: url(/media/Menús/2.jpg); }
+  .img.m3 {
+    background-image: url(/media/Menús/3.jpg); }
+  .img.m4 {
+    background-image: url(/media/Menús/4.jpg); }
+  .img.m5 {
+    background-image: url(/media/Menús/5.jpg); }
 
 /*# sourceMappingURL=exile.css.map */
