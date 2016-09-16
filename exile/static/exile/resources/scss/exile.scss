@@ -229,7 +229,8 @@ h6 {
             display: block;
         }
         &:hover{
-            background: lighten($accent, 70%);
+            background: lighten($accent, 50%);
+            @include %shadow;
         }
     }
 }
