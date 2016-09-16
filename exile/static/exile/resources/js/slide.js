@@ -25,7 +25,12 @@
 	   			}
 	   		}
 	   	}, 3000);
+	   	
+		$("#btn-down").click(function() {
+		    $('.content').animate({
+		        scrollTop: 1070
+		    }, 1000);
+		});
    	}
-
 	document.addEventListener("DOMContentLoaded", load, false);
 })();
