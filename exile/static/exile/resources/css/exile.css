@@ -8,7 +8,7 @@ body,
 html, #sheet .header nav > ul > li > a {
   height: 100%; }
 
-#sheet .header .top-header, .card, a.btn, button, input[type=button], input[type=submit] {
+#sheet .header .top-header, .servicios a:hover, .card, a.btn, button, input[type=button], input[type=submit] {
   box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23); }
 
 * {
@@ -36,7 +36,7 @@ h4,
 h5,
 h6 {
   font-family: 'Roboto', sans-serif;
-  color: #30158b;
+  color: #B94735;
   text-transform: uppercase; }
   .header h1, .header
   h2, .header
@@ -51,7 +51,7 @@ h6 {
   flex-flow: column; }
   #sheet .header {
     height: 56px;
-    background: #5d3d73;
+    background: #8da7b1;
     transition: height 0.2s;
     color: white; }
     #sheet .header.top {
@@ -115,13 +115,13 @@ h6 {
           #sheet .header nav > ul > li .sub {
             display: none; }
           #sheet .header nav > ul > li.selected .sub {
-            background: #5d3d73;
-            background: -moz-linear-gradient(top, #5d3d73 0%, #5d3d73 19%, rgba(93, 61, 115, 0.85) 100%);
-            background: -webkit-gradient(left top, left bottom, color-stop(0%, #5d3d73), color-stop(49%, #5d3d73), color-stop(100%, rgba(93, 61, 115, 0.85)));
-            background: -webkit-linear-gradient(top, #5d3d73 0%, #5d3d73 19%, rgba(93, 61, 115, 0.85) 100%);
-            background: -o-linear-gradient(top, #5d3d73 0%, #5d3d73 19%, rgba(93, 61, 115, 0.85) 100%);
-            background: -ms-linear-gradient(top, #5d3d73 0%, #5d3d73 19%, rgba(93, 61, 115, 0.85) 100%);
-            background: linear-gradient(to bottom, #5d3d73 0%, #5d3d73 19%, rgba(93, 61, 115, 0.85) 100%);
+            background: #8da7b1;
+            background: -moz-linear-gradient(top, #8da7b1 0%, #8da7b1 19%, rgba(141, 167, 177, 0.85) 100%);
+            background: -webkit-gradient(left top, left bottom, color-stop(0%, #8da7b1), color-stop(49%, #8da7b1), color-stop(100%, rgba(141, 167, 177, 0.85)));
+            background: -webkit-linear-gradient(top, #8da7b1 0%, #8da7b1 19%, rgba(141, 167, 177, 0.85) 100%);
+            background: -o-linear-gradient(top, #8da7b1 0%, #8da7b1 19%, rgba(141, 167, 177, 0.85) 100%);
+            background: -ms-linear-gradient(top, #8da7b1 0%, #8da7b1 19%, rgba(141, 167, 177, 0.85) 100%);
+            background: linear-gradient(to bottom, #8da7b1 0%, #8da7b1 19%, rgba(141, 167, 177, 0.85) 100%);
             display: block;
             position: fixed;
             z-index: 1000;
@@ -201,6 +201,20 @@ h6 {
   display: flex;
   align-items: flex-end; }
 
+.servicios a {
+  display: block;
+  width: 100%;
+  text-align: center;
+  text-decoration: none;
+  color: #B94735;
+  padding: 16px 0;
+  transition: all 1s; }
+  .servicios a span {
+    display: block; }
+  .servicios a:hover {
+    background: white;
+    border-radius: 3px; }
+
 .card {
   width: 99%;
   padding: 40px 0;
@@ -242,7 +256,7 @@ ul {
       color: #555; }
       ul > li > a:hover {
         text-decoration: underline;
-        color: #30158b; }
+        color: #B94735; }
   .social ul > li {
     display: inline-block;
     padding: 4px 8px; }
@@ -267,13 +281,13 @@ a.btn, button, input[type=button], input[type=submit] {
   border-radius: 3px;
   transition: all .2s; }
   a.btn:hover, button:hover, input[type=button]:hover, input[type=submit]:hover {
-    background: #3f1cb7; }
+    background: #ce6453; }
   a.btn:active, button:active, input[type=button]:active, input[type=submit]:active {
     box-shadow: none; }
   a.btn.outline, button.outline, input[type=button].outline, input[type=submit].outline {
     background: transparent;
-    border: 1px solid #30158b;
-    color: #30158b; }
+    border: 1px solid #B94735;
+    color: #B94735; }
 
 video {
   background: #848385; }
