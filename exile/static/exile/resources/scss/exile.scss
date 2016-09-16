@@ -166,7 +166,7 @@ h6 {
                             }
                         }
                         a > span{
-                            border: 1px solid $accent;
+                            border: 1px solid white;
                             width: 100%;
                         }
                     }
@@ -269,6 +269,10 @@ h6 {
     a{
         color: $secundary;
     }
+    ul{
+        padding: 24px;
+        list-style: inherit;
+    }
 }
 .pd{
     padding: 16px;
@@ -292,6 +296,7 @@ footer {
     }
     ul > li{
         text-align: right;
+        list-style: none;
     }
 }
 
@@ -330,7 +335,7 @@ ul {
 a.btn, button, input[type=button], input[type=submit]{
     font-family: 'Roboto Condensed', sans-serif;
     padding: 10px 30px;
-    margin: 0 4px;
+    margin: 4px;
     color: white;
     background: $accent;
     border: 1px solid transparent;
@@ -425,18 +430,23 @@ video {
     }
     &.m1{
         background-image: url(/media/Menus/1.png);
+        background-position: 0 0;
     }
     &.m2{
         background-image: url(/media/Menus/2.png);
+        background-position: 0 0;
     }
     &.m3{
         background-image: url(/media/Menus/3.png);
+        background-position: 0 0;
     }
     &.m4{
         background-image: url(/media/Menus/4.png);
+        background-position: 0 0;
     }
     &.m5{
-        background-image: url(/media/Menús/5.png);
+        background-image: url(/media/Menus/5.png);
+        background-position: 0 0;
     }
 }
 
