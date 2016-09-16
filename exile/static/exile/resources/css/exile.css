@@ -351,15 +351,15 @@ video {
   .img.i8 {
     background-image: url(/media/Imagenes/Duotono/8.jpg); }
   .img.m1 {
-    background-image: url(/media/Menus/1.jpg); }
+    background-image: url(/media/Menus/1.png); }
   .img.m2 {
-    background-image: url(/media/Menus/2.jpg); }
+    background-image: url(/media/Menus/2.png); }
   .img.m3 {
-    background-image: url(/media/Menus/3.jpg); }
+    background-image: url(/media/Menus/3.png); }
   .img.m4 {
-    background-image: url(/media/Menus/4.jpg); }
+    background-image: url(/media/Menus/4.png); }
   .img.m5 {
-    background-image: url(/media/Menús/5.jpg); }
+    background-image: url(/media/Menús/5.png); }
 
 .text-center {
   text-align: center; }
