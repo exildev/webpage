@@ -36,7 +36,7 @@ h4,
 h5,
 h6 {
   font-family: 'Roboto', sans-serif;
-  color: #B94735;
+  color: #023147;
   text-transform: uppercase; }
   .header h1, .header
   h2, .header
@@ -133,6 +133,9 @@ h6 {
               #sheet .header nav > ul > li.selected .sub a > span {
                 border: 1px solid white;
                 width: 100%; }
+          #sheet .header nav > ul > li.selected a > span {
+            border: 1px solid #023147;
+            width: 100%; }
   #sheet .content {
     flex: 2;
     overflow: auto; }
@@ -206,17 +209,17 @@ h6 {
   width: 100%;
   text-align: center;
   text-decoration: none;
-  color: #B94735;
+  color: #023147;
   padding: 16px 0;
-  transition: all 1s; }
+  transition: all .2s; }
   .servicios a span {
     display: block; }
   .servicios a:hover {
-    background: #df9a8f;
+    background: #0587c3;
     border-radius: 3px; }
 
 .rowf .servicios:nth-child(2n+1) a:hover {
-  background: #80d4fb; }
+  background: white; }
 
 .card {
   width: 99%;
@@ -228,6 +231,8 @@ h6 {
   .card p, .card h2, .card h4 {
     font-size: larger;
     padding-left: 16px; }
+  .card a {
+    color: #B94735; }
 
 .pd {
   padding: 16px; }
@@ -259,7 +264,7 @@ ul {
       color: #555; }
       ul > li > a:hover {
         text-decoration: underline;
-        color: #B94735; }
+        color: #023147; }
   .social ul > li {
     display: inline-block;
     padding: 4px 8px; }
@@ -284,13 +289,13 @@ a.btn, button, input[type=button], input[type=submit] {
   border-radius: 3px;
   transition: all .2s; }
   a.btn:hover, button:hover, input[type=button]:hover, input[type=submit]:hover {
-    background: #ce6453; }
+    background: #035379; }
   a.btn:active, button:active, input[type=button]:active, input[type=submit]:active {
     box-shadow: none; }
   a.btn.outline, button.outline, input[type=button].outline, input[type=submit].outline {
     background: transparent;
-    border: 1px solid #B94735;
-    color: #B94735; }
+    border: 1px solid #023147;
+    color: #023147; }
 
 video {
   background: #848385; }
