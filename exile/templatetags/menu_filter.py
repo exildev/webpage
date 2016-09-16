@@ -54,7 +54,7 @@ def footerSeccion(footer):
 
 @register.filter(name="footerPage_tag")
 def footerPage(footer, seccion):
-    return footer.paginas.all().filter(ordenfooter__seccion=seccion).order_by('posicion')
+    return footer.paginas.all().filter(ordenfooter__seccion=seccion).order_by('ordenfooter__posicion')
 # end def
 
 
