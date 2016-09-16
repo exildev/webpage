@@ -190,7 +190,7 @@ input, select, textarea {
   height: 75px;
   padding: 10px;
 }
-
+/*
 .input.submit {
   background-color: #FFF;
   color: #B94735;
@@ -202,11 +202,15 @@ input, select, textarea {
   transition: all 0.1s, transform 0s 0.6s;
   transition: all 0.1s, transform 0s 0.6s, -webkit-transform 0s 0.6s;
 }
+.input.submit:hover{
+
+}
+
 .input.submit:active {
   margin-top: 15px;
   box-shadow: 0 0 rgba(0, 0, 0, 0.5);
 }
-
+*/
 .input.form-error {
   -webkit-animation: error 0.8s ease;
           animation: error 0.8s ease;
