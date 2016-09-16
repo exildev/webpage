@@ -210,6 +210,8 @@ h6 {
   padding: 16px 0; }
   .servicios a span {
     display: block; }
+  .servicios a:hover {
+    background: white; }
 
 .card {
   width: 99%;

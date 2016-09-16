@@ -228,6 +228,9 @@ h6 {
         span {
             display: block;
         }
+        &:hover{
+            background: lighten($accent, 70%);
+        }
     }
 }
 
