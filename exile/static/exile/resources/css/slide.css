@@ -61,3 +61,17 @@ html,body{
 	height: 500px;
 	overflow: hidden;
 }
+
+
+#btn-down::before{
+	font-size: 60px;
+}
+#btn-down{
+	position: relative;
+    margin: 0 auto;
+    display: block;
+    width: 100px;
+    text-align: center;
+    margin-top: -200px;
+    color: #fff;
+}
