@@ -43,7 +43,7 @@ def subItemsSeccion(item):
 def footerSeccion(footer):
     secciones = []
     for f in footer.paginas.all():
-        orden = models.OrdenFooter.objects.filter(footer=footer, pagina=f)
+        orden = models.OrdenFooter.objects.filter(footer=footer, pagina=f).first()
         if secciones.count(orden.seccion) == 0:
             secciones.append(orden.seccion)
         # end if
