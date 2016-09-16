@@ -212,8 +212,11 @@ h6 {
   .servicios a span {
     display: block; }
   .servicios a:hover {
-    background: white;
+    background: #df9a8f;
     border-radius: 3px; }
+
+.rowf .servicios:nth-child(2n+1) a:hover {
+  background: #80d4fb; }
 
 .card {
   width: 99%;
