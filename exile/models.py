@@ -176,3 +176,18 @@ class Footer(models.Model):
         return u"%s" % (self.nombre)
     # end def
 # end class
+
+
+class FooterPrincipal(models.Model):
+    footer = models.OneToOneField(Footer)
+    fecha = models.DateField(auto_now_add=True)
+
+    class Meta:
+        verbose_name = "Footer Principal"
+        verbose_name_plural = "Footer Principal"
+    # end class
+
+    def __unicode__(self):
+        return u"%s" % (self.footer.nombre)
+    # end def
+# end class

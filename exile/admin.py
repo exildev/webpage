@@ -82,6 +82,7 @@ class PaginaPrincipalAdmin(admin.ModelAdmin):
 
 class ContactoAdmin(admin.ModelAdmin):
     list_display = ('nombre', 'email', 'asunto', 'mensaje')
+    readonly_fields = list_display
     search_fields = list_display
 # end class
 
