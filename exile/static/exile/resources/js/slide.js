@@ -25,10 +25,10 @@
 	   			}
 	   		}
 	   	}, 3000);
-	   	
+
 		$("#btn-down").click(function() {
 		    $('.content').animate({
-		        scrollTop: 1070
+		        scrollTop: 900
 		    }, 1000);
 		});
    	}
