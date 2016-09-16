@@ -1,7 +1,7 @@
 @import "utils";
 @import "mixin";
-$primary: rgb(93, 61, 115);
-$accent: rgb(48, 21, 139);
+$primary: #8da7b1;
+$accent: #B94735;
 $radio: 3px;
 
 * {
@@ -225,6 +225,7 @@ h6 {
         text-decoration: none;
         color: $accent;
         padding: 16px 0;
+        transition: all 1s;
         span {
             display: block;
         }
