@@ -86,6 +86,18 @@ class ContactoAdmin(admin.ModelAdmin):
 # end class
 
 
+class OrdenFooterstack(admin.StackedInline):
+    model = models.OrdenFooter
+# end class
+
+
+class FooterAdmin(admin.ModelAdmin):
+    list_display = ("nombre",)
+    search_fields = list_display
+    inlines = [OrdenFooterstack,]
+# end class
+
+
 admin.site.register(models.Page, PageAdmin)
 admin.site.register(models.Seccion, SeccionAdmin)
 admin.site.register(models.Item, ItemAdmin)
@@ -95,3 +107,4 @@ admin.site.register(models.Menu, MenuAdmin)
 admin.site.register(models.MenuPrincipal, MenuPrincipalAdmin)
 admin.site.register(models.PaginaPrincipal, PaginaPrincipalAdmin)
 admin.site.register(models.Contacto, ContactoAdmin)
+admin.site.register(models.Footer, FooterAdmin)
