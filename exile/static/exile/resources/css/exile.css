@@ -67,7 +67,8 @@ h6 {
     height: 56px;
     background: #fff;
     transition: height 0.2s;
-    color: #323232; }
+    color: #323232;
+    border: 1px solid #323232; }
     #sheet .header.top {
       height: 128px; }
       #sheet .header.top .top-header {
@@ -143,7 +144,7 @@ h6 {
             z-index: 1000;
             right: 0;
             left: 0;
-            margin-top: -4px; }
+            margin-top: -8px; }
             #sheet .header nav > ul > li.selected .sub a {
               color: #323232; }
               #sheet .header nav > ul > li.selected .sub a > span {
@@ -265,20 +266,25 @@ footer.card {
   width: 99%;
   border-radius: 3px 3px 0 0;
   padding-bottom: 0;
-  margin-bottom: 0; }
+  margin-bottom: 0;
+  background: #323232;
+  color: white; }
 footer .power [class^="col-"] {
   align-items: baseline;
-  border-bottom: 1px solid #555;
-  padding: 16px; }
+  border-top: 1px solid #555;
+  padding: 16px;
+  margin-top: 8px; }
 footer h3 {
   padding-left: 16px;
   text-align: right;
-  color: #fff !important; }
+  color: #B94735 !important; }
 footer ul {
   padding: 0; }
   footer ul > li {
     text-align: right;
     list-style: none; }
+    footer ul > li a {
+      color: white !important; }
 
 ul {
   padding: 0;
@@ -411,7 +417,7 @@ video {
 .blur, .title h1 {
   padding: 16px;
   background: rgba(255, 255, 255, 0.4);
-  border: 3px; }
+  border-radius: 3px; }
 
 ul.info {
   list-style: none; }

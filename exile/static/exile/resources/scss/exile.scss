@@ -58,6 +58,7 @@ h6 {
         background: $primary;
         transition: height 0.2s;
         color: $menufont;
+        border: 1px solid $menufont;
         @extend %shadow;
 
         &.top {
@@ -162,7 +163,7 @@ h6 {
                             z-index: 1000;
                             right: 0;
                             left: 0;
-                            margin-top: -4px;
+                            margin-top: -8px;
                             a{
                                 color: $menufont;
                                 > span{
@@ -286,29 +287,36 @@ h6 {
 .pd{
     padding: 16px;
 }
+
 footer {
     &.card {
         width: 99%;
         border-radius: $radio $radio 0 0;
         padding-bottom: 0;
         margin-bottom: 0;
+        background: $menufont;
+        color: white;
     }
 
     .power [class^="col-"] {
         align-items: baseline;
-        border-bottom: 1px solid #555;
+        border-top: 1px solid #555;
         padding: 16px;
+        margin-top: 8px;
     }
     h3 {
         padding-left: 16px;
         text-align: right;
-        color: $primary !important;
+        color: $secundary !important;
     }
     ul {
         padding: 0;
         > li{
             text-align: right;
             list-style: none;
+            a{
+                color: white !important;
+            }
         }
     }
 }
@@ -491,7 +499,7 @@ video {
 .blur, .title h1 {
     padding: 16px;
     background: rgba(255, 255, 255, 0.4);
-    border: $radio;
+    border-radius: $radio;
 }
 
 ul.info{
