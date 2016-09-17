@@ -51,11 +51,8 @@
     border: 1px solid black;
     right: 200px;
     -ms-transform: scaley(5);
-    /* IE 9 */
     -webkit-transform: scale(2, 3);
-    /* Safari */
     transform: scale(2, 3);
-    /* Standard syntax */
     -webkit-transition: all 0.5s cubic-bezier(0.23, 1, 0.32, 1);
     transition: all 0.5s cubic-bezier(0.23, 1, 0.32, 1);
 }
