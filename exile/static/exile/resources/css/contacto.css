@@ -3,11 +3,11 @@
     height: 275px;
 }
 
-.form-contacto.col-12{
+.form-contacto .col-12{
   position: absolute;
 }
 
-.form-contacto.col-12:nth-child(2){
+.form-contacto .col-12:nth-child(2){
   bottom: 0px;
 }
 
