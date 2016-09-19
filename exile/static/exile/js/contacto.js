@@ -66,6 +66,7 @@ $('form').submit(function() {
   if (!formError) {
     $('.form-contacto').addClass('form-submitted');
     $('#form-head').addClass('form-submitted');
+    $('.thank').fadeIn(300);
     $(this).ajaxSubmit(options);
   }
   return false;
@@ -73,12 +74,11 @@ $('form').submit(function() {
 
 // post-submit callback
 function showResponse(responseText, statusText, xhr, $form)  {
-    $('.thank').fadeIn(300);
     setTimeout(function(){
       toggleForm();
       bindFormClick();
       //$('form').trigger("reset");
-    }, 2000);
+    }, 1000);
 }
 
 function showError(response){
