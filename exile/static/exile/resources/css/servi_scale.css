@@ -64,5 +64,7 @@
 }
 
 .mod_temp .no-scale{
-    transform: scaleX(0.3334) scaleY(0.5);
+    background: white;
+    box-shadow: 0 0 12px #555;
+    padding: 16px;
 }
