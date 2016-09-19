@@ -1,3 +1,10 @@
+/*
+  Framento tomado de :
+  Joe Harry
+  https://twitter.com/joeharry__/
+  http://codepen.io/woodwork/
+  http://codepen.io/woodwork/pen/pgLvEr
+*/
 var formContainer = $('#form-container');
 
 bindFormClick();
@@ -26,6 +33,15 @@ function toggleForm(){
   $('.form-submitted').removeClass('form-submitted');
 }
 
+var options = {
+    url: "/contacto/",
+    type: "POST",
+    dataType: "json",
+    success: showResponse,
+    error: showError,
+    resetForm: true
+};
+
 //Form validation
 $('form').submit(function() {
   var form = $(this);
@@ -33,7 +49,7 @@ $('form').submit(function() {
   var formError = false;
 
   form.find('.input').each(function() {
-    if ($(this).val() == '') {
+    if ($(this).val() === '') {
       $(this).addClass('form-error');
       $(this).select();
       formError = true;
@@ -50,12 +66,38 @@ $('form').submit(function() {
   if (!formError) {
     $('.form-contacto').addClass('form-submitted');
     $('#form-head').addClass('form-submitted');
-    setTimeout(function(){
-      $(form).trigger("reset");
-    }, 1000);
+    $('.thank').fadeIn(300);
+    $(this).ajaxSubmit(options);
   }
   return false;
 });
+
+// post-submit callback
+function showResponse(responseText, statusText, xhr, $form)  {
+    setTimeout(function(){
+      toggleForm();
+      bindFormClick();
+      //$('form').trigger("reset");
+    }, 1000);
+}
+
+function showError(response){
+    $('.form-contacto').removeClass('form-submitted');
+    $('#form-head').removeClass('form-submitted');
+    if (response.responseJSON.nombre) {
+        $('input[name="nombre"]').addClass('form-error');
+        $('input[name="nombre"]').select();
+    } else if (response.responseJSON.email) {
+        $('input[name="email"]').addClass('form-error');
+        $('input[name="email"]').select();
+    } else if (response.responseJSON.asunto) {
+        $('input[name="asunto"]').addClass('form-error');
+        $('input[name="asunto"]').select();
+    } else if (response.responseJSON.mensaje) {
+        $('input[name="mensaje"]').addClass('form-error');
+        $('input[name="mensaje"]').select();
+    }
+}
 
 function isValidEmail(email) {
     var pattern = /^([a-z\d!#$%&'*+\-\/=?^_`{|}~\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF]+(\.[a-z\d!#$%&'*+\-\/=?^_`{|}~\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF]+)*|"((([ \t]*\r\n)?[ \t]+)?([\x01-\x08\x0b\x0c\x0e-\x1f\x7f\x21\x23-\x5b\x5d-\x7e\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF]|\\[\x01-\x09\x0b\x0c\x0d-\x7f\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF]))*(([ \t]*\r\n)?[ \t]+)?")@(([a-z\d\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF]|[a-z\d\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF][a-z\d\-._~\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF]*[a-z\d\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])\.)+([a-z\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF]|[a-z\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF][a-z\d\-._~\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF]*[a-z\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])\.?$/i;
