@@ -38,7 +38,6 @@ var options = {
     type: "POST",
     dataType: "json",
     success: showResponse,
-    beforeSubmit:  showRequest,
 };
 
 //Form validation
@@ -68,23 +67,11 @@ $('form').submit(function() {
   return false;
 });
 
-function showRequest(formData, jqForm, options) {
-    // formData is an array; here we use $.param to convert it to a string to display it
-    // but the form plugin does this for you automatically when it submits the data
-    var queryString = $.param(formData);
-    // jqForm is a jQuery object encapsulating the form element.  To access the
-    // DOM element for the form do this:
-    // var formElement = jqForm[0];
-
-    console.log('About to submit: \n\n' + queryString);
-    // here we could return false to prevent the form from being submitted;
-    // returning anything other than false will allow the form submit to continue
-    return true;
-
-}
-
 // post-submit callback
 function showResponse(responseText, statusText, xhr, $form)  {
+  console.log(responseText);
+  console.log(statusText);
+  console.log($form);
     // for normal html responses, the first argument to the success callback
     // is the XMLHttpRequest object's responseText property
 
@@ -98,12 +85,10 @@ function showResponse(responseText, statusText, xhr, $form)  {
     $('.form-contacto').addClass('form-submitted');
     $('#form-head').addClass('form-submitted');
     setTimeout(function(){
-      $(form).trigger("reset");
+      $('form').trigger("reset");
       toggleForm();
       bindFormClick();
     }, 2000);
-    console.log('status: ' + statusText + '\n\nresponseText: \n' + responseText +
-        '\n\nThe output div should have already been updated with the responseText.');
 }
 
 function isValidEmail(email) {
