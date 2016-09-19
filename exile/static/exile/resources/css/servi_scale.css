@@ -1,5 +1,10 @@
 .modal {}
 
+.mod_temp{
+    -webkit-transition: width 2s, height 4s; /* For Safari 3.1 to 6.0 */
+    transition: width 2s, height 4s;
+}
+
 .act_scale {
     width: 100px !important;
 }
