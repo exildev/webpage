@@ -63,6 +63,8 @@ $('form').submit(function() {
   });
 
   if (!formError) {
+    $('.form-contacto').addClass('form-submitted');
+    $('#form-head').addClass('form-submitted');
     $(this).ajaxSubmit(options);
   }
   return false;
@@ -70,17 +72,17 @@ $('form').submit(function() {
 
 // post-submit callback
 function showResponse(responseText, statusText, xhr, $form)  {
-    $('.form-contacto').addClass('form-submitted');
-    $('#form-head').addClass('form-submitted');
     $('.thank').fadeIn(300);
     setTimeout(function(){
       $('form').trigger("reset");
       toggleForm();
       bindFormClick();
-    }, 3000);
+    }, 2000);
 }
 
 function showError(response){
+    $('.form-contacto').removeClass('form-submitted');
+    $('#form-head').removeClass('form-submitted');
     if (response.responseJSON.nombre) {
         $('input[name="nombre"]').addClass('form-error');
         $('input[name="nombre"]').select();
