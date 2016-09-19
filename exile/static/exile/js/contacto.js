@@ -38,7 +38,8 @@ var options = {
     type: "POST",
     dataType: "json",
     success: showResponse,
-    error: showError
+    error: showError,
+    resetForm: true
 };
 
 //Form validation
@@ -74,9 +75,9 @@ $('form').submit(function() {
 function showResponse(responseText, statusText, xhr, $form)  {
     $('.thank').fadeIn(300);
     setTimeout(function(){
-      $('form').trigger("reset");
       toggleForm();
       bindFormClick();
+      //$('form').trigger("reset");
     }, 2000);
 }
 
