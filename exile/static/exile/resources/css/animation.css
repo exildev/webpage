@@ -116,5 +116,5 @@
 }
 
 .tec li.animated{
-	transform: rotate3d(0, 100, 0, 360deg);
+	transform: scale(2) rotate3d(0, 100, 0, 360deg);
 }
