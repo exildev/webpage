@@ -34,19 +34,31 @@
 		(function() { 
 
 			// how many milliseconds is a long press?
-			var longpress = 2000;
+			var longpress = 1000;
 			// holds the start time
 			var start;
 
 			jQuery( ".tec li" ).on( 'mousedown', function( e ) {
 			    start = new Date().getTime();
-			} );
+			    this.scale = 1;
+			    this.interval = window.setInterval(function (){
+			    	$(this).css({transform: 'scale(' + this.scale + ')'});
+			    	this.scale += 0.1;
+			    }.bind(this), 100);
+			});
 
 			jQuery( ".tec li" ).on( 'mouseleave', function( e ) {
+				window.clearTimeout(this.interval);
+				$(this).removeAttr("style");
+				console.log($(this));
 			    start = 0;
-			} );
+			});
 
 			jQuery( ".tec li" ).on( 'mouseup', function( e ) {
+				window.clearTimeout(this.interval);
+				console.log($(this));
+				$(this).removeAttr("style");
+				console.log(new Date().getTime() , ( start + longpress )  , new Date().getTime() >= ( start + longpress )  );
 			    if ( new Date().getTime() >= ( start + longpress )  ) {
 			       $(this).addClass("animated");
 			       window.setTimeout(function (){
