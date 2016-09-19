@@ -31,6 +31,31 @@
 		        scrollTop: 900
 		    }, 1000);
 		});
+		(function() { 
+
+			// how many milliseconds is a long press?
+			var longpress = 2000;
+			// holds the start time
+			var start;
+
+			jQuery( ".tec li" ).on( 'mousedown', function( e ) {
+			    start = new Date().getTime();
+			} );
+
+			jQuery( ".tec li" ).on( 'mouseleave', function( e ) {
+			    start = 0;
+			} );
+
+			jQuery( ".tec li" ).on( 'mouseup', function( e ) {
+			    if ( new Date().getTime() >= ( start + longpress )  ) {
+			       $(this).addClass("animated");
+			       window.setTimeout(function (){
+			       		$(this).removeClass("animated");
+			       }.bind(this), 2000);
+			    }
+			} );
+
+		}());
    	}
 	document.addEventListener("DOMContentLoaded", load, false);
 })();
