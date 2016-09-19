@@ -72,11 +72,12 @@ $('form').submit(function() {
 function showResponse(responseText, statusText, xhr, $form)  {
     $('.form-contacto').addClass('form-submitted');
     $('#form-head').addClass('form-submitted');
+    $('.thank').fadeIn(300);
     setTimeout(function(){
       $('form').trigger("reset");
       toggleForm();
       bindFormClick();
-    }, 2000);
+    }, 3000);
 }
 
 function showError(response){
