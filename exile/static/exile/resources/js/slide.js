@@ -44,7 +44,7 @@
 			    this.interval = window.setInterval(function (){
 			    	$(this).css({transform: 'scale(' + this.scale + ')'});
 			    	if (this.scale < 4){
-			    		this.scale += 0.1;
+			    		this.scale += 0.5;
 			    	}
 			    }.bind(this), 100);
 			});
