@@ -142,7 +142,7 @@
   display: none;
 }
 
-.form-submitted.thank {
+.form-submitted .thank {
   display: inherit;
 }
 
