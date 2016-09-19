@@ -1,8 +1,9 @@
 @import "utils";
 @import "mixin";
-$primary: #023147;
+$primary: #fff;
 $secundary: #B94735;
 $accent: #023147;
+$menufont: #323232;
 $radio: 3px;
 
 * {
@@ -17,7 +18,7 @@ html {
     margin: 0;
     font-family: 'Open Sans Condensed', sans-serif;
     background: #f3f3f3;
-    color: #333;
+    color: $menufont;
 }
 
 body {
@@ -38,7 +39,7 @@ h6 {
     color: $accent;
     text-transform: uppercase;
     .header &{
-        color: white;
+        color: $menufont;
     }
     .title &{
         color: $secundary;
@@ -56,7 +57,9 @@ h6 {
         height: 56px;
         background: $primary;
         transition: height 0.2s;
-        color: white;
+        color: $menufont;
+        border: 1px solid $menufont;
+        @extend %shadow;
 
         &.top {
             height: 128px;
@@ -72,8 +75,8 @@ h6 {
 
         .top-header {
             position: relative;
-            top: -60px;
-            background: white;
+            top: -63px;
+            background: $menufont;
             height: 56px;
             border-radius: 0 0 $radio $radio;
             @extend %shadow;
@@ -83,6 +86,7 @@ h6 {
                 padding: 12px;
                 > span{
                     margin-top: 4px;
+                    color: white;
                 }
                 a > span{
                     vertical-align: sub;
@@ -129,7 +133,7 @@ h6 {
                         @extend %wh1;
                         padding: 16px;
                         text-decoration: none;
-                        color: white;
+                        color: $menufont;
                         text-transform: uppercase;
 
                         > span {
@@ -159,17 +163,17 @@ h6 {
                             z-index: 1000;
                             right: 0;
                             left: 0;
-                            margin-top: -4px;
+                            margin-top: -8px;
                             a{
-                                color: white;
+                                color: $menufont;
                                 > span{
-                                    border: 1px solid white;
+                                    border: 1px solid $menufont;
                                     width: 100%;
                                 }
                             }
                         }
                         a > span{
-                            border: 1px solid white;
+                            border: 1px solid $menufont;
                             width: 100%;
                         }
                     }
@@ -229,7 +233,7 @@ h6 {
     align-items: flex-end;
 }
 
-.servicios{
+.servicios .modal .no-scale{
     a{
         display: block;
         width: 100%;
@@ -238,8 +242,9 @@ h6 {
         color: $accent;
         padding: 16px 0;
         transition: all .2s;
-        span {
+        span:not(.des_complem) {
             display: block;
+            text-align: center;
         }
         &:hover{
             background: lighten($accent, 60%);
@@ -282,29 +287,36 @@ h6 {
 .pd{
     padding: 16px;
 }
+
 footer {
     &.card {
         width: 99%;
         border-radius: $radio $radio 0 0;
         padding-bottom: 0;
         margin-bottom: 0;
+        background: $menufont;
+        color: white;
     }
 
     .power [class^="col-"] {
         align-items: baseline;
-        border-bottom: 1px solid #555;
+        border-top: 1px solid #555;
         padding: 16px;
+        margin-top: 8px;
     }
     h3 {
         padding-left: 16px;
         text-align: right;
-        color: $primary !important;
+        color: $secundary !important;
     }
     ul {
         padding: 0;
         > li{
             text-align: right;
             list-style: none;
+            a{
+                color: white !important;
+            }
         }
     }
 }
@@ -487,7 +499,7 @@ video {
 .blur, .title h1 {
     padding: 16px;
     background: rgba(255, 255, 255, 0.4);
-    border: $radio;
+    border-radius: $radio;
 }
 
 ul.info{
