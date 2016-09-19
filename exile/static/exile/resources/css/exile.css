@@ -127,7 +127,7 @@ h6 {
               display: block;
               width: 0; }
             #sheet .header nav > ul > li > a:hover > span {
-              border: 1px solid white;
+              border: 1px solid #323232;
               width: 100%; }
           #sheet .header nav > ul > li .sub {
             display: none; }
@@ -171,39 +171,87 @@ h6 {
   .row .col-1,
   .rowf .col-1 {
     width: 8.33333%; }
+    @media screen and (max-width: 500px) {
+      .row .col-1,
+      .rowf .col-1 {
+        width: 100%; } }
   .row .col-2,
   .rowf .col-2 {
     width: 16.66667%; }
+    @media screen and (max-width: 500px) {
+      .row .col-2,
+      .rowf .col-2 {
+        width: 100%; } }
   .row .col-3,
   .rowf .col-3 {
     width: 25%; }
+    @media screen and (max-width: 500px) {
+      .row .col-3,
+      .rowf .col-3 {
+        width: 100%; } }
   .row .col-4,
   .rowf .col-4 {
     width: 33.33333%; }
+    @media screen and (max-width: 500px) {
+      .row .col-4,
+      .rowf .col-4 {
+        width: 100%; } }
   .row .col-5,
   .rowf .col-5 {
     width: 41.66667%; }
+    @media screen and (max-width: 500px) {
+      .row .col-5,
+      .rowf .col-5 {
+        width: 100%; } }
   .row .col-6,
   .rowf .col-6 {
     width: 50%; }
+    @media screen and (max-width: 500px) {
+      .row .col-6,
+      .rowf .col-6 {
+        width: 100%; } }
   .row .col-7,
   .rowf .col-7 {
     width: 58.33333%; }
+    @media screen and (max-width: 500px) {
+      .row .col-7,
+      .rowf .col-7 {
+        width: 100%; } }
   .row .col-8,
   .rowf .col-8 {
     width: 66.66667%; }
+    @media screen and (max-width: 500px) {
+      .row .col-8,
+      .rowf .col-8 {
+        width: 100%; } }
   .row .col-9,
   .rowf .col-9 {
     width: 75%; }
+    @media screen and (max-width: 500px) {
+      .row .col-9,
+      .rowf .col-9 {
+        width: 100%; } }
   .row .col-10,
   .rowf .col-10 {
     width: 83.33333%; }
+    @media screen and (max-width: 500px) {
+      .row .col-10,
+      .rowf .col-10 {
+        width: 100%; } }
   .row .col-11,
   .rowf .col-11 {
     width: 91.66667%; }
+    @media screen and (max-width: 500px) {
+      .row .col-11,
+      .rowf .col-11 {
+        width: 100%; } }
   .row .col-12,
   .rowf .col-12 {
     width: 100%; }
+    @media screen and (max-width: 500px) {
+      .row .col-12,
+      .rowf .col-12 {
+        width: 100%; } }
 
 .right {
   display: flex;
@@ -335,7 +383,7 @@ a.btn, button, input[type=button], input[type=submit] {
       background: #035379; }
 
 video {
-  background: #f4f3f4;
+  background: #848385;
   max-height: 850px; }
 
 .title {
