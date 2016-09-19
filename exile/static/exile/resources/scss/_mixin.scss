@@ -4,6 +4,9 @@
         @for $i from 1 through $n {
             .col-#{$i} {
                 width: $val * $i;
+                @media screen and (max-width: 500px) {
+                    width: 100%;
+                }
             }
         }
     }
