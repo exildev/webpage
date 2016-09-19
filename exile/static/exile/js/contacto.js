@@ -1,3 +1,10 @@
+/*
+  Framento tomado de :
+  Joe Harry
+  https://twitter.com/joeharry__/
+  http://codepen.io/woodwork/
+  http://codepen.io/woodwork/pen/pgLvEr
+*/
 var formContainer = $('#form-container');
 
 bindFormClick();
@@ -26,6 +33,14 @@ function toggleForm(){
   $('.form-submitted').removeClass('form-submitted');
 }
 
+var options = {
+    url: "/contacto/",
+    type: "POST",
+    dataType: "json",
+    success: showResponse,
+    beforeSubmit:  showRequest,
+};
+
 //Form validation
 $('form').submit(function() {
   var form = $(this);
@@ -48,14 +63,48 @@ $('form').submit(function() {
   });
 
   if (!formError) {
+    $(this).ajaxSubmit(options);
+  }
+  return false;
+});
+
+function showRequest(formData, jqForm, options) {
+    // formData is an array; here we use $.param to convert it to a string to display it
+    // but the form plugin does this for you automatically when it submits the data
+    var queryString = $.param(formData);
+    // jqForm is a jQuery object encapsulating the form element.  To access the
+    // DOM element for the form do this:
+    // var formElement = jqForm[0];
+
+    alert('About to submit: \n\n' + queryString);
+    // here we could return false to prevent the form from being submitted;
+    // returning anything other than false will allow the form submit to continue
+    return true;
+
+}
+
+// post-submit callback
+function showResponse(responseText, statusText, xhr, $form)  {
+    // for normal html responses, the first argument to the success callback
+    // is the XMLHttpRequest object's responseText property
+
+    // if the ajaxSubmit method was passed an Options Object with the dataType
+    // property set to 'xml' then the first argument to the success callback
+    // is the XMLHttpRequest object's responseXML property
+
+    // if the ajaxSubmit method was passed an Options Object with the dataType
+    // property set to 'json' then the first argument to the success callback
+    // is the json data object returned by the server
     $('.form-contacto').addClass('form-submitted');
     $('#form-head').addClass('form-submitted');
     setTimeout(function(){
       $(form).trigger("reset");
-    }, 1000);
-  }
-  return false;
-});
+      toggleForm();
+      bindFormClick();
+    }, 2000);
+    alert('status: ' + statusText + '\n\nresponseText: \n' + responseText +
+        '\n\nThe output div should have already been updated with the responseText.');
+}
 
 function isValidEmail(email) {
     var pattern = /^([a-z\d!#$%&'*+\-\/=?^_`{|}~\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF]+(\.[a-z\d!#$%&'*+\-\/=?^_`{|}~\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF]+)*|"((([ \t]*\r\n)?[ \t]+)?([\x01-\x08\x0b\x0c\x0e-\x1f\x7f\x21\x23-\x5b\x5d-\x7e\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF]|\\[\x01-\x09\x0b\x0c\x0d-\x7f\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF]))*(([ \t]*\r\n)?[ \t]+)?")@(([a-z\d\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF]|[a-z\d\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF][a-z\d\-._~\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF]*[a-z\d\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])\.)+([a-z\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF]|[a-z\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF][a-z\d\-._~\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF]*[a-z\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])\.?$/i;

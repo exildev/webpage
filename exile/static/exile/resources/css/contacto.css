@@ -138,6 +138,14 @@
   display: block;
 }
 
+.thank{
+  display: none;
+}
+
+.form-submitted.thank {
+  display: inherit;
+}
+
 .input {
   background: rgba(0, 0, 0, 0.2);
   display: block;
