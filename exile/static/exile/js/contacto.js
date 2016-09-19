@@ -38,7 +38,8 @@ var options = {
     type: "POST",
     dataType: "json",
     success: showResponse,
-    beforeSubmit:  showRequest,
+    error: showError,
+    resetForm: true
 };
 
 //Form validation
@@ -63,47 +64,39 @@ $('form').submit(function() {
   });
 
   if (!formError) {
+    $('.form-contacto').addClass('form-submitted');
+    $('#form-head').addClass('form-submitted');
+    $('.thank').fadeIn(300);
     $(this).ajaxSubmit(options);
   }
   return false;
 });
 
-function showRequest(formData, jqForm, options) {
-    // formData is an array; here we use $.param to convert it to a string to display it
-    // but the form plugin does this for you automatically when it submits the data
-    var queryString = $.param(formData);
-    // jqForm is a jQuery object encapsulating the form element.  To access the
-    // DOM element for the form do this:
-    // var formElement = jqForm[0];
-
-    console.log('About to submit: \n\n' + queryString);
-    // here we could return false to prevent the form from being submitted;
-    // returning anything other than false will allow the form submit to continue
-    return true;
-
-}
-
 // post-submit callback
 function showResponse(responseText, statusText, xhr, $form)  {
-    // for normal html responses, the first argument to the success callback
-    // is the XMLHttpRequest object's responseText property
-
-    // if the ajaxSubmit method was passed an Options Object with the dataType
-    // property set to 'xml' then the first argument to the success callback
-    // is the XMLHttpRequest object's responseXML property
-
-    // if the ajaxSubmit method was passed an Options Object with the dataType
-    // property set to 'json' then the first argument to the success callback
-    // is the json data object returned by the server
-    $('.form-contacto').addClass('form-submitted');
-    $('#form-head').addClass('form-submitted');
     setTimeout(function(){
-      $(form).trigger("reset");
       toggleForm();
       bindFormClick();
-    }, 2000);
-    console.log('status: ' + statusText + '\n\nresponseText: \n' + responseText +
-        '\n\nThe output div should have already been updated with the responseText.');
+      //$('form').trigger("reset");
+    }, 1000);
+}
+
+function showError(response){
+    $('.form-contacto').removeClass('form-submitted');
+    $('#form-head').removeClass('form-submitted');
+    if (response.responseJSON.nombre) {
+        $('input[name="nombre"]').addClass('form-error');
+        $('input[name="nombre"]').select();
+    } else if (response.responseJSON.email) {
+        $('input[name="email"]').addClass('form-error');
+        $('input[name="email"]').select();
+    } else if (response.responseJSON.asunto) {
+        $('input[name="asunto"]').addClass('form-error');
+        $('input[name="asunto"]').select();
+    } else if (response.responseJSON.mensaje) {
+        $('input[name="mensaje"]').addClass('form-error');
+        $('input[name="mensaje"]').select();
+    }
 }
 
 function isValidEmail(email) {
