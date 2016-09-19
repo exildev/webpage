@@ -33,7 +33,7 @@ $('form').submit(function() {
   var formError = false;
 
   form.find('.input').each(function() {
-    if ($(this).val() == '') {
+    if ($(this).val() === '') {
       $(this).addClass('form-error');
       $(this).select();
       formError = true;

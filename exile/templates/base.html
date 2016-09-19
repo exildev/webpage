@@ -8,22 +8,13 @@
     <title>Exile</title>
     <link rel="icon" type="image/png" href="/media/icon.png">
     <link rel="stylesheet" href="{% static "exile/resources/css/exile.css" %}" media="screen" title="no title" charset="utf-8">
-    <link href="https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300|Open+Sans" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Roboto+Condensed:300|Roboto:300" rel="stylesheet">
     <link rel="stylesheet" href="{% static "exile/resources/css/animation.css" %}">
     <link rel="stylesheet" href="{% static "exile/resources/css/slide.css" %}">
     <link rel="stylesheet" href="{% static "exile/resources/css/tecnologias.css" %}">
     <link rel="stylesheet" href="{% static "exile/resources/css/servi_scale.css" %}">
     {% block style %}
     {% endblock %}
-    <script src="{% static "exile/resources/js/exile.js" %}" charset="utf-8"></script>
-    <script src="{% static "exile/resources/js/slide.js" %}" charset="utf-8"></script>
-    <script src="{% static "exile/resources/js/servi_scale.js" %}" charset="utf-8"></script>
-    {% block script %}
-    <script src="{% static "exile/resources/js/jquery.longclick-min.js" %}" charset="utf-8"></script>
-        
-    {% endblock %}
-    <script src="http://localhost:35729/livereload.js" charset="utf-8"></script>
-
 </head>
 
 <body class="hidden">
@@ -318,9 +309,7 @@
                                 <a href="#">Lapix</a>
                             </li>
                             <li>
-                                <a href="#">GeoActivos</a>
-                            </li>
-                        </ul>
+                          1l>
                     </div>
                     <div class="col-3">
                         <h3>Experiencia</h3>
@@ -374,5 +363,13 @@
                 </div>
             </footer>
         </div>
+        <script type="text/javascript" src="{% static "exile/js/jquery.min.js" %}"></script>
+        <script type="text/javascript" src="{% static "exile/js/contacto.js" %}"></script>
+        <script src="{% static "exile/resources/js/exile.js" %}" charset="utf-8"></script>
+        <script src="{% static "exile/resources/js/slide.js" %}" charset="utf-8"></script>
+        <script src="{% static "exile/resources/js/servi_scale.js" %}" charset="utf-8"></script>
+        {% block script %}
+            <script src="{% static "exile/resources/js/jquery.longclick-min.js" %}" charset="utf-8"></script>
+        {% endblock %}
     </body>
 </html>
