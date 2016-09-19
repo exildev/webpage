@@ -31,6 +31,10 @@
 		        scrollTop: 900
 		    }, 1000);
 		});
+
+		$(".tec li").click( 100, function (){
+			alert("OO");
+		});
    	}
 	document.addEventListener("DOMContentLoaded", load, false);
 })();
