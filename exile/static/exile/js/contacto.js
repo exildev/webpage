@@ -80,7 +80,19 @@ function showResponse(responseText, statusText, xhr, $form)  {
 }
 
 function showError(response){
-    console.log(response);
+    if (response.responseJSON.nombre) {
+        $('input[name="nombre"]').addClass('form-error');
+        $('input[name="nombre"]').select();
+    } else if (response.responseJSON.email) {
+        $('input[name="email"]').addClass('form-error');
+        $('input[name="email"]').select();
+    } else if (response.responseJSON.asunto) {
+        $('input[name="asunto"]').addClass('form-error');
+        $('input[name="asunto"]').select();
+    } else if (response.responseJSON.mensaje) {
+        $('input[name="mensaje"]').addClass('form-error');
+        $('input[name="mensaje"]').select();
+    }
 }
 
 function isValidEmail(email) {
