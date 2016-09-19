@@ -43,7 +43,9 @@
 			    this.scale = 1;
 			    this.interval = window.setInterval(function (){
 			    	$(this).css({transform: 'scale(' + this.scale + ')'});
-			    	this.scale += 0.1;
+			    	if (this.scale < 4){
+			    		this.scale += 0.1;
+			    	}
 			    }.bind(this), 100);
 			});
 
