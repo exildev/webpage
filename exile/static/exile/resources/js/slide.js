@@ -43,8 +43,8 @@
 			    this.scale = 1;
 			    this.interval = window.setInterval(function (){
 			    	$(this).css({transform: 'scale(' + this.scale + ')'});
-			    	if (this.scale < 4){
-			    		this.scale += 0.9999;
+			    	if (this.scale < 3){
+			    		this.scale += 0.5;
 			    	}
 			    }.bind(this), 100);
 			});
@@ -65,7 +65,7 @@
 			       $(this).addClass("animated");
 			       window.setTimeout(function (){
 			       		$(this).removeClass("animated");
-			       }.bind(this), 2000);
+			       }.bind(this), 1000);
 			    }
 			} );
 
