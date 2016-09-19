@@ -65,7 +65,7 @@
 			       $(this).addClass("animated");
 			       window.setTimeout(function (){
 			       		$(this).removeClass("animated");
-			       }.bind(this), 2000);
+			       }.bind(this), 1000);
 			    }
 			} );
 
