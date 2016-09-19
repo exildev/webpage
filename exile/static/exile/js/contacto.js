@@ -38,6 +38,7 @@ var options = {
     type: "POST",
     dataType: "json",
     success: showResponse,
+    error: showError
 };
 
 //Form validation
@@ -69,19 +70,6 @@ $('form').submit(function() {
 
 // post-submit callback
 function showResponse(responseText, statusText, xhr, $form)  {
-  console.log(responseText);
-  console.log(statusText);
-  console.log($form);
-    // for normal html responses, the first argument to the success callback
-    // is the XMLHttpRequest object's responseText property
-
-    // if the ajaxSubmit method was passed an Options Object with the dataType
-    // property set to 'xml' then the first argument to the success callback
-    // is the XMLHttpRequest object's responseXML property
-
-    // if the ajaxSubmit method was passed an Options Object with the dataType
-    // property set to 'json' then the first argument to the success callback
-    // is the json data object returned by the server
     $('.form-contacto').addClass('form-submitted');
     $('#form-head').addClass('form-submitted');
     setTimeout(function(){
@@ -89,6 +77,10 @@ function showResponse(responseText, statusText, xhr, $form)  {
       toggleForm();
       bindFormClick();
     }, 2000);
+}
+
+function showError(response){
+    console.log(response);
 }
 
 function isValidEmail(email) {
