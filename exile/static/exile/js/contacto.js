@@ -80,21 +80,16 @@ function showResponse(responseText, statusText, xhr, $form)  {
 }
 
 function showError(response){
-    console.log(response.responseJSON);
     if (response.responseJSON.nombre) {
-        console.log("1");
         $('input[name="nombre"]').addClass('form-error');
         $('input[name="nombre"]').select();
     } else if (response.responseJSON.email) {
-        console.log("2");
         $('input[name="email"]').addClass('form-error');
         $('input[name="email"]').select();
     } else if (response.responseJSON.asunto) {
-        console.log("3");
         $('input[name="asunto"]').addClass('form-error');
         $('input[name="asunto"]').select();
     } else if (response.responseJSON.mensaje) {
-        console.log("4");
         $('input[name="mensaje"]').addClass('form-error');
         $('input[name="mensaje"]').select();
     }
