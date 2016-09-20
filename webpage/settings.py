@@ -57,7 +57,7 @@ EXILE_UI = {
         },
         'icons':{
             'exile': {
-                'icon': 'language',
+                'icon': 'public',
                 'groups': [
                     'Contenido', 'Configuracion', 'Principal', 'Contacto',
                 ],
@@ -66,14 +66,14 @@ EXILE_UI = {
                     'Seccion': {'icon': 'grid_on', 'group': 'Contenido'},
                     'Item': {'icon': 'view_carousel', 'group': 'Contenido'},
                     'SubItem': {'icon': 'widgets', 'group': 'Contenido'},
-                    'ItemSeccion': {'icon': 'schedule', 'group': 'Operación' },
-                    'SeccionFooter': {'icon': 'build', 'group': 'Operación'},
-                    'Menu': {'icon': 'build', 'group': 'Operación'},
-                    'MenuPrincipal': {'icon': 'build', 'group': 'Operación'},
-                    'PaginaPrincipal': {'icon': 'build', 'group': 'Operación'},
-                    'FooterPrincipal': {'icon': 'build', 'group': 'Operación'},
-                    'Contacto': {'icon': 'build', 'group': 'Operación'},
-                    'Footer': {'icon': 'build', 'group': 'Operación'},
+                    'ItemSeccion': {'icon': 'settings', 'group': 'Configuracion' },
+                    'SeccionFooter': {'icon': 'build', 'group': 'Contenido'},
+                    'Menu': {'icon': 'menu', 'group': 'Contenido'},
+                    'MenuPrincipal': {'icon': 'grade', 'group': 'Principal'},
+                    'PaginaPrincipal': {'icon': 'grade', 'group': 'Principal'},
+                    'FooterPrincipal': {'icon': 'grade', 'group': 'Principal'},
+                    'Contacto': {'icon': 'person', 'group': 'Contacto'},
+                    'Footer': {'icon': 'extension', 'group': 'Contenido'},
                 },
             },
             'auth': {
@@ -97,7 +97,7 @@ MENU_ORDER = [
     {
         'name': 'exile',
         'models': [
-            'Pagina',
+            'Page',
             'Seccion',
             'Item',
             'SubItem',

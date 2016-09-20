@@ -16,7 +16,7 @@ body {
 /* LINKS */
 
 a:link, a:visited {
-    color: #F50057;
+    color: #B94735;
     text-decoration: none;
 }
 a:focus, a:hover {
@@ -351,10 +351,10 @@ input[type=text], input[type=password], input[type=email], input[type=url], inpu
     margin-top: 0;
     outline: none;
     border: none;
-    border-bottom: 2px solid #607D8B;
+    border-bottom: 2px solid #8DA7B1;
 }
 input[type=text]:focus, input[type=password]:focus, input[type=email]:focus, input[type=url]:focus, input[type=number]:focus, textarea:focus, select:focus, .vTextField:focus {
-    border-color: #263238;
+    border-color: #023147;
 }
 select {
     height: 30px;
@@ -366,7 +366,7 @@ select[multiple] {
 /* FORM BUTTONS */
 
 .button, input[type=submit], input[type=button], .submit-row input, a.button, button {
-    background: #F50057;
+    background: #B94735;
     padding: 10px 15px;
     margin: 7px 0;
     border: none;
@@ -423,7 +423,7 @@ a.button {
     font-weight: 400;
     font-size: 16px;
     text-align: left;
-    background: #607D8B;
+    background: #8DA7B1;
     color: #fff;
 }
 .module caption, .inline-group h2 {
@@ -528,7 +528,7 @@ div.system-message p.system-message-title {
 /* BREADCRUMBS */
 
 div.breadcrumbs {
-    background: #607D8B;
+    background: #3e7c94;
     padding: 10px 40px;
     border: none;
     font-size: 17px;
@@ -594,7 +594,7 @@ a.deletelink:focus, a.deletelink:hover {
     display: block;
     float: left;
     padding: 7px;
-    background: #F50057;
+    background: #B94735;
     font-weight: 400;
     font-size: 14px;
     text-transform: uppercase;
@@ -684,7 +684,7 @@ table#change-history tbody th {
     height: 40px;
     padding: 10px 40px;
     padding-left: 0;
-    background: #263238;
+    background: #023147;
     line-height: 40px;
     color: #ffc;
     overflow: hidden;
@@ -734,8 +734,8 @@ table#change-history tbody th {
 }
 #user-tools a:focus, #user-tools a:hover {
     text-decoration: none;
-    border-bottom-color: #607D8B;
-    color: #607D8B;
+    border-bottom-color: #8DA7B1;
+    color: #8DA7B1;
 }
 
 /* SIDEBAR */
