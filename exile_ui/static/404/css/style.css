@@ -4,7 +4,7 @@
 	position: absolute;
 	width:100%;
 	height: 100%;
-	background-color: #6ecccc;
+	background-color: #004F65;
   overflow:hidden;
 }
 
@@ -15,17 +15,17 @@
   bottom:0;
   margin-bottom:20px;
   font-family:'Open Sans', sans-serif;
-  color:#328685;
+  color:#fff;
   font-size:0.7em;
   text-transform: uppercase;
   text-align : center;
 }
 #credits a {
-  color:#328685;
+  color:#fff;
 }
 
 #credits p{
-	font-size: 20px;	
+	font-size: 20px;
 }
 
 #credits h1 {
@@ -39,5 +39,5 @@
 }
 
 #credits a:hover {
-  color:#630d15;
+  color:#B94735;
 }

@@ -1,5 +1,5 @@
 
-//THREEJS RELATED VARIABLES 
+//THREEJS RELATED VARIABLES
 
 var scene,
     camera, fieldOfView, aspectRatio, nearPlane, farPlane,
@@ -23,7 +23,7 @@ var hero;
 //INIT THREE JS, SCREEN AND MOUSE EVENTS
 
 function initScreenAnd3D() {
-  
+
   HEIGHT = window.innerHeight;
   WIDTH = window.innerWidth;
   windowHalfX = WIDTH / 2;
@@ -48,17 +48,17 @@ function initScreenAnd3D() {
   renderer = new THREE.WebGLRenderer({ alpha: true, antialias: true });
   renderer.setSize(WIDTH, HEIGHT);
   renderer.shadowMapEnabled = true;
-  
+
   container = document.getElementById('world');
   container.appendChild(renderer.domElement);
-  
+
   window.addEventListener('resize', handleWindowResize, false);
   document.addEventListener('mousemove', handleMouseMove, false);
   document.addEventListener('touchmove', handleTouchMove, false);
-  
+
   /*
   controls = new THREE.OrbitControls(camera, renderer.domElement);
-  controls.minPolarAngle = -Math.PI / 2; 
+  controls.minPolarAngle = -Math.PI / 2;
   controls.maxPolarAngle = Math.PI / 2;
   controls.noZoom = true;
   controls.noPan = true;
@@ -79,7 +79,7 @@ function handleWindowResize() {
 
 function handleMouseMove(event) {
   mousePos = {x:event.clientX, y:event.clientY};
-} 
+}
 
 function handleTouchMove(event) {
   if (event.touches.length == 1) {
@@ -90,26 +90,26 @@ function handleTouchMove(event) {
 
 function createLights() {
   globalLight = new THREE.HemisphereLight(0xffffff, 0xffffff, .5)
-  
+
   shadowLight = new THREE.DirectionalLight(0xffffff, .9);
   shadowLight.position.set(200, 200, 200);
   shadowLight.castShadow = true;
   shadowLight.shadowDarkness = .2;
   shadowLight.shadowMapWidth = shadowLight.shadowMapHeight = 2048;
-  
+
   backLight = new THREE.DirectionalLight(0xffffff, .4);
   backLight.position.set(-100, 100, 100);
   backLight.castShadow = true;
   backLight.shadowDarkness = .1;
   backLight.shadowMapWidth = shadowLight.shadowMapHeight = 2048;
-  
+
   scene.add(globalLight);
   scene.add(shadowLight);
   scene.add(backLight);
 }
 
-function createFloor(){ 
-  floor = new THREE.Mesh(new THREE.PlaneBufferGeometry(1000,1000), new THREE.MeshBasicMaterial({color: 0x6ecccc}));
+function createFloor(){
+  floor = new THREE.Mesh(new THREE.PlaneBufferGeometry(1000,1000), new THREE.MeshBasicMaterial({color: 0x004F65}));
   floor.rotation.x = -Math.PI/2;
   floor.position.y = 0;
   floor.receiveShadow = true;
@@ -138,7 +138,7 @@ var woolNodes = 10,
 Ball = function(){
 
 	var redMat = new THREE.MeshLambertMaterial ({
-	    color: 0x630d15, 
+	    color: 0x630d15,
 	    shading:THREE.FlatShading
 	});
 
@@ -168,7 +168,7 @@ Ball = function(){
 		woolV.vertex = v;
 		if (i > 0) woolV.attach(this.verts[(i - 1)]);
 		this.verts.push(woolV);
-		
+
 	}
   	this.string = new THREE.Line(stringGeom, stringMat);
 
@@ -217,7 +217,7 @@ Ball = function(){
   	this.wire9.rotation.z = Math.PI/2;
   	this.wire9.rotation.y = Math.PI/2;
   	this.wire9.position.y = 1;
-  	
+
   	this.body.add(this.wire1);
   	this.body.add(this.wire2);
   	this.body.add(this.wire3);
@@ -239,7 +239,7 @@ Ball = function(){
 
 }
 
-/* 
+/*
 The next part of the code is largely inspired by this codepen :
 http://codepen.io/dissimulate/pen/KrAwx?editors=001
 thanks to dissimulate for his great work
@@ -317,29 +317,29 @@ Constraint = function(p1, p2) {
 };
 
 Ball.prototype.update = function(posX, posY, posZ){
-		
+
 	var i = accuracy;
-	
+
 	while (i--) {
-		
+
 		var nodesCount = woolNodes;
-		
+
 		while (nodesCount--) {
-		
+
 			var v = this.verts[nodesCount];
-			
+
 			if (v.isRootNode) {
 			    v.x = posX;
 			    v.y = posY;
 			    v.z = posZ;
 			}
-		
+
 			else {
-		
+
 				var constraintsCount = v.constraints.length;
-		  		
+
 		  		while (constraintsCount--) {
-		  			
+
 		  			var c = v.constraints[constraintsCount];
 
 		  			var diff_x = c.p1.x - c.p2.x,
@@ -365,7 +365,7 @@ Ball.prototype.update = function(posX, posY, posZ){
 					this.body.rotation.z += (v.y <= this.ballRay)? (v.oldx-v.x)/10 : Math.min(Math.max( diff_x/2, -.1 ), .1);
 		  		}
 		  	}
-		  	
+
 		  	if (v.y < this.ballRay) {
 		  		v.y = this.ballRay;
 		  	}
@@ -377,7 +377,7 @@ Ball.prototype.update = function(posX, posY, posZ){
 
 	this.string.geometry.verticesNeedUpdate = true;
 
-	
+
 }
 
 Ball.prototype.receivePower = function(tp){
@@ -393,7 +393,7 @@ var t=0;
 
 function loop(){
   render();
-  
+
   t+=.05;
   hero.updateTail(t);
 
@@ -410,7 +410,7 @@ function getBallPos(){
   var vector = new THREE.Vector3();
 
   vector.set(
-      ( mousePos.x / window.innerWidth ) * 2 - 1, 
+      ( mousePos.x / window.innerWidth ) * 2 - 1,
       - ( mousePos.y / window.innerHeight ) * 2 + 1,
       0.1 );
 
