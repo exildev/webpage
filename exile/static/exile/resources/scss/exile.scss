@@ -131,7 +131,7 @@ h6 {
                     > a {
                         display: block;
                         @extend %wh1;
-                        padding: 16px;
+                        padding: 16px 6px;
                         text-decoration: none;
                         color: $menufont;
                         text-transform: uppercase;

@@ -117,7 +117,7 @@ h6 {
           display: inline-block; }
           #sheet .header nav > ul > li > a {
             display: block;
-            padding: 16px;
+            padding: 16px 6px;
             text-decoration: none;
             color: #323232;
             text-transform: uppercase; }
