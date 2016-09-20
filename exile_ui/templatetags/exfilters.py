@@ -1,8 +1,13 @@
 from django.template import Library
 from django.conf import settings
 import json as parse_json
-from exile_ui.admin import admin_site, ExTabular, ExStacked
+from exile_ui.admin import admin_site
 import operator
+try:
+    from exile_ui.admin import ExTabular, ExStacked
+except:
+    pass
+# endtry
 register = Library()
 
 
@@ -10,7 +15,11 @@ register = Library()
 def is_exinline(obj):
     print type(obj.opts).__bases__
     bases = type(obj.opts).__bases__
-    return ExTabular in bases or ExStacked in bases
+    try:
+        return ExTabular in bases or ExStacked in bases
+    except:
+        return False
+    # endtry
 # end def
 
 
@@ -60,7 +69,7 @@ def ex_applist_add(arr, group, model, app_name):
     if icons.get(app_name):
         if icons[app_name].get('models'):
             if icons[app_name]['models'].get(model['object_name']):
-                if settings.EXILE_UI['media']['icons'][app_name]['models'][model['object_name']].get('icon'): 
+                if settings.EXILE_UI['media']['icons'][app_name]['models'][model['object_name']].get('icon'):
                     icon = icons[app_name]['models'][model['object_name']]['icon']
                 # end if
             # end if
