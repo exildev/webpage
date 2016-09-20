@@ -3,6 +3,7 @@
 from django import forms
 from django.core.mail import EmailMultiAlternatives
 import models
+from ace_overlay.widgets import AceOverlayWidget
 
 
 class SeccionForm(forms.ModelForm):
@@ -10,6 +11,9 @@ class SeccionForm(forms.ModelForm):
     class Meta:
         model = models.Seccion
         exclude = ()
+        widgets = {
+            "contenido": AceOverlayWidget(mode='html', wordwrap=False, theme='monokai', width="100%", height="400px", showprintmargin=False)
+        }
     # end class
 # end class
 
