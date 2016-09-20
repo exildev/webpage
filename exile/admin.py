@@ -1,4 +1,5 @@
 from django.contrib import admin
+from exile_ui.admin import admin_site
 from django.db import models as model
 import models
 import forms
@@ -7,6 +8,7 @@ import forms
 
 class SeccionStack(admin.StackedInline):
     model = models.Seccion
+    form = forms.SeccionForm
 
     fieldsets = [
        (None, {'fields': ['nombre', 'posicion']}),
@@ -102,15 +104,16 @@ class FooterPrincipalAdmin(admin.ModelAdmin):
     list_display = ("footer", "fecha")
 # end class
 
-admin.site.register(models.Page, PageAdmin)
-admin.site.register(models.Seccion, SeccionAdmin)
-admin.site.register(models.Item, ItemAdmin)
-admin.site.register(models.SubItem, SubitemAdmin)
-admin.site.register(models.ItemSeccion)
-admin.site.register(models.SeccionFooter)
-admin.site.register(models.Menu, MenuAdmin)
-admin.site.register(models.MenuPrincipal, MenuPrincipalAdmin)
-admin.site.register(models.PaginaPrincipal, PaginaPrincipalAdmin)
-admin.site.register(models.FooterPrincipal, FooterPrincipalAdmin)
-admin.site.register(models.Contacto, ContactoAdmin)
-admin.site.register(models.Footer, FooterAdmin)
+admin_site._registry = admin.site._registry
+admin_site.register(models.Page, PageAdmin)
+admin_site.register(models.Seccion, SeccionAdmin)
+admin_site.register(models.Item, ItemAdmin)
+admin_site.register(models.SubItem, SubitemAdmin)
+admin_site.register(models.ItemSeccion)
+admin_site.register(models.SeccionFooter)
+admin_site.register(models.Menu, MenuAdmin)
+admin_site.register(models.MenuPrincipal, MenuPrincipalAdmin)
+admin_site.register(models.PaginaPrincipal, PaginaPrincipalAdmin)
+admin_site.register(models.FooterPrincipal, )
+admin_site.register(models.Contacto, ContactoAdmin)
+admin_site.register(models.Footer, FooterAdmin)

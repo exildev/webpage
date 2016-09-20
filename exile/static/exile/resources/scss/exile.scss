@@ -145,7 +145,7 @@ h6 {
 
                         &:hover{
                             > span{
-                                border: 1px solid white;
+                                border: 1px solid #323232;
                                 width: 100%;
                             }
                         }
@@ -386,8 +386,9 @@ a.btn, button, input[type=button], input[type=submit]{
     }
 }
 
+
 video {
-    background: #848385;
+    background: #f4f3f4;
     max-height: 850px;
 }
 

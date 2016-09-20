@@ -1,5 +1,10 @@
 .modal {}
 
+.mod_temp{
+    -webkit-transition: width 2s, height 4s; /* For Safari 3.1 to 6.0 */
+    transition: width 2s, height 4s;
+}
+
 .act_scale {
     width: 100px !important;
 }
@@ -31,6 +36,7 @@
     border: 1px solid black;*/
 }
 
+
 .model:hover {
     z-index: 10;
     position: absolute;
@@ -58,5 +64,7 @@
 }
 
 .mod_temp .no-scale{
-    transform: scaleX(0.3334) scaleY(0.5);
+    background: white;
+    box-shadow: 0 0 12px #555;
+    padding: 16px;
 }

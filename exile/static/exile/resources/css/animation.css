@@ -110,3 +110,11 @@
 	animation: moon 15s forwards;
 }
 
+
+.tec li {
+	transition: all 1s;
+}
+
+.tec li.animated{
+	transform: scale(2) rotate3d(0, 100, 0, 360deg);
+}

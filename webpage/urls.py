@@ -16,10 +16,11 @@ Including another URLconf
 from django.conf.urls import url, include
 from django.contrib import admin
 from django.conf.urls.static import static
+from exile_ui.admin import admin_site
 import settings
 
 urlpatterns = [
-    url(r'^admin/', admin.site.urls),
+    url(r'^dashboard/', admin_site.urls),
     url(r'^', include('exile.urls')),
 ]
 

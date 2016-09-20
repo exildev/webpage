@@ -33,7 +33,7 @@ ALLOWED_HOSTS = []
 # Application definition
 
 INSTALLED_APPS = [
-    'suit',
+    'exile_ui',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -41,44 +41,83 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'exile',
-    'supra'
+    'supra',
+    'ace_overlay'
 ]
 
-# Django Suit configuration example
-SUIT_CONFIG = {
-    # header
-    'ADMIN_NAME': 'Exile page',
-    'HEADER_DATE_FORMAT': 'l, j. F Y',
-    'HEADER_TIME_FORMAT': 'H:i',
-
-    # forms
-    'SHOW_REQUIRED_ASTERISK': True,  # Default True
-    'CONFIRM_UNSAVED_CHANGES': True,  # Default True
-
-    # menu
-    # 'SEARCH_URL': '/admin/auth/user/',
-    'MENU_ICONS': {
-        'auth': 'icon-lock',
-        'exile': 'icon-fire'
-    },
-    # 'MENU_OPEN_FIRST_CHILD': True, # Default True
-    # 'MENU_EXCLUDE': ('auth.group',),
-    'MENU': (
-        'sites',
-        {'app': 'auth', 'icon': 'icon-lock', 'models': ('user', 'group')},
-        {'app': 'exile', 'models': (
-            'page', 'seccion', 'item', 'subitem', 'menu', 'footer')},
-        {'label': 'Configuracion', 'icon': 'icon-cog',
-         'models': ('exile.itemseccion', 'exile.footerseccion')},
-        {'label': 'Principal', 'icon': 'icon-star',
-         'models': ('exile.menuprincipal', 'exile.paginaprincipal', 'exile.footerprincipal')},
-        {'label': 'Contacto', 'icon': 'icon-user',
-         'models': ('exile.contacto',)}
-    ),
-
-    # misc
-    'LIST_PER_PAGE': 15
+EXILE_UI = {
+    'site_title': 'Exile web',
+    'site_header': 'Exile web',
+    'index_title': 'Gestor de contenido de Exile',
+    'media': {
+        'logo': {
+            'dashboard': '/media/EXILE-small.png',
+            'page': '/media/exile-72x72.png',
+            'login': '/media/EXILE-small.png'
+        },
+        'icons':{
+            'exile': {
+                'icon': 'public',
+                'groups': [
+                    'Contenido', 'Configuracion', 'Principal', 'Contacto',
+                ],
+                'models': {
+                    'Page': {'icon': 'language', 'group': 'Contenido'},
+                    'Seccion': {'icon': 'grid_on', 'group': 'Contenido'},
+                    'Item': {'icon': 'view_carousel', 'group': 'Contenido'},
+                    'SubItem': {'icon': 'widgets', 'group': 'Contenido'},
+                    'ItemSeccion': {'icon': 'settings', 'group': 'Configuracion' },
+                    'SeccionFooter': {'icon': 'build', 'group': 'Contenido'},
+                    'Menu': {'icon': 'menu', 'group': 'Contenido'},
+                    'MenuPrincipal': {'icon': 'grade', 'group': 'Principal'},
+                    'PaginaPrincipal': {'icon': 'grade', 'group': 'Principal'},
+                    'FooterPrincipal': {'icon': 'grade', 'group': 'Principal'},
+                    'Contacto': {'icon': 'person', 'group': 'Contacto'},
+                    'Footer': {'icon': 'extension', 'group': 'Contenido'},
+                },
+            },
+            'auth': {
+                'icon': 'security',
+                'groups': [
+                    'Seguridad',
+                ],
+                'models': {
+                    'Group': {'icon': 'people', 'group': 'Seguridad'},
+                    'User': {'icon': 'person', 'group': 'Seguridad'}
+                }
+            },
+            'logout': {
+                'icon': 'exit_to_app',
+            }
+        }
+    }
 }
+
+MENU_ORDER = [
+    {
+        'name': 'exile',
+        'models': [
+            'Page',
+            'Seccion',
+            'Item',
+            'SubItem',
+            'Menu',
+            'Footer'
+        ]
+    },
+
+    {
+        'name': 'auth',
+        'models': [
+            'Group',
+            'User'
+        ]
+    },
+    {
+        'name': 'logout'
+    }
+]
+
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',

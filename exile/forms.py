@@ -3,6 +3,7 @@
 from django import forms
 from django.core.mail import EmailMultiAlternatives
 import models
+from ace_overlay.widgets import AceOverlayWidget
 
 
 class SeccionForm(forms.ModelForm):
@@ -10,6 +11,9 @@ class SeccionForm(forms.ModelForm):
     class Meta:
         model = models.Seccion
         exclude = ()
+        widgets = {
+            "contenido": AceOverlayWidget(mode='html', wordwrap=False, theme='monokai', width="100%", height="400px", showprintmargin=False)
+        }
     # end class
 # end class
 
@@ -23,7 +27,7 @@ class ContactoForm(forms.ModelForm):
 
     def save(self, commit=True):
         contacto = super(ContactoForm, self).save(commit)
-        subject, from_email, to = contacto.asunto , contacto.email , 'mariobarrios@gmail.com'
+        subject, from_email, to = contacto.asunto , contacto.email , 'mariobarrios@exile.com.co'
         text_content = "Mensaje de Contacto"
         html_content = "<p> %s </p>" % (contacto.mensaje)
         msg = EmailMultiAlternatives(subject, text_content, from_email, [to])
