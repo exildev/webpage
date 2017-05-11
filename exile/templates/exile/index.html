@@ -23,7 +23,7 @@
                       <ul>
                           {% for s in i|subitems_tag:t %}
                           <li>
-                              <a href="/page/{{s.pagina.id}}/">{{s.nombre}}</a>
+                              <a href="/page/{{s.pagina.alias}}/">{{s.nombre}}</a>
                           </li>
                           {% endfor %}
                       </ul>
@@ -34,7 +34,7 @@
                       <ul>
                           {% for s in i|subitems_tag:None %}
                           <li>
-                              <a href="/page/{{s.pagina.id}}/">{{s.nombre}}</a>
+                              <a href="/page/{{s.pagina.alias}}/">{{s.nombre}}</a>
                           </li>
                           {% endfor %}
                       </ul>
@@ -59,7 +59,7 @@
           <ul>
             {% for p in footer|footerPage_tag:f %}
               <li>
-                <a href="/page/{{p.id}}/">{{p.nombre}}</a>
+                <a href="/page/{{p.alias}}/">{{p.nombre}}</a>
               </li>
             {% endfor %}
           </ul>

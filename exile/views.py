@@ -17,8 +17,8 @@ def index(request):
 # end def
 
 
-def page(request, id):
-    pagina = models.Page.objects.filter(id=id).first()
+def page(request, alias):
+    pagina = models.Page.objects.filter(alias=alias).first()
     if pagina:
         principal = models.MenuPrincipal.objects.all().first()
         footer = models.FooterPrincipal.objects.all().first()

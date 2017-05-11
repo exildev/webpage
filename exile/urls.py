@@ -3,6 +3,6 @@ import views
 
 urlpatterns = [
     url(r'^$', views.index, name="index"),
-    url(r'^page/(?P<id>\d+)/$', views.page, name="page"),
+    url(r'^page/(?P<alias>\w+)/$', views.page, name="page"),
     url(r'^contacto/', views.ContactoSupra.as_view(), name="contacto" )
 ]

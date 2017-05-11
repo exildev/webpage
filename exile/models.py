@@ -8,6 +8,7 @@ from django.db import models
 
 class Page(models.Model):
     nombre = models.CharField(max_length=400)
+    alias = models.CharField(max_length=50, null=True, blank=True)
 
     class Meta:
         verbose_name = "Pagina"
@@ -72,7 +73,8 @@ class OrdenSubItem(models.Model):
 
 class Item(models.Model):
     nombre = models.CharField(max_length=400)
-    principal = models.ForeignKey(Page, blank=True, null=True, verbose_name="Pagina Principal")
+    principal = models.ForeignKey(
+        Page, blank=True, null=True, verbose_name="Pagina Principal")
     subitems = models.ManyToManyField(SubItem, through=OrdenSubItem)
 
     class Meta:
