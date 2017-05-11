@@ -84,6 +84,7 @@ function showResponse(responseText, statusText, xhr, $form)  {
 function showError(response){
     $('.form-contacto').removeClass('form-submitted');
     $('#form-head').removeClass('form-submitted');
+    console.log(response);
     if (response.responseJSON.nombre) {
         $('input[name="nombre"]').addClass('form-error');
         $('input[name="nombre"]').select();
