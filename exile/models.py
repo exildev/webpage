@@ -144,7 +144,7 @@ class Contacto(models.Model):
     nombre = models.CharField(max_length=300)
     email = models.EmailField()
     asunto = models.CharField(max_length=300)
-    # telefono = models.CharField(max_length=20)
+    telefono = models.CharField(max_length=20)
     mensaje = models.TextField()
 
     def __unicode__(self):
