@@ -95,7 +95,7 @@ function showError(response){
           } else if (response.responseJSON.asunto) {
               $('input[name="asunto"]').addClass('form-error');
               $('input[name="asunto"]').select();
-          else if (response.responseJSON.telefono) {
+          }else if (response.responseJSON.telefono) {
               $('input[name="telefono"]').addClass('form-error');
               $('input[name="telefono"]').select();
           } else if (response.responseJSON.mensaje) {
