@@ -25,9 +25,9 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SECRET_KEY = '$6tgkn!ug50hss(7z(vix!7&!r9rhz&mb*s2)e$(d2vtfxk9sg'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['www.exile.com.co', 'exile.com.co', 'dev.exile.com.co', 'develop.exile.com.co']
 
 
 # Application definition
@@ -157,9 +157,9 @@ DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql_psycopg2',
         'NAME': 'webpage',
-        'USER': 'postgres',
+        'USER': 'webpage',
         'PASSWORD': 'Exile*74522547',
-        'HOST': '104.236.33.228',
+        'HOST': 'localhost',
         'POST': '5432'
     }
 }
@@ -209,7 +209,7 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/1.10/howto/static-files/
 
 STATIC_URL = '/static/'
-STATIC_ROOT = os.path.join(BASE_DIR, 'static')
+STATIC_ROOT = '/home/coviyarce/webapps/page_static/'
 
 MEDIA_URL = '/media/'
-MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
+MEDIA_ROOT = '/home/coviyarce/webapps/media/'
