@@ -25,7 +25,7 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SECRET_KEY = '$6tgkn!ug50hss(7z(vix!7&!r9rhz&mb*s2)e$(d2vtfxk9sg'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
 ALLOWED_HOSTS = ['www.exile.com.co', 'exile.com.co', 'dev.exile.com.co', 'develop.exile.com.co']
 
