@@ -9,7 +9,7 @@
 <ul>
     {% for i in menu|items_tag %}
     <li>
-      <a href="{% if i.principal %}/page/{{i.principal.id}}/{% else %}#{% endif %}">
+      <a href="{% if i.principal %}/page/{{i.principal.alias}}/{% else %}#{% endif %}">
         {{i.nombre}}<span></span>
       </a>
       {% if i.subitems.all|length > 0 %}
