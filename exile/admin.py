@@ -11,11 +11,11 @@ class SeccionStack(admin.StackedInline):
     form = forms.SeccionForm
 
     fieldsets = [
-       (None, {'fields': ['nombre', 'posicion']}),
-       ('Editor', {
-           'classes': ('full-width',),
-           'description': 'Escribir su codigo html aqui',
-           'fields': ['contenido']})]
+        (None, {'fields': ['nombre', 'posicion']}),
+        ('Editor', {
+            'classes': ('full-width',),
+            'description': 'Escribir su codigo html aqui',
+            'fields': ['contenido']})]
 
 # end class
 
@@ -25,11 +25,11 @@ class SeccionAdmin(admin.ModelAdmin):
     search_fields = ('nombre',)
     list_filter = ('pagina', )
     fieldsets = [
-       (None, {'fields': ['nombre', 'posicion']}),
-       ('Editor', {
-           'classes': ('full-width',),
-           'description': 'Escribir su codigo html aqui',
-           'fields': ['contenido']})]
+        (None, {'fields': ['nombre', 'posicion']}),
+        ('Editor', {
+            'classes': ('full-width',),
+            'description': 'Escribir su codigo html aqui',
+            'fields': ['contenido']})]
 # end class
 
 
@@ -83,7 +83,7 @@ class PaginaPrincipalAdmin(admin.ModelAdmin):
 
 
 class ContactoAdmin(admin.ModelAdmin):
-    list_display = ('nombre', 'email', 'asunto', 'mensaje')
+    list_display = ('nombre', 'email', 'asunto', 'telefono', 'mensaje')
     search_fields = list_display
 # end class
 
@@ -96,7 +96,7 @@ class OrdenFooterstack(admin.StackedInline):
 class FooterAdmin(admin.ModelAdmin):
     list_display = ("nombre",)
     search_fields = list_display
-    inlines = [OrdenFooterstack,]
+    inlines = [OrdenFooterstack, ]
 # end class
 
 
