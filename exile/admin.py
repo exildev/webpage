@@ -83,7 +83,7 @@ class PaginaPrincipalAdmin(admin.ModelAdmin):
 
 
 class ContactoAdmin(admin.ModelAdmin):
-    list_display = ('nombre', 'email', 'asunto', 'telefono', 'mensaje')
+    list_display = ('nombre', 'email', 'asunto', 'mensaje')
     search_fields = list_display
 # end class
 
