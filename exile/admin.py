@@ -34,7 +34,8 @@ class SeccionAdmin(admin.ModelAdmin):
 
 
 class PageAdmin(admin.ModelAdmin):
-    search_fields = ('nombre',)
+    search_fields = ('nombre', 'alias')
+    list_editable = ('alias', )
     inlines = [
         SeccionStack,
     ]
