@@ -66,7 +66,6 @@ $('form').submit(function() {
   if (!formError) {
     $('.form-contacto').addClass('form-submitted');
     $('#form-head').addClass('form-submitted');
-    $('.thank').fadeIn(300);
     $(this).ajaxSubmit(options);
   }
   return false;
@@ -74,6 +73,7 @@ $('form').submit(function() {
 
 // post-submit callback
 function showResponse(responseText, statusText, xhr, $form)  {
+    $('.thank').fadeIn(300);
     setTimeout(function(){
       toggleForm();
       bindFormClick();
@@ -85,19 +85,24 @@ function showError(response){
     $('.form-contacto').removeClass('form-submitted');
     $('#form-head').removeClass('form-submitted');
     console.log(response);
-    if (response.responseJSON.nombre) {
-        $('input[name="nombre"]').addClass('form-error');
-        $('input[name="nombre"]').select();
-    } else if (response.responseJSON.email) {
-        $('input[name="email"]').addClass('form-error');
-        $('input[name="email"]').select();
-    } else if (response.responseJSON.asunto) {
-        $('input[name="asunto"]').addClass('form-error');
-        $('input[name="asunto"]').select();
-    } else if (response.responseJSON.mensaje) {
-        $('input[name="mensaje"]').addClass('form-error');
-        $('input[name="mensaje"]').select();
+    if (response.status == 400) {
+          if (response.responseJSON.nombre) {
+              $('input[name="nombre"]').addClass('form-error');
+              $('input[name="nombre"]').select();
+          } else if (response.responseJSON.email) {
+              $('input[name="email"]').addClass('form-error');
+              $('input[name="email"]').select();
+          } else if (response.responseJSON.asunto) {
+              $('input[name="asunto"]').addClass('form-error');
+              $('input[name="asunto"]').select();
+          } else if (response.responseJSON.mensaje) {
+              $('input[name="mensaje"]').addClass('form-error');
+              $('input[name="mensaje"]').select();
+          }
+    }else if (response.status == 500) {
+      console.log("Error 500");
     }
+
 }
 
 function isValidEmail(email) {

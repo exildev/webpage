@@ -27,7 +27,7 @@ class ContactoForm(forms.ModelForm):
 
     def save(self, commit=True):
         contacto = super(ContactoForm, self).save(commit)
-        subject, from_email, to = contacto.asunto , contacto.email , 'mariobarrios@exile.com.co'
+        subject, from_email, to = contacto.asunto , contacto.email , 'info@exile.com.co'
         text_content = "Mensaje de Contacto"
         html_content = "<p> %s </p>" % (contacto.mensaje)
         msg = EmailMultiAlternatives(subject, text_content, from_email, [to])
